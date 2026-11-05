@@ -5,6 +5,7 @@ import localFont from "next/font/local";
 
 import ContactCard from "@/components/contact-card";
 import { getContentCollection } from "@/components/mdx/utils";
+import RouteChrome from "@/components/route-chrome";
 import Footer from "@/components/ui/footer";
 import Header from "@/components/ui/header";
 
@@ -96,27 +97,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body
         className={`${inter.variable} ${aspekta.variable} font-inter bg-white tracking-tight text-slate-800 antialiased dark:bg-slate-900 dark:text-slate-200`}
       >
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(personStructuredData) }}
-        />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personStructuredData) }} />
         <Theme>
-          <div className="mx-auto max-w-7xl">
-            <div className="flex min-h-screen flex-col lg:flex-row">
-              <ContactCard />
-
-              {/* Main content */}
-              <main className="min-w-0 grow overflow-hidden px-6">
-                <div className="mx-auto flex h-full w-full max-w-[1072px] flex-col">
-                  <Header />
-
-                  {children}
-
-                  <Footer />
-                </div>
-              </main>
-            </div>
-          </div>
+          <RouteChrome sidebar={<ContactCard />} header={<Header />} footer={<Footer />}>
+            {children}
+          </RouteChrome>
         </Theme>
       </body>
     </html>
