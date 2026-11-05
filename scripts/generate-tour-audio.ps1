@@ -1,9 +1,12 @@
 Add-Type -AssemblyName System.Speech
 
 $ErrorActionPreference = "Stop"
-$audioRoot = Join-Path $PSScriptRoot "..\public\audio\resume-tour"
-$captionRoot = Join-Path $PSScriptRoot "..\public\captions\resume-tour"
+$audioRoot = Join-Path $PSScriptRoot "..\resume\audio-source"
+$captionRoot = Join-Path $PSScriptRoot "..\resume\caption-source"
 New-Item -ItemType Directory -Force -Path $audioRoot, $captionRoot | Out-Null
+
+# Source narration stays outside public/. Compress it for the web, give both the
+# audio and VTT files content-hashed names, and then update narrationTracks.
 
 $narration = [ordered]@{
   profile = "It is great to meet you. My name is Thomas Miller III. I have been a software engineer for the last ten years and I have loved making a difference for various companies and partners that I have worked with. I enjoy solving problems with competitive enthusiasm. Today, I work across the entire development lifecycle, eagerly adapting to any workload asked of me."

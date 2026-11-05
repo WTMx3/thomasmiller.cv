@@ -91,9 +91,24 @@ const leadership = collection('leadership');
 
 if (!profile) throw new Error('A profile MDX file is required.');
 
+const resumeDate = new Intl.DateTimeFormat('en-US', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+}).format(new Date());
+const latestRole = experience[0];
+const coverParagraphs = [
+  'I am a senior software engineer who turns ambiguous product needs into dependable systems. My work spans product and platform engineering: customer-facing applications, APIs, cloud infrastructure, delivery automation, observability, and the operating practices that keep software healthy after launch.',
+  latestRole
+    ? 'At ' + latestRole.metadata.company + ', I ' + String(latestRole.metadata.summary).replace(/^Own\b/, 'own').replace(/\.$/, '') + '. I lead work from early planning and architecture through implementation, release, monitoring, support, and continuous improvement.'
+    : '',
+  'Earlier roles strengthened my experience in enterprise reliability, incident response, quality engineering, accessible interfaces, and client-focused delivery. I am most valuable where a team needs both breadth and follow-through: someone who can shape the architecture, write the software, improve the path to production, and remain accountable for the result in operation.',
+  'I would welcome the opportunity to discuss how that combination could support your products, engineering organization, and customers. Thank you for your consideration.',
+].filter(Boolean);
+
 const lines = [
   '#set document(',
-  '  title: "' + typstText(profile.metadata.name) + ' - Master Resume",',
+  '  title: "' + typstText(profile.metadata.name) + ' - Portfolio Resume",',
   '  author: ("' + typstText(profile.metadata.name) + '",),',
   '  description: "' + typstText(profile.content) + '",',
   ')',
@@ -110,7 +125,7 @@ const lines = [
   '#let accent = rgb("#2d2f32")',
   '#set text(font: ("Segoe UI", "Arial"), size: 9.8pt, fill: body)',
   '#set par(leading: 0.9em)',
-  '#set list(indent: 11pt, body-indent: 5.5pt, spacing: 7pt, tight: false)',
+  '#set list(indent: 11pt, body-indent: 5.5pt, spacing: 5.2pt, tight: false)',
   '#show link: set text(fill: accent)',
   '#let section(title) = {',
   '  v(11pt)',
@@ -120,6 +135,39 @@ const lines = [
   '  )',
   '  v(6.5pt)',
   '}',
+  '#grid(columns: (1fr, auto), gutter: 20pt, align: top,',
+  '  [#text(size: 14pt, weight: "bold", fill: ink)[' + typstText(profile.metadata.name) + ']',
+  '   #v(2pt)',
+  '   #text(size: 9.8pt, fill: muted)[' + typstText(profile.metadata.role) + ']],',
+  '  [#align(right)[#text(size: 9.2pt)[',
+  '    #link("mailto:' + typstText(profile.metadata.email) + '")[' + typstText(profile.metadata.email) + '] \\',
+  '    #link("tel:' + typstText(profile.metadata.phoneHref) + '")[' + typstText(profile.metadata.phone) + '] \\',
+  '    #link("' + typstText(profile.metadata.website) + '")[' + typstText(profile.metadata.websiteLabel) + ']',
+  '  ]]],',
+  ')',
+  '#v(34pt)',
+  '#text(size: 10.2pt, weight: "semibold", fill: muted, tracking: 1.2pt)[COVER LETTER]',
+  '#v(18pt)',
+  '#text(size: 30pt, weight: "bold", fill: ink)[Reliable products.]',
+  '#v(2pt)',
+  '#text(size: 30pt, weight: "bold", fill: accent)[Dependable systems.]',
+  '#v(22pt)',
+  '#text(size: 9.6pt, fill: muted)[' + typstText(resumeDate) + ']',
+  '#v(17pt)',
+  '#text(size: 10.4pt, weight: "semibold", fill: ink)[Dear Hiring Team,]',
+  ...coverParagraphs.flatMap((paragraph) => [
+    '#v(10pt)',
+    '#block(width: 100%)[#set par(leading: 1.05em); ' + typstText(paragraph) + ']',
+  ]),
+  '#v(13pt)',
+  '#text(size: 10.2pt)[Sincerely,]',
+  '#v(5pt)',
+  '#text(size: 10.5pt, weight: "semibold", fill: ink)[' + typstText(profile.metadata.name) + ']',
+  '#v(1fr)',
+  '#line(length: 100%, stroke: 0.55pt + rule)',
+  '#v(7pt)',
+  '#text(size: 8.2pt, weight: "semibold", fill: muted, tracking: 0.8pt)[PRODUCT ENGINEERING   PLATFORM RELIABILITY   SECURE SYSTEMS   TECHNICAL LEADERSHIP]',
+  '#pagebreak()',
   '#grid(columns: (1fr, auto), gutter: 20pt, align: top,',
   '  [#text(size: 26.5pt, weight: "bold", fill: ink)[' + typstText(profile.metadata.name) + ']',
   '   #v(2.5pt)',
@@ -193,6 +241,8 @@ for (const job of experience) {
     ')',
     '',
     '#block(width: 100%, above: 4pt)[#text(size: 9.8pt, weight: "semibold", fill: accent)[' + typstText(job.metadata.company) + (job.metadata.location ? ' | ' + typstText(job.metadata.location) : '') + ']]',
+    '',
+    '#block(width: 100%, above: 4pt, below: 2pt)[#text(size: 9.8pt, fill: body)[' + typstText(job.metadata.summary) + ']]',
     '',
     ...bulletList(job.content),
     ']',

@@ -85,23 +85,23 @@ type CaptionCue = {
 
 const narrationTracks: Record<string, NarrationTrack> = {
   profile: {
-    audio: "/audio/resume-tour/profile.wav",
-    captions: "/captions/resume-tour/profile.vtt",
+    audio: "/audio/resume-tour/profile.3dacb077958c.mp3",
+    captions: "/captions/resume-tour/profile.e71218c00364.vtt",
     label: "Profile introduction",
   },
   skills: {
-    audio: "/audio/resume-tour/skills.wav",
-    captions: "/captions/resume-tour/skills.vtt",
+    audio: "/audio/resume-tour/skills.ffce3375ca9f.mp3",
+    captions: "/captions/resume-tour/skills.5f5e168924a7.vtt",
     label: "Skills and tools",
   },
   experience: {
-    audio: "/audio/resume-tour/experience.wav",
-    captions: "/captions/resume-tour/experience.vtt",
+    audio: "/audio/resume-tour/experience.516c7f4788f9.mp3",
+    captions: "/captions/resume-tour/experience.0eaba9263b67.vtt",
     label: "Professional experience",
   },
   projects: {
-    audio: "/audio/resume-tour/projects.wav",
-    captions: "/captions/resume-tour/projects.vtt",
+    audio: "/audio/resume-tour/projects.77d898dd5f73.mp3",
+    captions: "/captions/resume-tour/projects.046d3947b1af.vtt",
     label: "Portfolio projects",
   },
 };
@@ -363,7 +363,7 @@ function NarrationPlayer({
         preload="auto"
         ref={audioRef}
       >
-        <source src={track.audio} type="audio/wav" />
+        <source src={track.audio} type="audio/mpeg" />
         <track default kind="captions" label="English" src={track.captions} srcLang="en" />
       </audio>
 
@@ -824,14 +824,15 @@ export default function ResumeJourney({ data }: { data: ResumeJourneyData }) {
   const showTourControls = activeStage > 0 && activeStage < completeStageIndex;
 
   useEffect(() => {
-    const preloaders = Object.values(narrationTracks).map((track) => {
-      const audio = new Audio(track.audio);
-      audio.preload = "auto";
-      audio.load();
-      return audio;
-    });
-    return () => preloaders.forEach((audio) => audio.pause());
-  }, []);
+    const upcomingStage = stages[Math.min(activeStage + 1, completeStageIndex)];
+    const upcomingTrack = narrationTracks[upcomingStage.id];
+    if (!upcomingTrack) return;
+
+    const preloader = new Audio(upcomingTrack.audio);
+    preloader.preload = "auto";
+    preloader.load();
+    return () => preloader.pause();
+  }, [activeStage, completeStageIndex]);
 
   const goToStage = useCallback((index: number) => {
     const nextIndex = Math.max(0, Math.min(stages.length - 1, index));

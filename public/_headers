@@ -1,0 +1,11 @@
+/audio/resume-tour/*
+  Cache-Control: public, max-age=31536000, immutable
+  X-Content-Type-Options: nosniff
+
+/captions/resume-tour/*
+  Cache-Control: public, max-age=31536000, immutable
+  X-Content-Type-Options: nosniff
+
+/thomas-miller-resume.pdf
+  Cache-Control: public, max-age=3600, must-revalidate
+  X-Content-Type-Options: nosniff

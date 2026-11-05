@@ -1,5 +1,5 @@
 #set document(
-  title: "Thomas Miller - Master Resume",
+  title: "Thomas Miller - Portfolio Resume",
   author: ("Thomas Miller",),
   description: "Platform-focused engineer with more than 10 years of experience building full-stack products and the systems that keep them reliable: cloud infrastructure, CI/CD, observability, identity and access management, scalable architecture, incident response, and technical leadership.",
 )
@@ -16,7 +16,7 @@
 #let accent = rgb("#2d2f32")
 #set text(font: ("Segoe UI", "Arial"), size: 9.8pt, fill: body)
 #set par(leading: 0.9em)
-#set list(indent: 11pt, body-indent: 5.5pt, spacing: 7pt, tight: false)
+#set list(indent: 11pt, body-indent: 5.5pt, spacing: 5.2pt, tight: false)
 #show link: set text(fill: accent)
 #let section(title) = {
   v(11pt)
@@ -26,6 +26,43 @@
   )
   v(6.5pt)
 }
+#grid(columns: (1fr, auto), gutter: 20pt, align: top,
+  [#text(size: 14pt, weight: "bold", fill: ink)[Thomas Miller]
+   #v(2pt)
+   #text(size: 9.8pt, fill: muted)[Senior Software Engineer]],
+  [#align(right)[#text(size: 9.2pt)[
+    #link("mailto:wthomasmiii\@gmail.com")[wthomasmiii\@gmail.com] \
+    #link("tel:+19727959884")[(972) 795-9884] \
+    #link("https://thomasmiller.cv")[thomasmiller.cv]
+  ]]],
+)
+#v(34pt)
+#text(size: 10.2pt, weight: "semibold", fill: muted, tracking: 1.2pt)[COVER LETTER]
+#v(18pt)
+#text(size: 30pt, weight: "bold", fill: ink)[Reliable products.]
+#v(2pt)
+#text(size: 30pt, weight: "bold", fill: accent)[Dependable systems.]
+#v(22pt)
+#text(size: 9.6pt, fill: muted)[November 5, 2026]
+#v(17pt)
+#text(size: 10.4pt, weight: "semibold", fill: ink)[Dear Hiring Team,]
+#v(10pt)
+#block(width: 100%)[#set par(leading: 1.05em); I am a senior software engineer who turns ambiguous product needs into dependable systems. My work spans product and platform engineering: customer-facing applications, APIs, cloud infrastructure, delivery automation, observability, and the operating practices that keep software healthy after launch.]
+#v(10pt)
+#block(width: 100%)[#set par(leading: 1.05em); At BAAS Software, I own the complete software product lifecycle across web, mobile, cloud, DevOps, reliability, and security. I lead work from early planning and architecture through implementation, release, monitoring, support, and continuous improvement.]
+#v(10pt)
+#block(width: 100%)[#set par(leading: 1.05em); Earlier roles strengthened my experience in enterprise reliability, incident response, quality engineering, accessible interfaces, and client-focused delivery. I am most valuable where a team needs both breadth and follow-through: someone who can shape the architecture, write the software, improve the path to production, and remain accountable for the result in operation.]
+#v(10pt)
+#block(width: 100%)[#set par(leading: 1.05em); I would welcome the opportunity to discuss how that combination could support your products, engineering organization, and customers. Thank you for your consideration.]
+#v(13pt)
+#text(size: 10.2pt)[Sincerely,]
+#v(5pt)
+#text(size: 10.5pt, weight: "semibold", fill: ink)[Thomas Miller]
+#v(1fr)
+#line(length: 100%, stroke: 0.55pt + rule)
+#v(7pt)
+#text(size: 8.2pt, weight: "semibold", fill: muted, tracking: 0.8pt)[PRODUCT ENGINEERING   PLATFORM RELIABILITY   SECURE SYSTEMS   TECHNICAL LEADERSHIP]
+#pagebreak()
 #grid(columns: (1fr, auto), gutter: 20pt, align: top,
   [#text(size: 26.5pt, weight: "bold", fill: ink)[Thomas Miller]
    #v(2.5pt)
@@ -125,6 +162,8 @@ Elected to help advance quality engineering practices, testing frameworks, mento
 
 #block(width: 100%, above: 4pt)[#text(size: 9.8pt, weight: "semibold", fill: accent)[BAAS Software | Remote]]
 
+#block(width: 100%, above: 4pt, below: 2pt)[#text(size: 9.8pt, fill: body)[Own the complete software product lifecycle across web, mobile, cloud, DevOps, reliability, and security.]]
+
 #block(width: 100%, above: 6pt)[
 #list(
   [Lead products from initial idea and concept validation through requirements, planning, architecture, implementation, testing, production launch, monitoring, support, and continuous improvement.],
@@ -147,6 +186,8 @@ Elected to help advance quality engineering practices, testing frameworks, mento
 
 #block(width: 100%, above: 4pt)[#text(size: 9.8pt, weight: "semibold", fill: accent)[USAA | Remote]]
 
+#block(width: 100%, above: 4pt, below: 2pt)[#text(size: 9.8pt, fill: body)[Strengthened enterprise reliability, delivery automation, quality engineering, and incident response.]]
+
 #block(width: 100%, above: 6pt)[
 #list(
   [Served as Vice President of the Quality Engineering Society and advanced automated, integration, regression, and performance-testing practices across engineering teams.],
@@ -165,6 +206,8 @@ Elected to help advance quality engineering practices, testing frameworks, mento
 )
 
 #block(width: 100%, above: 4pt)[#text(size: 9.8pt, weight: "semibold", fill: accent)[Web Plant Media | Remote]]
+
+#block(width: 100%, above: 4pt, below: 2pt)[#text(size: 9.8pt, fill: body)[Built custom WordPress and React experiences while modernizing client platforms, cloud infrastructure, and delivery practices.]]
 
 #block(width: 100%, above: 6pt)[
 #list(
@@ -188,6 +231,8 @@ Elected to help advance quality engineering practices, testing frameworks, mento
 
 #block(width: 100%, above: 4pt)[#text(size: 9.8pt, weight: "semibold", fill: accent)[Caprock Custom Apps]]
 
+#block(width: 100%, above: 4pt, below: 2pt)[#text(size: 9.8pt, fill: body)[Delivered custom web and mobile products from discovery and architecture through app-store release and support.]]
+
 #block(width: 100%, above: 6pt)[
 #list(
   [Worked directly with clients and cross-functional teams to define requirements, evaluate constraints, shape product scope, and prepare solution plans tied to business outcomes.],
@@ -206,6 +251,8 @@ Elected to help advance quality engineering practices, testing frameworks, mento
 )
 
 #block(width: 100%, above: 4pt)[#text(size: 9.8pt, weight: "semibold", fill: accent)[IT Help Central]]
+
+#block(width: 100%, above: 4pt, below: 2pt)[#text(size: 9.8pt, fill: body)[Resolved complex technology issues, led support operations, and created knowledge resources for a large university community.]]
 
 #block(width: 100%, above: 6pt)[
 #list(
@@ -251,17 +298,20 @@ Elected to help advance quality engineering practices, testing frameworks, mento
 
 #block(width: 100%, above: 4pt)[#text(size: 9.8pt, weight: "semibold", fill: accent)[Full-Stack Software Engineer | 2025]]
 
-#block(width: 100%, above: 5pt)[An AI-assisted real-estate discovery experience that turns natural-language preferences into focused property results.]
+#block(width: 100%, above: 5pt)[An AI-assisted real-estate platform that turns natural-language intent into structured searches, retrieves live listings, and enriches grounded property results.]
 
-#block(width: 100%, above: 6pt)[#text(size: 9.4pt, fill: muted)[Tech: Next.js, React, TypeScript, Tailwind CSS, Cloudflare, Radix UI]]
+#block(width: 100%, above: 6pt)[#text(size: 9.4pt, fill: muted)[Tech: Next.js, React, TypeScript, Go, OpenAI API, PostgreSQL, Redis, Typesense, Docker, Caddy, Cloudflare]]
 
 #block(width: 100%, above: 6pt)[
 #list(
-  [Created a natural-language property search flow with city autocomplete and structured preference capture.],
-  [Developed responsive listing cards, comparison tables, image carousels, and property-detail experiences.],
-  [Built server-action boundaries for search and lead-submission integrations.],
-  [Composed accessible, reusable interface primitives with Radix UI, Tailwind CSS, and motion libraries.],
-  [Prepared the Next.js application for Cloudflare deployment with OpenNext.],
+  [Designed a RAG-style retrieval workflow that converts natural-language home preferences into validated filters, retrieves live inventory, and grounds the user experience in source property data.],
+  [Integrated OpenAI chat completions with strict JSON output for bedrooms, bathrooms, price, square footage, amenities, and property types, including graceful fallback when model output or filtered retrieval fails.],
+  [Built Go API endpoints for AI-assisted home finding, UUID-based result retrieval, and merged property-detail views across eXp Realty, Century 21, and enrichment sources.],
+  [Persisted search summaries, generated filters, result sets, sources, and timestamps in PostgreSQL with JSONB for traceability and repeatable retrieval.],
+  [Implemented layered performance controls with Redis caching, in-memory TTL caches, and a PostgreSQL-backed property-detail cache.],
+  [Added Typesense-powered city lookup, listing normalization, property-detail enrichment, and image aggregation.],
+  [Developed the Next.js interface with responsive listing cards, comparison tables, image carousels, accessible primitives, and server-action boundaries for search and lead workflows.],
+  [Containerized PostgreSQL, Redis, Typesense, the Go API, and Caddy; prepared the front end for Cloudflare deployment with OpenNext.],
 )
 ]
 ]

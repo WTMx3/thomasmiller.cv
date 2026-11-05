@@ -8,7 +8,7 @@
     "deploy": "pnpm build && wrangler deploy",
     "preview": "pnpm build && wrangler dev",
     "resume:source": "node scripts/build-resume.mjs",
-    "resume:pdf": "pnpm resume:source && typst compile resume/thomas-miller-master.typ output/pdf/thomas-miller-master-resume.pdf --pdf-standard ua-1",
+    "resume:pdf": "pnpm resume:source && typst compile resume/thomas-miller-master.typ output/pdf/thomas-miller-master-resume.pdf --pdf-standard ua-1 && node scripts/publish-resume.mjs",
     "start": "next start",
     "lint": "eslint . --fix",
     "format": "prettier --write ."
