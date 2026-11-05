@@ -152,14 +152,15 @@ const lines = [
   "  )",
   "  v(6.5pt)",
   "}",
-  "#grid(columns: (1fr, auto), gutter: 20pt, align: top,",
-  '  [#text(size: 14pt, weight: "bold", fill: ink)[' + typstText(profile.metadata.name) + "]",
-  "   #v(2pt)",
-  "   #text(size: 9.8pt, fill: muted)[" + typstText(profile.metadata.role) + "]],",
-  "  [#align(right)[#text(size: 9.2pt)[",
-  '    #link("mailto:' + typstText(profile.metadata.email) + '")[' + typstText(profile.metadata.email) + "] \\",
+  "#grid(columns: (1fr, auto), gutter: 18pt, align: top,",
+  '  [#text(size: 17pt, weight: "bold", fill: ink)[' + typstText(profile.metadata.name) + "]",
+  "   #v(3pt)",
+  "   #text(size: 9.5pt, fill: muted)[Software engineer | Product and platform development]],",
+  "  [#align(right)[#text(size: 8.5pt)[",
+  '    #link("mailto:' + profile.metadata.email + '")[' + typstText(profile.metadata.email) + "] |",
   '    #link("tel:' + typstText(profile.metadata.phoneHref) + '")[' + typstText(profile.metadata.phone) + "] \\",
-  '    #link("' + typstText(profile.metadata.website) + '")[' + typstText(profile.metadata.websiteLabel) + "]",
+  '    #link("' + typstText(profile.metadata.website) + '")[' + typstText(profile.metadata.websiteLabel) + "] |",
+  '    #link("' + typstText(profile.metadata.github) + '")[GitHub]  |  #link("' + typstText(profile.metadata.linkedin) + '")[LinkedIn]',
   "  ]]],",
   ")",
   "#v(40pt)",
@@ -180,20 +181,16 @@ const lines = [
   "#v(6pt)",
   '#text(size: 11pt, weight: "semibold", fill: ink)[' + typstText(profile.metadata.name) + "]",
   "#pagebreak()",
-  "#grid(columns: (1fr, auto), gutter: 20pt, align: top,",
-  '  [#text(size: 26.5pt, weight: "bold", fill: ink)[' + typstText(profile.metadata.name) + "]",
-  "   #v(2.5pt)",
-  '   #text(size: 11.6pt, weight: "semibold", fill: accent)[' + typstText(profile.metadata.role) + "]",
-  "   #v(2.5pt)",
-  "   #text(size: 9.4pt, fill: muted)[" + typstText(profile.metadata.tagline) + "]],",
-  "  [#align(right)[#text(size: 9.4pt)[",
-  '    #link("mailto:' + typstText(profile.metadata.email) + '")[' + typstText(profile.metadata.email) + "] \\",
+  "#grid(columns: (1fr, auto), gutter: 18pt, align: top,",
+  '  [#text(size: 26pt, weight: "bold", fill: ink)[' + typstText(profile.metadata.name) + "]],",
+  "  [#align(right)[#text(size: 8.5pt)[",
+  '    #link("mailto:' + profile.metadata.email + '")[' + typstText(profile.metadata.email) + "] |",
   '    #link("tel:' + typstText(profile.metadata.phoneHref) + '")[' + typstText(profile.metadata.phone) + "] \\",
-  '    #link("' + typstText(profile.metadata.website) + '")[' + typstText(profile.metadata.websiteLabel) + "]",
+  '    #link("' + typstText(profile.metadata.website) + '")[' + typstText(profile.metadata.websiteLabel) + "] |",
+  '    #link("' + typstText(profile.metadata.github) + '")[GitHub]  |  #link("' + typstText(profile.metadata.linkedin) + '")[LinkedIn]',
   "  ]]],",
   ")",
-  "#v(7pt)",
-  "#line(length: 100%, stroke: 0.9pt + accent)",
+  "#v(14pt)",
   '#section("Summary")',
   typstText(profile.content),
   '#section("Skills")',
@@ -266,79 +263,55 @@ if (educationEntry || leadershipEntry) {
 
 lines.push(
   "#pagebreak()",
-  '#set page(header: align(right)[#text(size: 8.2pt, weight: "semibold", fill: muted, tracking: 0.7pt)[THOMAS MILLER | EXPERIENCE]])',
+  "#set page(header: none)",
   "#set text(size: 10pt)",
-  "#set list(spacing: 4.8pt)",
+  "#set list(spacing: 5pt)",
   '#section("Employment History")',
 );
 
-for (const job of experience) {
-  const jobBulletLines = job.content.split(/\r?\n/).filter((line) => line.trimStart().startsWith("- "));
-  const splitsAcrossPages = job.slug === "web-plant-media";
-  const firstPageContent = splitsAcrossPages ? jobBulletLines.slice(0, 1).join("\n") : job.content;
-
+for (const [index, job] of experience.entries()) {
+  if (index === 2) lines.push("#pagebreak()", '#section("Employment History (continued)")');
   lines.push(
-    "#block(above: 8pt, below: 16pt, breakable: true)[",
-    "#grid(columns: (1fr, auto), gutter: 8pt,",
-    '  [#text(size: 11.8pt, weight: "bold", fill: ink)[' + typstText(job.metadata.role) + "]],",
-    "  [#text(size: 9.5pt, fill: muted)[" +
+    "#block(above: 11pt, below: 16pt, breakable: false)[",
+    "#grid(columns: (1fr, auto), gutter: 12pt, align: top,",
+    '  [#text(size: 13pt, weight: "bold", fill: ink)[' + typstText(job.metadata.role) + "]",
+    "   #v(3pt)",
+    '   #text(size: 10pt, weight: "semibold", fill: accent)[' +
+      typstText(job.metadata.company) +
+      (job.metadata.location ? " | " + typstText(job.metadata.location) : "") +
+      "]],",
+    "  [#text(size: 9.3pt, fill: muted)[" +
       typstText(job.metadata.startDate) +
       " - " +
       typstText(job.metadata.endDate) +
       "]],",
     ")",
-    "",
-    '#block(width: 100%, above: 4pt)[#text(size: 9.9pt, weight: "semibold", fill: accent)[' +
-      typstText(job.metadata.company) +
-      (job.metadata.location ? " | " + typstText(job.metadata.location) : "") +
-      "]]",
-    "",
-    "#block(width: 100%, above: 5pt, below: 3pt)[#text(size: 9.9pt, fill: body)[" +
-      typstText(job.metadata.summary) +
-      "]]",
-    "",
-    ...bulletList(firstPageContent),
+    "#v(9pt)",
+    '#text(size: 8pt, weight: "semibold", fill: muted, tracking: 0.7pt)[POSITION SUMMARY]',
+    "#v(3pt)",
+    "#text(size: 9.6pt, fill: body)[" + typstText(job.metadata.summary) + "]",
+    "#v(9pt)",
+    '#text(size: 8pt, weight: "semibold", fill: muted, tracking: 0.7pt)[SELECTED ACCOMPLISHMENTS]',
+    "#set text(size: 9.25pt)",
+    ...bulletList(job.content),
+    "#v(12pt)",
+    "#line(length: 100%, stroke: 0.5pt + rule)",
     "]",
   );
-
-  if (splitsAcrossPages) {
-    lines.push(
-      "#pagebreak()",
-      "#block(above: 4pt, below: 16pt, breakable: true)[",
-      "#grid(columns: (1fr, auto), gutter: 8pt,",
-      '  [#text(size: 11.2pt, weight: "bold", fill: ink)[' + typstText(job.metadata.role) + " (continued)]],",
-      "  [#text(size: 9.5pt, fill: muted)[" +
-        typstText(job.metadata.startDate) +
-        " - " +
-        typstText(job.metadata.endDate) +
-        "]],",
-      ")",
-      '#block(width: 100%, above: 4pt)[#text(size: 9.9pt, weight: "semibold", fill: accent)[' +
-        typstText(job.metadata.company) +
-        (job.metadata.location ? " | " + typstText(job.metadata.location) : "") +
-        "]]",
-      ...bulletList(jobBulletLines.slice(1).join("\n")),
-      "]",
-    );
-  }
 }
 
-for (const [index, project] of projects.entries()) {
+for (const project of projects) {
   const engineeringFocus = sectionText(project.content, "Engineering focus");
   const coverImage = String(project.metadata.coverImage ?? "").replace(/^\//, "");
-  const portfolioLabel = `PORTFOLIO ${String(index + 1).padStart(2, "0")} / ${String(projects.length).padStart(2, "0")}`;
+  const galleryImages = Array.isArray(project.metadata.galleryImages) ? project.metadata.galleryImages.slice(0, 2) : [];
+  const galleryCaptions = Array.isArray(project.metadata.galleryCaptions) ? project.metadata.galleryCaptions : [];
 
   lines.push(
     "#pagebreak()",
-    '#set page(header: align(right)[#text(size: 8.2pt, weight: "semibold", fill: muted, tracking: 0.7pt)[' +
-      portfolioLabel +
-      "]])",
+    "#set page(header: none)",
     "#set text(size: 9.2pt)",
     "#set list(spacing: 4.2pt)",
-    "#grid(columns: (1fr, auto), gutter: 14pt, align: bottom,",
-    '  [#text(size: 22pt, weight: "bold", fill: ink)[' + typstText(project.metadata.title) + "]],",
-    '  [#text(size: 8.8pt, weight: "semibold", fill: muted)[' + typstText(project.metadata.status) + "]],",
-    ")",
+    '#text(size: 20pt, weight: "bold", fill: ink)[' + typstText(project.metadata.title) + "]",
     "#v(4pt)",
     '#text(size: 9.2pt, weight: "semibold", fill: accent)[' +
       typstText(project.metadata.role) +
@@ -352,10 +325,10 @@ for (const [index, project] of projects.entries()) {
 
   if (coverImage) {
     lines.push(
-      '#block(width: 100%, height: 124pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[',
+    '#block(width: 100%, height: 110pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[',
       '  #image("../public/' +
         typstText(coverImage) +
-        '", width: 100%, height: 124pt, fit: "cover", alt: "' +
+        '", width: 100%, height: 110pt, fit: "cover", alt: "' +
         typstText(project.metadata.title) +
         ' product interface")',
       "]",
@@ -377,45 +350,39 @@ for (const [index, project] of projects.entries()) {
     '  [#text(size: 8.2pt, weight: "semibold", fill: muted, tracking: 0.75pt)[TECHNOLOGIES]',
     "   #v(4pt)",
     "   #text(size: 8.75pt, fill: body)[" + project.metadata.technologies.map(typstText).join(", ") + "]",
-    "   #v(14pt)",
+    "   #v(9pt)",
     '   #text(size: 8.2pt, weight: "semibold", fill: muted, tracking: 0.75pt)[ENGINEERING FOCUS]',
     "   #v(4pt)",
     "   #text(size: 8.75pt, fill: body)[" + typstText(engineeringFocus) + "]",
-    "   #v(14pt)",
+    "   #v(9pt)",
     '   #text(size: 8.2pt, weight: "semibold", fill: muted, tracking: 0.75pt)[SOURCE]',
     "   #v(4pt)",
-    '   #link("' +
-      typstText(project.metadata.repositoryUrl) +
-      '")[#text(size: 8.6pt, fill: accent)[View the sanitized repository]]',
+    '   #link("' + typstText(project.metadata.repositoryUrl) + '")[#text(size: 8.1pt, fill: accent)[' + typstText(project.metadata.repositoryUrl) + ']]',
     "  ],",
     ")",
   );
 
-  const galleryImages = Array.isArray(project.metadata.galleryImages) ? project.metadata.galleryImages.slice(0, 3) : [];
-  const galleryCaptions = Array.isArray(project.metadata.galleryCaptions) ? project.metadata.galleryCaptions : [];
-
   if (galleryImages.length) {
     lines.push(
-      "#v(14pt)",
+      "#v(11pt)",
       '#text(size: 8.2pt, weight: "semibold", fill: muted, tracking: 0.75pt)[PRODUCT VIEWS]',
-      "#v(5pt)",
-      "#grid(columns: (" + galleryImages.map(() => "1fr").join(", ") + "), gutter: 8pt,",
+      "#v(6pt)",
+      "#grid(columns: (1fr, 1fr), gutter: 12pt,",
     );
 
     galleryImages.forEach((imagePath, galleryIndex) => {
       const normalizedPath = String(imagePath).replace(/^\//, "");
       const alt = galleryCaptions[galleryIndex] ?? `${project.metadata.title} product view ${galleryIndex + 1}`;
       lines.push(
-        '  [#block(width: 100%, height: 54pt, clip: true, radius: 4pt, fill: rgb("#f1f2f3"))[',
+        '  [#block(width: 100%, height: 88pt, clip: true, radius: 4pt, fill: rgb("#f1f2f3"))[',
         '    #image("../public/' +
           typstText(normalizedPath) +
-          '", width: 100%, height: 54pt, fit: "cover", alt: "' +
+          '", width: 100%, height: 88pt, fit: "cover", alt: "' +
           typstText(alt) +
           '")',
         "  ]],",
       );
     });
-
     lines.push(")");
   }
 }

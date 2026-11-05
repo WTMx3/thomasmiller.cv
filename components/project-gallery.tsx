@@ -47,17 +47,17 @@ export default function ProjectGallery({ items, projectTitle }: { items: Project
       <div className="grid gap-5 sm:grid-cols-2">
         {items.map((item, index) => (
           <button
-            className="group overflow-hidden rounded-xl border border-slate-200 bg-white text-left shadow-sm transition hover:-translate-y-0.5 hover:border-slate-300 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900 dark:hover:border-slate-700"
+            className={`group overflow-hidden rounded-xl border border-slate-200 bg-white text-left shadow-sm transition hover:-translate-y-0.5 hover:border-slate-300 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900 dark:hover:border-slate-700 ${index === 0 ? "sm:col-span-2" : ""}`}
             key={item.src}
             onClick={() => setActiveIndex(index)}
             type="button"
           >
-            <span className="relative block aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-950">
+            <span className={`relative block overflow-hidden bg-slate-100 dark:bg-slate-950 ${index === 0 ? "aspect-[4/3] sm:aspect-[16/9]" : "aspect-[4/3]"}`}>
               <Image
                 alt={`${projectTitle}: ${item.caption}`}
                 className="object-cover object-top transition duration-500 group-hover:scale-[1.02]"
                 fill
-                sizes="(min-width: 1024px) 460px, (min-width: 640px) 50vw, 100vw"
+                sizes={index === 0 ? "(min-width: 1024px) 980px, 100vw" : "(min-width: 1024px) 470px, (min-width: 640px) 50vw, 100vw"}
                 src={item.src}
               />
             </span>
