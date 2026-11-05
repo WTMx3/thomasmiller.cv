@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 type Profile = {
@@ -46,6 +47,7 @@ type Project = {
   summary: string;
   technologies: string[];
   repositoryUrl: string;
+  coverImage: string;
 };
 
 export type ResumeJourneyData = {
@@ -762,26 +764,14 @@ function ProjectsStage({ data }: { data: ResumeJourneyData }) {
           key={project.slug}
           role="tabpanel"
         >
-          <div className="project-detail__visual" aria-hidden="true">
-            <div className="project-terminal">
-              <div>
-                <i />
-                <i />
-                <i />
-              </div>
-              <p>
-                <span>$</span> launch {project.slug}
-              </p>
-              <p>
-                <span>→</span> architecture ready
-              </p>
-              <p>
-                <span>→</span> services connected
-              </p>
-              <p className="project-terminal__success">
-                <span>✓</span> system online
-              </p>
-            </div>
+          <div className="project-detail__visual">
+            <Image
+              alt={`${project.title} interface`}
+              className="project-detail__image"
+              fill
+              sizes="(min-width: 900px) 35vw, 100vw"
+              src={project.coverImage}
+            />
             <span className="project-detail__status">{project.status}</span>
           </div>
 

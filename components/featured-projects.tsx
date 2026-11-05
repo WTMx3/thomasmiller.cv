@@ -19,6 +19,7 @@ export default function FeaturedProjects() {
               summary: String(project.metadata.summary),
               status: String(project.metadata.status),
               technologies: project.metadata.technologies as string[],
+              coverImage: String(project.metadata.coverImage),
             }}
           />
         ))}

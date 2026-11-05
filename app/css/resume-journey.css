@@ -1112,12 +1112,14 @@
 .project-detail__visual::before {
   position: absolute;
   inset: 0;
-  background-image:
-    linear-gradient(rgba(110, 173, 235, 0.09) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(110, 173, 235, 0.09) 1px, transparent 1px);
-  background-size: 26px 26px;
+  z-index: 1;
+  background: linear-gradient(to top, rgba(4, 12, 27, 0.5), transparent 48%);
   content: "";
-  mask-image: radial-gradient(circle, black, transparent 75%);
+}
+
+.project-detail__image {
+  object-fit: cover;
+  object-position: top;
 }
 .project-terminal {
   z-index: 1;
@@ -1164,6 +1166,7 @@
   position: absolute;
   right: 14px;
   bottom: 14px;
+  z-index: 2;
   padding: 6px 9px;
   border: 1px solid rgba(137, 184, 231, 0.18);
   border-radius: 999px;

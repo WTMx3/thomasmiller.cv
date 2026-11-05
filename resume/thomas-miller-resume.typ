@@ -58,8 +58,8 @@
    #v(2pt)
    #text(size: 9.2pt, fill: muted)[Enterprise Platforms | Configuration Delivery | Reliability]],
   [#align(right)[#text(size: 9.2pt)[
-    #link("mailto:wthomasmiii@gmail.com")[wthomasmiii\@gmail.com] \
-    #link("tel:+19727959884")[(972) 795-9884] \
+    #link("mailto:mail@thomasmiller.cv")[mail\@thomasmiller.cv] \
+    #link("tel:+12143991411")[214-399-1411] \
     #link("https://thomasmiller.cv")[thomasmiller.cv]
   ]]],
 )

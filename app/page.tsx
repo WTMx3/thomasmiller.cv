@@ -69,6 +69,7 @@ export default function Home() {
       summary: String(entry.metadata.summary),
       technologies: entry.metadata.technologies as string[],
       repositoryUrl: String(entry.metadata.repositoryUrl),
+      coverImage: String(entry.metadata.coverImage),
     })),
     leadership: {
       role: String(leadershipEntry.metadata.role),
