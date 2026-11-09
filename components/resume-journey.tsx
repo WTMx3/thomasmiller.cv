@@ -777,6 +777,16 @@ function ProjectsStage({ data }: { data: ResumeJourneyData }) {
           <div className="project-detail__visual">
             <Image alt={images[selectedImage].caption} className="project-detail__image" fill priority sizes="(min-width: 900px) 70vw, 100vw" src={images[selectedImage].src} />
           </div>
+          <div className="project-detail__media-strip">
+            <div className="project-detail__gallery" aria-label={`${project.title} screenshots`}>
+              {images.map((item, index) => (
+                <button aria-label={`Show ${item.caption}`} aria-pressed={selectedImage === index} className={selectedImage === index ? "is-active" : ""} key={item.src} onClick={() => setSelectedImage(index)} type="button">
+                  <Image alt="" fill sizes="120px" src={item.src} />
+                </button>
+              ))}
+            </div>
+            <p className="project-detail__caption">{images[selectedImage].caption}</p>
+          </div>
 
           <div className="project-detail__content">
             <div className="project-detail__meta">
@@ -801,14 +811,6 @@ function ProjectsStage({ data }: { data: ResumeJourneyData }) {
                 ))}
               </ul>
             </div>
-            <div className="project-detail__gallery" aria-label={`${project.title} screenshots`}>
-              {images.map((item, index) => (
-                <button aria-label={`Show ${item.caption}`} aria-pressed={selectedImage === index} className={selectedImage === index ? "is-active" : ""} key={item.src} onClick={() => setSelectedImage(index)} type="button">
-                  <Image alt="" fill sizes="120px" src={item.src} />
-                </button>
-              ))}
-            </div>
-            <p className="project-detail__caption">{images[selectedImage].caption}</p>
             <div className="project-links">
               <a className="journey-text-link" href={project.repositoryUrl} rel="noreferrer" target="_blank">
                 View repository <ExternalIcon />

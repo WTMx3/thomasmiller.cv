@@ -4,7 +4,7 @@ import Experience from "@/components/experience";
 
 export const metadata = {
   title: "About",
-  description: "About Thomas Miller, a senior software engineer focused on reliable platforms and secure systems.",
+  description: "About Thomas Miller III, a senior software engineer focused on reliable platforms and secure systems.",
 };
 
 export default function About() {
@@ -16,7 +16,7 @@ export default function About() {
             <h1 className="h1 font-aspekta mb-5">I turn complex systems into dependable products.</h1>
             <div className="space-y-4 text-lg text-slate-500 dark:text-slate-400">
               <p>
-                I&apos;m Thomas Miller, a senior software engineer working across platform engineering, cloud
+                I&apos;m Thomas Miller III, a senior software engineer working across platform engineering, cloud
                 infrastructure, DevOps, site reliability, full-stack development, and application security.
               </p>
               <p>

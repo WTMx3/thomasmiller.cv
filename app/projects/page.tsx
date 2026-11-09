@@ -4,7 +4,7 @@ import ProjectCard from "../project-card";
 
 export const metadata = {
   title: "Portfolio",
-  description: "Selected software engineering and platform projects by Thomas Miller.",
+  description: "Selected software engineering and platform projects by Thomas Miller III.",
 };
 
 export default function Projects() {

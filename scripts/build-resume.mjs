@@ -167,9 +167,7 @@ const lines = [
   '    #link("' + typstText(profile.metadata.github) + '")[github.com/WTMx3]  |  #link("' + typstText(profile.metadata.linkedin) + '")[linkedin.com/in/wtmx3]',
   "  ]]],",
   ")",
-  "#v(40pt)",
-  '#text(size: 22pt, weight: "bold", fill: ink)[Cover letter]',
-  "#v(27pt)",
+  "#v(54pt)",
   '#text(size: 11pt, weight: "semibold", fill: ink)[Dear Hiring Team,]',
   ...coverParagraphs.flatMap((paragraph) => [
     "#v(14pt)",
@@ -314,19 +312,6 @@ for (const project of projects) {
     "#v(20pt)",
   );
 
-  if (coverImage) {
-    lines.push(
-    '#block(width: 100%, height: 225pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[',
-      '  #image("../public/' +
-        typstText(coverImage) +
-        '", width: 100%, height: 225pt, fit: "cover", alt: "' +
-        typstText(project.metadata.title) +
-        ' product interface")',
-      "]",
-      "#v(12pt)",
-    );
-  }
-
   lines.push(
     "#grid(columns: (1.58fr, 1fr), gutter: 22pt, align: top,",
     '  [#text(size: 8.2pt, weight: "semibold", fill: muted, tracking: 0.75pt)[OVERVIEW]',
@@ -353,22 +338,27 @@ for (const project of projects) {
     ")",
   );
 
-  if (galleryImages.length) {
+  const screenshots = [
+    ...(coverImage ? [{ path: coverImage, caption: `${project.metadata.title} main interface` }] : []),
+    ...galleryImages.map((imagePath, galleryIndex) => ({
+      path: String(imagePath).replace(/^\//, ""),
+      caption: galleryCaptions[galleryIndex] ?? `${project.metadata.title} product view ${galleryIndex + 1}`,
+    })),
+  ];
+  if (screenshots.length) {
     lines.push(
       "#pagebreak()",
       '#text(size: 20pt, weight: "bold", fill: ink)[' + typstText(project.metadata.title) + "]",
-      "#v(22pt)",
+      "#v(15pt)",
     );
-    galleryImages.forEach((imagePath, galleryIndex) => {
-      const normalizedPath = String(imagePath).replace(/^\//, "");
-      const alt = galleryCaptions[galleryIndex] ?? `${project.metadata.title} product view ${galleryIndex + 1}`;
+    screenshots.forEach(({ path: imagePath, caption: alt }) => {
       lines.push(
-        '#block(width: 100%, height: 270pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[',
-        '  #image("../public/' + typstText(normalizedPath) + '", width: 100%, height: 270pt, fit: "cover", alt: "' + typstText(alt) + '")',
+        '#block(width: 100%, height: 175pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[',
+        '  #image("../public/' + typstText(imagePath) + '", width: 100%, height: 175pt, fit: "cover", alt: "' + typstText(alt) + '")',
         "]",
-        "#v(6pt)",
+        "#v(4pt)",
         '#text(size: 8.6pt, fill: muted)[' + typstText(alt) + "]",
-        "#v(13pt)",
+        "#v(9pt)",
       );
     });
   }

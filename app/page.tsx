@@ -3,7 +3,7 @@ import ResumeJourney, { type ResumeJourneyData } from "@/components/resume-journ
 
 export const metadata = {
   title: "Interactive Resume",
-  description: "Explore Thomas Miller's experience, skills, and portfolio through an interactive resume journey.",
+  description: "Explore Thomas Miller III's experience, skills, and portfolio through an interactive resume journey.",
 };
 
 function markdownText(value: string) {

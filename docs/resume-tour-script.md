@@ -1,4 +1,4 @@
-# Thomas Miller - Quick Resume Tour Script
+# Thomas Miller III - Quick Resume Tour Script
 
 ## 1. Profile
 

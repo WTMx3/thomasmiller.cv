@@ -1224,9 +1224,12 @@
 .project-detail__gallery {
   display: flex;
   gap: 9px;
-  margin-top: 28px;
   overflow-x: auto;
   padding: 4px 2px 8px;
+}
+.project-detail__media-strip {
+  padding: 12px clamp(24px, 3vw, 36px) 13px;
+  border-bottom: 1px solid var(--journey-line);
 }
 .project-detail__gallery button {
   position: relative;
@@ -1239,7 +1242,7 @@
 }
 .project-detail__gallery button.is-active { border-color: var(--journey-blue); }
 .project-detail__gallery img { object-fit: cover; object-position: top; }
-.project-detail__caption { margin-top: 3px !important; font-size: 12px !important; }
+.project-detail__caption { margin-top: 3px; color: #5d7189; font-size: 12px; }
 .project-tech {
   margin-top: 23px;
 }

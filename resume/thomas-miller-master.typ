@@ -1,6 +1,6 @@
 #set document(
   title: "WTM3 Resume",
-  author: ("Thomas Miller",),
+  author: ("Thomas Miller III",),
   description: "Platform-focused engineer with more than 10 years of experience building full-stack products and the systems that keep them reliable: cloud infrastructure, CI/CD, observability, identity and access management, scalable architecture, incident response, and technical leadership.",
 )
 #set page(
@@ -23,7 +23,7 @@
   v(6.5pt)
 }
 #grid(columns: (1fr, auto), gutter: 18pt, align: top,
-  [#text(size: 17pt, weight: "bold", fill: ink)[Thomas Miller]],
+  [#text(size: 17pt, weight: "bold", fill: ink)[Thomas Miller III]],
   [#align(right)[#text(size: 8.5pt)[
     #link("mailto:mail@thomasmiller.cv")[mail\@thomasmiller.cv] |
     #link("tel:+12143991411")[214-399-1411] \
@@ -31,9 +31,7 @@
     #link("https://github.com/WTMx3")[github.com/WTMx3]  |  #link("https://www.linkedin.com/in/wtmx3")[linkedin.com/in/wtmx3]
   ]]],
 )
-#v(40pt)
-#text(size: 22pt, weight: "bold", fill: ink)[Cover letter]
-#v(27pt)
+#v(54pt)
 #text(size: 11pt, weight: "semibold", fill: ink)[Dear Hiring Team,]
 #v(14pt)
 #block(width: 100%)[#set text(size: 10.5pt); #set par(leading: 1.15em); I am a senior software engineer who turns ambiguous product needs into dependable systems. My work spans product and platform engineering: customer-facing applications, APIs, cloud infrastructure, delivery automation, observability, and the operating practices that keep software healthy after launch.]
@@ -46,10 +44,10 @@
 #v(18pt)
 #text(size: 10.5pt)[Sincerely,]
 #v(6pt)
-#text(size: 11pt, weight: "semibold", fill: ink)[Thomas Miller]
+#text(size: 11pt, weight: "semibold", fill: ink)[Thomas Miller III]
 #pagebreak()
 #grid(columns: (1fr, auto), gutter: 18pt, align: top,
-  [#text(size: 26pt, weight: "bold", fill: ink)[Thomas Miller]],
+  [#text(size: 26pt, weight: "bold", fill: ink)[Thomas Miller III]],
   [#align(right)[#text(size: 8.5pt)[
     #link("mailto:mail@thomasmiller.cv")[mail\@thomasmiller.cv] |
     #link("tel:+12143991411")[214-399-1411] \
@@ -350,10 +348,6 @@ Platform-focused engineer with more than 10 years of experience building full-st
 #set list(spacing: 4.2pt)
 #text(size: 20pt, weight: "bold", fill: ink)[EazyHQ]
 #v(20pt)
-#block(width: 100%, height: 225pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
-  #image("../public/project-media/eazyhq/workflow-canvas.png", width: 100%, height: 225pt, fit: "cover", alt: "EazyHQ product interface")
-]
-#v(12pt)
 #grid(columns: (1.58fr, 1fr), gutter: 22pt, align: top,
   [#text(size: 8.2pt, weight: "semibold", fill: muted, tracking: 0.75pt)[OVERVIEW]
    #v(4pt)
@@ -388,29 +382,31 @@ Platform-focused engineer with more than 10 years of experience building full-st
 )
 #pagebreak()
 #text(size: 20pt, weight: "bold", fill: ink)[EazyHQ]
-#v(22pt)
-#block(width: 100%, height: 270pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
-  #image("../public/project-media/eazyhq/task-performance.png", width: 100%, height: 270pt, fit: "cover", alt: "Task performance and workload analytics")
+#v(15pt)
+#block(width: 100%, height: 175pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
+  #image("../public/project-media/eazyhq/workflow-canvas.png", width: 100%, height: 175pt, fit: "cover", alt: "EazyHQ main interface")
 ]
-#v(6pt)
+#v(4pt)
+#text(size: 8.6pt, fill: muted)[EazyHQ main interface]
+#v(9pt)
+#block(width: 100%, height: 175pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
+  #image("../public/project-media/eazyhq/task-performance.png", width: 100%, height: 175pt, fit: "cover", alt: "Task performance and workload analytics")
+]
+#v(4pt)
 #text(size: 8.6pt, fill: muted)[Task performance and workload analytics]
-#v(13pt)
-#block(width: 100%, height: 270pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
-  #image("../public/project-media/eazyhq/campaign-performance.png", width: 100%, height: 270pt, fit: "cover", alt: "Campaign delivery and engagement analytics")
+#v(9pt)
+#block(width: 100%, height: 175pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
+  #image("../public/project-media/eazyhq/campaign-performance.png", width: 100%, height: 175pt, fit: "cover", alt: "Campaign delivery and engagement analytics")
 ]
-#v(6pt)
+#v(4pt)
 #text(size: 8.6pt, fill: muted)[Campaign delivery and engagement analytics]
-#v(13pt)
+#v(9pt)
 #pagebreak()
 #set page(header: none)
 #set text(size: 9.2pt)
 #set list(spacing: 4.2pt)
 #text(size: 20pt, weight: "bold", fill: ink)[Listings+]
 #v(20pt)
-#block(width: 100%, height: 225pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
-  #image("../public/project-media/listingsplus/property-discovery.png", width: 100%, height: 225pt, fit: "cover", alt: "Listings+ product interface")
-]
-#v(12pt)
 #grid(columns: (1.58fr, 1fr), gutter: 22pt, align: top,
   [#text(size: 8.2pt, weight: "semibold", fill: muted, tracking: 0.75pt)[OVERVIEW]
    #v(4pt)
@@ -445,29 +441,31 @@ Platform-focused engineer with more than 10 years of experience building full-st
 )
 #pagebreak()
 #text(size: 20pt, weight: "bold", fill: ink)[Listings+]
-#v(22pt)
-#block(width: 100%, height: 270pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
-  #image("../public/project-media/listingsplus/property-and-call-workspace.png", width: 100%, height: 270pt, fit: "cover", alt: "Property detail, guided matching, and call context")
+#v(15pt)
+#block(width: 100%, height: 175pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
+  #image("../public/project-media/listingsplus/property-discovery.png", width: 100%, height: 175pt, fit: "cover", alt: "Listings+ main interface")
 ]
-#v(6pt)
+#v(4pt)
+#text(size: 8.6pt, fill: muted)[Listings+ main interface]
+#v(9pt)
+#block(width: 100%, height: 175pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
+  #image("../public/project-media/listingsplus/property-and-call-workspace.png", width: 100%, height: 175pt, fit: "cover", alt: "Property detail, guided matching, and call context")
+]
+#v(4pt)
 #text(size: 8.6pt, fill: muted)[Property detail, guided matching, and call context]
-#v(13pt)
-#block(width: 100%, height: 270pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
-  #image("../public/project-media/listingsplus/service-area-map.png", width: 100%, height: 270pt, fit: "cover", alt: "Geographic service-area visualization")
+#v(9pt)
+#block(width: 100%, height: 175pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
+  #image("../public/project-media/listingsplus/service-area-map.png", width: 100%, height: 175pt, fit: "cover", alt: "Geographic service-area visualization")
 ]
-#v(6pt)
+#v(4pt)
 #text(size: 8.6pt, fill: muted)[Geographic service-area visualization]
-#v(13pt)
+#v(9pt)
 #pagebreak()
 #set page(header: none)
 #set text(size: 9.2pt)
 #set list(spacing: 4.2pt)
 #text(size: 20pt, weight: "bold", fill: ink)[DOCHUB - Secure Document Sharing Platform]
 #v(20pt)
-#block(width: 100%, height: 225pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
-  #image("../public/project-media/dochub/document-access.png", width: 100%, height: 225pt, fit: "cover", alt: "DOCHUB - Secure Document Sharing Platform product interface")
-]
-#v(12pt)
 #grid(columns: (1.58fr, 1fr), gutter: 22pt, align: top,
   [#text(size: 8.2pt, weight: "semibold", fill: muted, tracking: 0.75pt)[OVERVIEW]
    #v(4pt)
@@ -502,16 +500,22 @@ Platform-focused engineer with more than 10 years of experience building full-st
 )
 #pagebreak()
 #text(size: 20pt, weight: "bold", fill: ink)[DOCHUB - Secure Document Sharing Platform]
-#v(22pt)
-#block(width: 100%, height: 270pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
-  #image("../public/project-media/dochub/workspace-documents.png", width: 100%, height: 270pt, fit: "cover", alt: "Workspace document organization and publishing")
+#v(15pt)
+#block(width: 100%, height: 175pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
+  #image("../public/project-media/dochub/document-access.png", width: 100%, height: 175pt, fit: "cover", alt: "DOCHUB - Secure Document Sharing Platform main interface")
 ]
-#v(6pt)
+#v(4pt)
+#text(size: 8.6pt, fill: muted)[DOCHUB - Secure Document Sharing Platform main interface]
+#v(9pt)
+#block(width: 100%, height: 175pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
+  #image("../public/project-media/dochub/workspace-documents.png", width: 100%, height: 175pt, fit: "cover", alt: "Workspace document organization and publishing")
+]
+#v(4pt)
 #text(size: 8.6pt, fill: muted)[Workspace document organization and publishing]
-#v(13pt)
-#block(width: 100%, height: 270pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
-  #image("../public/project-media/dochub/document-editor.png", width: 100%, height: 270pt, fit: "cover", alt: "Markdown authoring with live preview")
+#v(9pt)
+#block(width: 100%, height: 175pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
+  #image("../public/project-media/dochub/document-editor.png", width: 100%, height: 175pt, fit: "cover", alt: "Markdown authoring with live preview")
 ]
-#v(6pt)
+#v(4pt)
 #text(size: 8.6pt, fill: muted)[Markdown authoring with live preview]
-#v(13pt)
+#v(9pt)

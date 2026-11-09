@@ -7,7 +7,7 @@ import ProfessionalSkills from "@/components/professional-skills";
 
 export const metadata = {
   title: "Resume",
-  description: "Thomas Miller's professional experience, technical skills, education, and engineering leadership.",
+  description: "Thomas Miller III's professional experience, technical skills, education, and engineering leadership.",
 };
 
 export default function Resume() {

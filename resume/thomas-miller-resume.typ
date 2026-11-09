@@ -1,7 +1,7 @@
 #set document(
-  title: "Thomas Miller Resume",
-  author: ("Thomas Miller",),
-  description: "Professional resume for Thomas Miller.",
+  title: "Thomas Miller III Resume",
+  author: ("Thomas Miller III",),
+  description: "Professional resume for Thomas Miller III.",
 )
 
 #set page(
@@ -52,7 +52,7 @@
 ]
 
 #grid(columns: (1fr, auto), gutter: 20pt, align: top,
-  [#text(size: 25.5pt, weight: "bold", fill: ink)[Thomas Miller]
+  [#text(size: 25.5pt, weight: "bold", fill: ink)[Thomas Miller III]
    #v(2pt)
    #text(size: 11.4pt, weight: "semibold", fill: accent)[Senior Software Engineer]
    #v(2pt)
