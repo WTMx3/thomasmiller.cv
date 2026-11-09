@@ -20,6 +20,11 @@ function markdownBullets(value: string) {
     .map((line) => markdownText(line.replace(/^-\s+/, "")));
 }
 
+function markdownSection(value: string, heading: string) {
+  const section = value.split(new RegExp(`^## ${heading}\\s*$`, "im"))[1];
+  return section ? markdownText(section.split(/^## /m)[0]) : "";
+}
+
 export default function Home() {
   const profileEntry = getContentCollection("profile")[0];
   const educationEntry = getContentCollection("education")[0];
@@ -70,6 +75,12 @@ export default function Home() {
       technologies: entry.metadata.technologies as string[],
       repositoryUrl: String(entry.metadata.repositoryUrl),
       coverImage: String(entry.metadata.coverImage),
+      achievements: markdownBullets(entry.content),
+      engineeringFocus: markdownSection(entry.content, "Engineering focus"),
+      galleryImages: ((entry.metadata.galleryImages ?? []) as string[]).map((src, index) => ({
+        src,
+        caption: ((entry.metadata.galleryCaptions ?? []) as string[])[index] ?? `Project view ${index + 1}`,
+      })),
     })),
     leadership: {
       role: String(leadershipEntry.metadata.role),

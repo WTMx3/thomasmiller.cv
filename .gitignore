@@ -12,6 +12,7 @@
 /.next/
 /out/
 /tmp/
+/.wrangler/
 
 # production
 /build

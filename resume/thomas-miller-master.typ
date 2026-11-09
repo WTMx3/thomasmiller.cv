@@ -1,5 +1,5 @@
 #set document(
-  title: "Thomas Miller - Portfolio Resume",
+  title: "WTM3 Resume",
   author: ("Thomas Miller",),
   description: "Platform-focused engineer with more than 10 years of experience building full-stack products and the systems that keep them reliable: cloud infrastructure, CI/CD, observability, identity and access management, scalable architecture, incident response, and technical leadership.",
 )
@@ -12,7 +12,6 @@
 #let ink = rgb("#18191b")
 #let body = rgb("#42454a")
 #let muted = rgb("#70747a")
-#let rule = rgb("#d7d7d4")
 #let accent = rgb("#2d2f32")
 #set text(font: ("Segoe UI", "Arial"), size: 10pt, fill: body)
 #set par(leading: 1em)
@@ -20,31 +19,21 @@
 #show link: set text(fill: accent)
 #let section(title) = {
   v(11pt)
-  grid(columns: (auto, 1fr), gutter: 9pt, align: horizon,
-    text(size: 11.4pt, weight: "bold", fill: ink, tracking: 0.55pt, upper(title)),
-    line(length: 100%, stroke: 0.55pt + rule),
-  )
+  text(size: 11.4pt, weight: "bold", fill: ink, tracking: 0.55pt, upper(title))
   v(6.5pt)
 }
 #grid(columns: (1fr, auto), gutter: 18pt, align: top,
-  [#text(size: 17pt, weight: "bold", fill: ink)[Thomas Miller]
-   #v(3pt)
-   #text(size: 9.5pt, fill: muted)[Software engineer | Product and platform development]],
+  [#text(size: 17pt, weight: "bold", fill: ink)[Thomas Miller]],
   [#align(right)[#text(size: 8.5pt)[
     #link("mailto:mail@thomasmiller.cv")[mail\@thomasmiller.cv] |
     #link("tel:+12143991411")[214-399-1411] \
     #link("https://thomasmiller.cv")[thomasmiller.cv] |
-    #link("https://github.com/WTMx3")[GitHub]  |  #link("https://www.linkedin.com/in/wtmx3")[LinkedIn]
+    #link("https://github.com/WTMx3")[github.com/WTMx3]  |  #link("https://www.linkedin.com/in/wtmx3")[linkedin.com/in/wtmx3]
   ]]],
 )
 #v(40pt)
-#grid(columns: (1fr, auto), gutter: 18pt, align: bottom,
-  [#text(size: 22pt, weight: "bold", fill: ink)[Cover letter]],
-  [#text(size: 9.6pt, fill: muted)[November 5, 2026]],
-)
-#v(9pt)
-#line(length: 100%, stroke: 0.8pt + accent)
-#v(28pt)
+#text(size: 22pt, weight: "bold", fill: ink)[Cover letter]
+#v(27pt)
 #text(size: 11pt, weight: "semibold", fill: ink)[Dear Hiring Team,]
 #v(14pt)
 #block(width: 100%)[#set text(size: 10.5pt); #set par(leading: 1.15em); I am a senior software engineer who turns ambiguous product needs into dependable systems. My work spans product and platform engineering: customer-facing applications, APIs, cloud infrastructure, delivery automation, observability, and the operating practices that keep software healthy after launch.]
@@ -65,7 +54,7 @@
     #link("mailto:mail@thomasmiller.cv")[mail\@thomasmiller.cv] |
     #link("tel:+12143991411")[214-399-1411] \
     #link("https://thomasmiller.cv")[thomasmiller.cv] |
-    #link("https://github.com/WTMx3")[GitHub]  |  #link("https://www.linkedin.com/in/wtmx3")[LinkedIn]
+    #link("https://github.com/WTMx3")[github.com/WTMx3]  |  #link("https://www.linkedin.com/in/wtmx3")[linkedin.com/in/wtmx3]
   ]]],
 )
 #v(14pt)
@@ -152,9 +141,7 @@ Platform-focused engineer with more than 10 years of experience building full-st
     #text(size: 8.55pt, fill: body)[Agile, Scrum, Cross-Functional Collaboration, Mentoring]
   ]],
 )
-#v(11pt)
-#line(length: 100%, stroke: 0.55pt + rule)
-#v(8pt)
+#v(18pt)
 #grid(columns: (1fr, 1fr), gutter: 22pt,
   [#text(size: 8.1pt, weight: "semibold", fill: muted, tracking: 0.75pt)[EDUCATION]
    #v(3pt)
@@ -189,20 +176,34 @@ Platform-focused engineer with more than 10 years of experience building full-st
 #text(size: 9.6pt, fill: body)[Own the complete software product lifecycle across web, mobile, cloud, DevOps, reliability, and security.]
 #v(9pt)
 #text(size: 8pt, weight: "semibold", fill: muted, tracking: 0.7pt)[SELECTED ACCOMPLISHMENTS]
-#set text(size: 9.25pt)
-#block(width: 100%, above: 6pt)[
-#list(
-  [Led products from concept and client discovery through architecture, full-stack implementation, launch, monitoring, and ongoing support.],
-  [Built customer-facing web and mobile applications, APIs, automation systems, and internal platforms across cloud and containerized environments.],
-  [Created GitHub Actions release pipelines for AWS, Cloudflare, Docker, web, and mobile targets; reduced release time by 40% while helping maintain 99.9% uptime.],
-  [Established production monitoring, alerting, and incident workflows with Prometheus, Grafana, and Kibana, carrying corrective work through deployment.],
-  [Strengthened platform security with least-privilege AWS IAM policies, access-risk remediation, and OAuth 2.0, SSO, 2FA, and secure session flows.],
-  [Turned ambiguous business requests into executable roadmaps and production systems while coordinating engineering, product, operations, and customers.],
+#v(7pt)
+#grid(columns: (9pt, 1fr), column-gutter: 7pt, align: top,
+  [#text(size: 9pt, fill: accent)[•]],
+  [#block[#set par(leading: 1.08em); #text(size: 9.25pt, fill: body)[Led products from concept and client discovery through architecture, full-stack implementation, launch, monitoring, and ongoing support.]]],
+)
+#v(4pt)
+#grid(columns: (9pt, 1fr), column-gutter: 7pt, align: top,
+  [#text(size: 9pt, fill: accent)[•]],
+  [#block[#set par(leading: 1.08em); #text(size: 9.25pt, fill: body)[Built customer-facing web and mobile applications, APIs, automation systems, and internal platforms across cloud and containerized environments.]]],
+)
+#v(4pt)
+#grid(columns: (9pt, 1fr), column-gutter: 7pt, align: top,
+  [#text(size: 9pt, fill: accent)[•]],
+  [#block[#set par(leading: 1.08em); #text(size: 9.25pt, fill: body)[Created GitHub Actions release pipelines for AWS, Cloudflare, Docker, web, and mobile targets; reduced release time by 40% while helping maintain 99.9% uptime.]]],
+)
+#v(4pt)
+#grid(columns: (9pt, 1fr), column-gutter: 7pt, align: top,
+  [#text(size: 9pt, fill: accent)[•]],
+  [#block[#set par(leading: 1.08em); #text(size: 9.25pt, fill: body)[Established production monitoring, alerting, and incident workflows with Prometheus, Grafana, and Kibana, carrying corrective work through deployment.]]],
+)
+#v(4pt)
+#grid(columns: (9pt, 1fr), column-gutter: 7pt, align: top,
+  [#text(size: 9pt, fill: accent)[•]],
+  [#block[#set par(leading: 1.08em); #text(size: 9.25pt, fill: body)[Strengthened platform security with least-privilege AWS IAM policies, access-risk remediation, and OAuth 2.0, SSO, 2FA, and secure session flows.]]],
 )
 ]
-#v(12pt)
-#line(length: 100%, stroke: 0.5pt + rule)
-]
+#pagebreak()
+#section("Employment History (continued)")
 #block(above: 11pt, below: 16pt, breakable: false)[
 #grid(columns: (1fr, auto), gutter: 12pt, align: top,
   [#text(size: 13pt, weight: "bold", fill: ink)[Software Engineer III]
@@ -216,21 +217,28 @@ Platform-focused engineer with more than 10 years of experience building full-st
 #text(size: 9.6pt, fill: body)[Strengthened enterprise reliability, delivery automation, quality engineering, and incident response.]
 #v(9pt)
 #text(size: 8pt, weight: "semibold", fill: muted, tracking: 0.7pt)[SELECTED ACCOMPLISHMENTS]
-#set text(size: 9.25pt)
-#block(width: 100%, above: 6pt)[
-#list(
-  [Automated deployment and development workflows to improve release consistency, service stability, and recovery from failed changes.],
-  [Implemented real-time monitoring and alerting, supported production incidents, and turned post-incident findings into reliability improvements.],
-  [Partnered with engineering, security, and operations to address performance bottlenecks, vulnerabilities, and recurring operational risks.],
-  [Advanced automated integration, regression, and performance testing across teams as Vice President of the Quality Engineering Society.],
-  [Mentored engineers in site reliability, troubleshooting, and quality practices while contributing to resilient service designs.],
+#v(7pt)
+#grid(columns: (9pt, 1fr), column-gutter: 7pt, align: top,
+  [#text(size: 9pt, fill: accent)[•]],
+  [#block[#set par(leading: 1.08em); #text(size: 9.25pt, fill: body)[Automated deployment and development workflows to improve release consistency, service stability, and recovery from failed changes.]]],
+)
+#v(4pt)
+#grid(columns: (9pt, 1fr), column-gutter: 7pt, align: top,
+  [#text(size: 9pt, fill: accent)[•]],
+  [#block[#set par(leading: 1.08em); #text(size: 9.25pt, fill: body)[Implemented real-time monitoring and alerting, supported production incidents, and turned post-incident findings into reliability improvements.]]],
+)
+#v(4pt)
+#grid(columns: (9pt, 1fr), column-gutter: 7pt, align: top,
+  [#text(size: 9pt, fill: accent)[•]],
+  [#block[#set par(leading: 1.08em); #text(size: 9.25pt, fill: body)[Advanced automated integration, regression, and performance testing across teams as Vice President of the Quality Engineering Society.]]],
+)
+#v(4pt)
+#grid(columns: (9pt, 1fr), column-gutter: 7pt, align: top,
+  [#text(size: 9pt, fill: accent)[•]],
+  [#block[#set par(leading: 1.08em); #text(size: 9.25pt, fill: body)[Mentored engineers in site reliability, troubleshooting, and quality practices while contributing to resilient service designs.]]],
 )
 ]
-#v(12pt)
-#line(length: 100%, stroke: 0.5pt + rule)
-]
-#pagebreak()
-#section("Employment History (continued)")
+#v(20pt)
 #block(above: 11pt, below: 16pt, breakable: false)[
 #grid(columns: (1fr, auto), gutter: 12pt, align: top,
   [#text(size: 13pt, weight: "bold", fill: ink)[Software Engineer]
@@ -244,19 +252,29 @@ Platform-focused engineer with more than 10 years of experience building full-st
 #text(size: 9.6pt, fill: body)[Built custom WordPress and React experiences while modernizing client platforms, cloud infrastructure, and delivery practices.]
 #v(9pt)
 #text(size: 8pt, weight: "semibold", fill: muted, tracking: 0.7pt)[SELECTED ACCOMPLISHMENTS]
-#set text(size: 9.25pt)
-#block(width: 100%, above: 6pt)[
-#list(
-  [Built reusable React components and custom WordPress themes that standardized responsive navigation, content, forms, and interactive experiences.],
-  [Led client UI/UX work from requirements and user flows through design, accessible implementation, and iterative delivery.],
-  [Migrated client websites to AWS to improve performance, availability, security, and hosting efficiency.],
-  [Added monitoring, alerting, logging, backups, and disaster-recovery procedures to reduce operational risk and speed restoration.],
-  [Improved page speed, search visibility, accessibility, and data protection across a portfolio of client sites.],
+#v(7pt)
+#grid(columns: (9pt, 1fr), column-gutter: 7pt, align: top,
+  [#text(size: 9pt, fill: accent)[•]],
+  [#block[#set par(leading: 1.08em); #text(size: 9.25pt, fill: body)[Built reusable React components and custom WordPress themes that standardized responsive navigation, content, forms, and interactive experiences.]]],
+)
+#v(4pt)
+#grid(columns: (9pt, 1fr), column-gutter: 7pt, align: top,
+  [#text(size: 9pt, fill: accent)[•]],
+  [#block[#set par(leading: 1.08em); #text(size: 9.25pt, fill: body)[Led client UI/UX work from requirements and user flows through design, accessible implementation, and iterative delivery.]]],
+)
+#v(4pt)
+#grid(columns: (9pt, 1fr), column-gutter: 7pt, align: top,
+  [#text(size: 9pt, fill: accent)[•]],
+  [#block[#set par(leading: 1.08em); #text(size: 9.25pt, fill: body)[Migrated client websites to AWS to improve performance, availability, security, and hosting efficiency.]]],
+)
+#v(4pt)
+#grid(columns: (9pt, 1fr), column-gutter: 7pt, align: top,
+  [#text(size: 9pt, fill: accent)[•]],
+  [#block[#set par(leading: 1.08em); #text(size: 9.25pt, fill: body)[Added monitoring, alerting, logging, backups, and disaster-recovery procedures to reduce operational risk and speed restoration.]]],
 )
 ]
-#v(12pt)
-#line(length: 100%, stroke: 0.5pt + rule)
-]
+#pagebreak()
+#section("Employment History (continued)")
 #block(above: 11pt, below: 16pt, breakable: false)[
 #grid(columns: (1fr, auto), gutter: 12pt, align: top,
   [#text(size: 13pt, weight: "bold", fill: ink)[Software Engineer]
@@ -270,19 +288,28 @@ Platform-focused engineer with more than 10 years of experience building full-st
 #text(size: 9.6pt, fill: body)[Delivered custom web and mobile products from discovery and architecture through app-store release and support.]
 #v(9pt)
 #text(size: 8pt, weight: "semibold", fill: muted, tracking: 0.7pt)[SELECTED ACCOMPLISHMENTS]
-#set text(size: 9.25pt)
-#block(width: 100%, above: 6pt)[
-#list(
-  [Defined product scope and technical plans directly with clients and cross-functional teams, then delivered web and mobile applications through launch.],
-  [Built front-end experiences, Node.js and Express services, APIs, integrations, and data workflows for custom products.],
-  [Improved service architecture and request handling, reducing response times by up to 30% for key features.],
-  [Released multiple applications through mobile app stores and managed updates and post-launch support.],
-  [Introduced reusable patterns that reduced technical debt and shortened debugging time.],
+#v(7pt)
+#grid(columns: (9pt, 1fr), column-gutter: 7pt, align: top,
+  [#text(size: 9pt, fill: accent)[•]],
+  [#block[#set par(leading: 1.08em); #text(size: 9.25pt, fill: body)[Defined product scope and technical plans directly with clients and cross-functional teams, then delivered web and mobile applications through launch.]]],
+)
+#v(4pt)
+#grid(columns: (9pt, 1fr), column-gutter: 7pt, align: top,
+  [#text(size: 9pt, fill: accent)[•]],
+  [#block[#set par(leading: 1.08em); #text(size: 9.25pt, fill: body)[Built front-end experiences, Node.js and Express services, APIs, integrations, and data workflows for custom products.]]],
+)
+#v(4pt)
+#grid(columns: (9pt, 1fr), column-gutter: 7pt, align: top,
+  [#text(size: 9pt, fill: accent)[•]],
+  [#block[#set par(leading: 1.08em); #text(size: 9.25pt, fill: body)[Improved service architecture and request handling, reducing response times by up to 30% for key features.]]],
+)
+#v(4pt)
+#grid(columns: (9pt, 1fr), column-gutter: 7pt, align: top,
+  [#text(size: 9pt, fill: accent)[•]],
+  [#block[#set par(leading: 1.08em); #text(size: 9.25pt, fill: body)[Released multiple applications through mobile app stores and managed updates and post-launch support.]]],
 )
 ]
-#v(12pt)
-#line(length: 100%, stroke: 0.5pt + rule)
-]
+#v(20pt)
 #block(above: 11pt, below: 16pt, breakable: false)[
 #grid(columns: (1fr, auto), gutter: 12pt, align: top,
   [#text(size: 13pt, weight: "bold", fill: ink)[IT Support Technician / Supervisor]
@@ -296,30 +323,35 @@ Platform-focused engineer with more than 10 years of experience building full-st
 #text(size: 9.6pt, fill: body)[Resolved complex technology issues, led support operations, and created knowledge resources for a large university community.]
 #v(9pt)
 #text(size: 8pt, weight: "semibold", fill: muted, tracking: 0.7pt)[SELECTED ACCOMPLISHMENTS]
-#set text(size: 9.25pt)
-#block(width: 100%, above: 6pt)[
-#list(
-  [Earned promotion to Lead Technician, coordinated daily support operations, and led technical projects for a large university community.],
-  [Resolved software, hardware, account, network, and endpoint issues for students, faculty, and staff across walk-up, phone, and on-site channels.],
-  [Created searchable troubleshooting documentation used by thousands of Texas Tech University users and support technicians.],
-  [Investigated root causes, coordinated escalations with specialized IT teams, and communicated solutions clearly to people with varied technical experience.],
+#v(7pt)
+#grid(columns: (9pt, 1fr), column-gutter: 7pt, align: top,
+  [#text(size: 9pt, fill: accent)[•]],
+  [#block[#set par(leading: 1.08em); #text(size: 9.25pt, fill: body)[Earned promotion to Lead Technician, coordinated daily support operations, and led technical projects for a large university community.]]],
 )
-]
-#v(12pt)
-#line(length: 100%, stroke: 0.5pt + rule)
+#v(4pt)
+#grid(columns: (9pt, 1fr), column-gutter: 7pt, align: top,
+  [#text(size: 9pt, fill: accent)[•]],
+  [#block[#set par(leading: 1.08em); #text(size: 9.25pt, fill: body)[Resolved software, hardware, account, network, and endpoint issues for students, faculty, and staff across walk-up, phone, and on-site channels.]]],
+)
+#v(4pt)
+#grid(columns: (9pt, 1fr), column-gutter: 7pt, align: top,
+  [#text(size: 9pt, fill: accent)[•]],
+  [#block[#set par(leading: 1.08em); #text(size: 9.25pt, fill: body)[Created searchable troubleshooting documentation used by thousands of Texas Tech University users and support technicians.]]],
+)
+#v(4pt)
+#grid(columns: (9pt, 1fr), column-gutter: 7pt, align: top,
+  [#text(size: 9pt, fill: accent)[•]],
+  [#block[#set par(leading: 1.08em); #text(size: 9.25pt, fill: body)[Investigated root causes, coordinated escalations with specialized IT teams, and communicated solutions clearly to people with varied technical experience.]]],
+)
 ]
 #pagebreak()
 #set page(header: none)
 #set text(size: 9.2pt)
 #set list(spacing: 4.2pt)
 #text(size: 20pt, weight: "bold", fill: ink)[EazyHQ]
-#v(4pt)
-#text(size: 9.2pt, weight: "semibold", fill: accent)[Lead Software Engineer | 2026]
-#v(8pt)
-#line(length: 100%, stroke: 0.7pt + accent)
-#v(12pt)
-#block(width: 100%, height: 110pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
-  #image("../public/project-media/eazyhq/workflow-canvas.png", width: 100%, height: 110pt, fit: "cover", alt: "EazyHQ product interface")
+#v(20pt)
+#block(width: 100%, height: 225pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
+  #image("../public/project-media/eazyhq/workflow-canvas.png", width: 100%, height: 225pt, fit: "cover", alt: "EazyHQ product interface")
 ]
 #v(12pt)
 #grid(columns: (1.58fr, 1fr), gutter: 22pt, align: top,
@@ -331,7 +363,7 @@ Platform-focused engineer with more than 10 years of experience building full-st
    #set text(size: 8.65pt)
    #set list(spacing: 3.8pt)
    #block(width: 100%, above: 6pt)[
-   #list(
+   #list(spacing: 5pt,
      [Designed a registry-first add-on architecture with build-time linking and workspace-level enablement.],
      [Built event-driven automation infrastructure covering subscriptions, queued steps, waits, execution logs, and run histories.],
      [Developed workspace dashboards with configurable tabs, permission-aware editing, and add-on-provided widgets.],
@@ -354,29 +386,29 @@ Platform-focused engineer with more than 10 years of experience building full-st
    #link("https://github.com/WTMx3/eazyhq")[#text(size: 8.1pt, fill: accent)[https://github.com/WTMx3/eazyhq]]
   ],
 )
-#v(11pt)
-#text(size: 8.2pt, weight: "semibold", fill: muted, tracking: 0.75pt)[PRODUCT VIEWS]
+#pagebreak()
+#text(size: 20pt, weight: "bold", fill: ink)[EazyHQ]
+#v(22pt)
+#block(width: 100%, height: 270pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
+  #image("../public/project-media/eazyhq/task-performance.png", width: 100%, height: 270pt, fit: "cover", alt: "Task performance and workload analytics")
+]
 #v(6pt)
-#grid(columns: (1fr, 1fr), gutter: 12pt,
-  [#block(width: 100%, height: 88pt, clip: true, radius: 4pt, fill: rgb("#f1f2f3"))[
-    #image("../public/project-media/eazyhq/task-performance.png", width: 100%, height: 88pt, fit: "cover", alt: "Task performance and workload analytics")
-  ]],
-  [#block(width: 100%, height: 88pt, clip: true, radius: 4pt, fill: rgb("#f1f2f3"))[
-    #image("../public/project-media/eazyhq/campaign-performance.png", width: 100%, height: 88pt, fit: "cover", alt: "Campaign delivery and engagement analytics")
-  ]],
-)
+#text(size: 8.6pt, fill: muted)[Task performance and workload analytics]
+#v(13pt)
+#block(width: 100%, height: 270pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
+  #image("../public/project-media/eazyhq/campaign-performance.png", width: 100%, height: 270pt, fit: "cover", alt: "Campaign delivery and engagement analytics")
+]
+#v(6pt)
+#text(size: 8.6pt, fill: muted)[Campaign delivery and engagement analytics]
+#v(13pt)
 #pagebreak()
 #set page(header: none)
 #set text(size: 9.2pt)
 #set list(spacing: 4.2pt)
 #text(size: 20pt, weight: "bold", fill: ink)[Listings+]
-#v(4pt)
-#text(size: 9.2pt, weight: "semibold", fill: accent)[Full-Stack Software Engineer | 2026]
-#v(8pt)
-#line(length: 100%, stroke: 0.7pt + accent)
-#v(12pt)
-#block(width: 100%, height: 110pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
-  #image("../public/project-media/listingsplus/property-discovery.png", width: 100%, height: 110pt, fit: "cover", alt: "Listings+ product interface")
+#v(20pt)
+#block(width: 100%, height: 225pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
+  #image("../public/project-media/listingsplus/property-discovery.png", width: 100%, height: 225pt, fit: "cover", alt: "Listings+ product interface")
 ]
 #v(12pt)
 #grid(columns: (1.58fr, 1fr), gutter: 22pt, align: top,
@@ -388,7 +420,7 @@ Platform-focused engineer with more than 10 years of experience building full-st
    #set text(size: 8.65pt)
    #set list(spacing: 3.8pt)
    #block(width: 100%, above: 6pt)[
-   #list(
+   #list(spacing: 5pt,
      [Designed a retrieval workflow that uses OpenAI structured output to turn natural-language home preferences into validated property filters, retrieves live inventory, and falls back gracefully when a model response or search fails.],
      [Built Go API endpoints for AI-assisted home finding, UUID-based result retrieval, and merged property-detail views across eXp Realty, Century 21, and enrichment sources.],
      [Persisted search summaries, generated filters, result sets, sources, and timestamps in PostgreSQL with JSONB for traceability and repeatable retrieval.],
@@ -411,29 +443,29 @@ Platform-focused engineer with more than 10 years of experience building full-st
    #link("https://github.com/WTMx3/listingsplus")[#text(size: 8.1pt, fill: accent)[https://github.com/WTMx3/listingsplus]]
   ],
 )
-#v(11pt)
-#text(size: 8.2pt, weight: "semibold", fill: muted, tracking: 0.75pt)[PRODUCT VIEWS]
+#pagebreak()
+#text(size: 20pt, weight: "bold", fill: ink)[Listings+]
+#v(22pt)
+#block(width: 100%, height: 270pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
+  #image("../public/project-media/listingsplus/property-and-call-workspace.png", width: 100%, height: 270pt, fit: "cover", alt: "Property detail, guided matching, and call context")
+]
 #v(6pt)
-#grid(columns: (1fr, 1fr), gutter: 12pt,
-  [#block(width: 100%, height: 88pt, clip: true, radius: 4pt, fill: rgb("#f1f2f3"))[
-    #image("../public/project-media/listingsplus/property-and-call-workspace.png", width: 100%, height: 88pt, fit: "cover", alt: "Property detail, guided matching, and call context")
-  ]],
-  [#block(width: 100%, height: 88pt, clip: true, radius: 4pt, fill: rgb("#f1f2f3"))[
-    #image("../public/project-media/listingsplus/service-area-map.png", width: 100%, height: 88pt, fit: "cover", alt: "Geographic service-area visualization")
-  ]],
-)
+#text(size: 8.6pt, fill: muted)[Property detail, guided matching, and call context]
+#v(13pt)
+#block(width: 100%, height: 270pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
+  #image("../public/project-media/listingsplus/service-area-map.png", width: 100%, height: 270pt, fit: "cover", alt: "Geographic service-area visualization")
+]
+#v(6pt)
+#text(size: 8.6pt, fill: muted)[Geographic service-area visualization]
+#v(13pt)
 #pagebreak()
 #set page(header: none)
 #set text(size: 9.2pt)
 #set list(spacing: 4.2pt)
 #text(size: 20pt, weight: "bold", fill: ink)[DOCHUB - Secure Document Sharing Platform]
-#v(4pt)
-#text(size: 9.2pt, weight: "semibold", fill: accent)[Lead Software Engineer | 2026]
-#v(8pt)
-#line(length: 100%, stroke: 0.7pt + accent)
-#v(12pt)
-#block(width: 100%, height: 110pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
-  #image("../public/project-media/dochub/document-access.png", width: 100%, height: 110pt, fit: "cover", alt: "DOCHUB - Secure Document Sharing Platform product interface")
+#v(20pt)
+#block(width: 100%, height: 225pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
+  #image("../public/project-media/dochub/document-access.png", width: 100%, height: 225pt, fit: "cover", alt: "DOCHUB - Secure Document Sharing Platform product interface")
 ]
 #v(12pt)
 #grid(columns: (1.58fr, 1fr), gutter: 22pt, align: top,
@@ -445,7 +477,7 @@ Platform-focused engineer with more than 10 years of experience building full-st
    #set text(size: 8.65pt)
    #set list(spacing: 3.8pt)
    #block(width: 100%, above: 6pt)[
-   #list(
+   #list(spacing: 5pt,
      [Designed workspace-scoped access and a document-code path for sharing individual documents with external readers.],
      [Built a passwordless sign-in flow using a six-digit email code for workspace access.],
      [Organized documents into a navigable tree so proposals, plans, and decisions retain their relationships.],
@@ -468,14 +500,18 @@ Platform-focused engineer with more than 10 years of experience building full-st
    #link("https://github.com/WTMx3/dochub")[#text(size: 8.1pt, fill: accent)[https://github.com/WTMx3/dochub]]
   ],
 )
-#v(11pt)
-#text(size: 8.2pt, weight: "semibold", fill: muted, tracking: 0.75pt)[PRODUCT VIEWS]
+#pagebreak()
+#text(size: 20pt, weight: "bold", fill: ink)[DOCHUB - Secure Document Sharing Platform]
+#v(22pt)
+#block(width: 100%, height: 270pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
+  #image("../public/project-media/dochub/workspace-documents.png", width: 100%, height: 270pt, fit: "cover", alt: "Workspace document organization and publishing")
+]
 #v(6pt)
-#grid(columns: (1fr, 1fr), gutter: 12pt,
-  [#block(width: 100%, height: 88pt, clip: true, radius: 4pt, fill: rgb("#f1f2f3"))[
-    #image("../public/project-media/dochub/document-library.png", width: 100%, height: 88pt, fit: "cover", alt: "Workspace document library and publishing status")
-  ]],
-  [#block(width: 100%, height: 88pt, clip: true, radius: 4pt, fill: rgb("#f1f2f3"))[
-    #image("../public/project-media/dochub/document-reader.png", width: 100%, height: 88pt, fit: "cover", alt: "Connected long-form document reader")
-  ]],
-)
+#text(size: 8.6pt, fill: muted)[Workspace document organization and publishing]
+#v(13pt)
+#block(width: 100%, height: 270pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
+  #image("../public/project-media/dochub/document-editor.png", width: 100%, height: 270pt, fit: "cover", alt: "Markdown authoring with live preview")
+]
+#v(6pt)
+#text(size: 8.6pt, fill: muted)[Markdown authoring with live preview]
+#v(13pt)

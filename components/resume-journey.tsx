@@ -48,6 +48,9 @@ type Project = {
   technologies: string[];
   repositoryUrl: string;
   coverImage: string;
+  achievements: string[];
+  engineeringFocus: string;
+  galleryImages: { src: string; caption: string }[];
 };
 
 export type ResumeJourneyData = {
@@ -171,6 +174,12 @@ const ExternalIcon = () => (
   </svg>
 );
 
+const RefreshIcon = () => (
+  <svg aria-hidden="true" className="journey-icon" viewBox="0 0 20 20">
+    <path d="M16.5 8A6.5 6.5 0 1 0 17 11M16.5 3.5V8H12" />
+  </svg>
+);
+
 function StageEyebrow({ current, children }: { current: number; children: React.ReactNode }) {
   return (
     <p className="stage-eyebrow">
@@ -228,7 +237,7 @@ function IntroStage({
           </div>
           <a
             className="journey-button journey-button--secondary"
-            href="/thomas-miller-resume.pdf"
+            href="/resume"
             rel="noreferrer"
             target="_blank"
           >
@@ -241,19 +250,20 @@ function IntroStage({
 }
 
 function NarrationPlayer({
+  audioRef,
   audioEnabled,
   onToggleAudio,
   onVolumeChange,
   track,
   volume,
 }: {
+  audioRef: React.RefObject<HTMLAudioElement | null>;
   audioEnabled: boolean;
   onToggleAudio: () => void;
   onVolumeChange: (volume: number) => void;
   track: NarrationTrack;
   volume: number;
 }) {
-  const audioRef = useRef<HTMLAudioElement>(null);
   const [cues, setCues] = useState<CaptionCue[]>([]);
   const [caption, setCaption] = useState("");
   const [isPlaying, setIsPlaying] = useState(false);
@@ -271,12 +281,15 @@ function NarrationPlayer({
   useEffect(() => {
     let cancelled = false;
     fetch(track.captions)
-      .then((response) => response.text())
+      .then((response) => {
+        if (!response.ok) throw new Error("Captions unavailable");
+        return response.text();
+      })
       .then((value) => {
         if (!cancelled) setCues(parseWebVtt(value));
       })
       .catch(() => {
-        if (!cancelled) setPlaybackBlocked(true);
+        if (!cancelled) setCues([]);
       });
     return () => {
       cancelled = true;
@@ -286,30 +299,15 @@ function NarrationPlayer({
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio) return;
-    let cancelled = false;
-
-    const startPlayback = () => {
-      if (cancelled || !audioEnabled) return;
-      audio
-        .play()
-        .then(() => setPlaybackBlocked(false))
-        .catch(() => setPlaybackBlocked(true));
-    };
+    if (new URL(audio.src, window.location.href).pathname !== track.audio) audio.src = track.audio;
 
     if (!audioEnabled) {
       audio.pause();
       return;
     }
 
-    if (audio.readyState >= 2) startPlayback();
-    else audio.addEventListener("canplay", startPlayback, { once: true });
-
-    return () => {
-      cancelled = true;
-      audio.removeEventListener("canplay", startPlayback);
-      audio.pause();
-    };
-  }, [audioEnabled, track.audio]);
+    if (audio.paused) audio.play().then(() => setPlaybackBlocked(false)).catch(() => setPlaybackBlocked(true));
+  }, [audioEnabled, audioRef, track.audio]);
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -320,9 +318,29 @@ function NarrationPlayer({
     const audio = audioRef.current;
     if (!audio) return;
     const cue = cues.find((item) => audio.currentTime >= item.start && audio.currentTime <= item.end);
-    if (cue) setCaption(cue.text);
+    setCaption(cue?.text ?? "");
     setProgress(audio.duration ? audio.currentTime / audio.duration : 0);
   };
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+    const onPlay = () => { setIsPlaying(true); setPlaybackBlocked(false); };
+    const onPause = () => setIsPlaying(false);
+    const onEnded = () => { setIsPlaying(false); setProgress(1); };
+    audio.addEventListener("play", onPlay);
+    audio.addEventListener("pause", onPause);
+    audio.addEventListener("ended", onEnded);
+    audio.addEventListener("timeupdate", updatePlayback);
+    setIsPlaying(!audio.paused);
+    updatePlayback();
+    return () => {
+      audio.removeEventListener("play", onPlay);
+      audio.removeEventListener("pause", onPause);
+      audio.removeEventListener("ended", onEnded);
+      audio.removeEventListener("timeupdate", updatePlayback);
+    };
+  }, [audioRef, cues]);
 
   const togglePlayback = () => {
     const audio = audioRef.current;
@@ -354,21 +372,6 @@ function NarrationPlayer({
 
   return (
     <aside className="tour-narration" aria-label={`${track.label} narrated tour`}>
-      <audio
-        onEnded={() => {
-          setIsPlaying(false);
-          setProgress(1);
-        }}
-        onPause={() => setIsPlaying(false)}
-        onPlay={() => setIsPlaying(true)}
-        onTimeUpdate={updatePlayback}
-        preload="auto"
-        ref={audioRef}
-      >
-        <source src={track.audio} type="audio/mpeg" />
-        <track default kind="captions" label="English" src={track.captions} srcLang="en" />
-      </audio>
-
       <div className="tour-narration__identity">
         <span>Narrated tour</span>
         <strong>{track.label}</strong>
@@ -389,7 +392,7 @@ function NarrationPlayer({
       </div>
 
       <div className="tour-caption" aria-live="polite">
-        <p>{caption || (playbackBlocked ? "Press play to begin the narration." : "Preparing the introduction...")}</p>
+        <p>{caption || (playbackBlocked ? "Press play to begin the narration." : track.label)}</p>
         <span style={{ "--tour-progress": progress } as React.CSSProperties} />
       </div>
 
@@ -446,7 +449,7 @@ function CompleteStage({ onRestart }: { onRestart: () => void }) {
           </div>
           <a
             className="journey-button journey-button--secondary"
-            href="/thomas-miller-resume.pdf"
+            href="/resume"
             rel="noreferrer"
             target="_blank"
           >
@@ -720,7 +723,14 @@ function ExperienceStage({ data }: { data: ResumeJourneyData }) {
 
 function ProjectsStage({ data }: { data: ResumeJourneyData }) {
   const [selected, setSelected] = useState(0);
+  const [selectedImage, setSelectedImage] = useState(0);
   const project = data.projects[selected];
+  const images = [{ src: project.coverImage, caption: `${project.title} interface` }, ...project.galleryImages];
+
+  const selectProject = (index: number) => {
+    setSelected(index);
+    setSelectedImage(0);
+  };
 
   return (
     <section className="journey-stage journey-stage--projects" aria-labelledby="projects-title">
@@ -743,7 +753,7 @@ function ProjectsStage({ data }: { data: ResumeJourneyData }) {
               className={selected === index ? "is-active" : ""}
               id={`project-tab-${index}`}
               key={item.slug}
-              onClick={() => setSelected(index)}
+              onClick={() => selectProject(index)}
               role="tab"
               type="button"
             >
@@ -765,14 +775,7 @@ function ProjectsStage({ data }: { data: ResumeJourneyData }) {
           role="tabpanel"
         >
           <div className="project-detail__visual">
-            <Image
-              alt={`${project.title} interface`}
-              className="project-detail__image"
-              fill
-              sizes="(min-width: 900px) 35vw, 100vw"
-              src={project.coverImage}
-            />
-            <span className="project-detail__status">{project.status}</span>
+            <Image alt={images[selectedImage].caption} className="project-detail__image" fill priority sizes="(min-width: 900px) 70vw, 100vw" src={images[selectedImage].src} />
           </div>
 
           <div className="project-detail__content">
@@ -782,6 +785,14 @@ function ProjectsStage({ data }: { data: ResumeJourneyData }) {
             </div>
             <h3>{project.title}</h3>
             <p>{project.summary}</p>
+            <div className="project-detail__section">
+              <h4>What I built</h4>
+              <ul>{project.achievements.map((achievement) => <li key={achievement}>{achievement}</li>)}</ul>
+            </div>
+            <div className="project-detail__section">
+              <h4>Engineering focus</h4>
+              <p>{project.engineeringFocus}</p>
+            </div>
             <div className="project-tech">
               <span className="card-kicker">Key skills &amp; technologies</span>
               <ul>
@@ -790,13 +801,25 @@ function ProjectsStage({ data }: { data: ResumeJourneyData }) {
                 ))}
               </ul>
             </div>
+            <div className="project-detail__gallery" aria-label={`${project.title} screenshots`}>
+              {images.map((item, index) => (
+                <button aria-label={`Show ${item.caption}`} aria-pressed={selectedImage === index} className={selectedImage === index ? "is-active" : ""} key={item.src} onClick={() => setSelectedImage(index)} type="button">
+                  <Image alt="" fill sizes="120px" src={item.src} />
+                </button>
+              ))}
+            </div>
+            <p className="project-detail__caption">{images[selectedImage].caption}</p>
             <div className="project-links">
-              <a className="journey-button journey-button--primary" href={`/projects/${project.slug}`}>
-                Read case study <ArrowIcon />
-              </a>
               <a className="journey-text-link" href={project.repositoryUrl} rel="noreferrer" target="_blank">
                 View repository <ExternalIcon />
               </a>
+            </div>
+            <div className="role-detail__pager" aria-label="Project navigation">
+              <span>{selected + 1} of {data.projects.length}</span>
+              <div>
+                <button aria-label="Previous project" disabled={selected === 0} onClick={() => selectProject(selected - 1)} type="button"><ArrowIcon direction="left" /></button>
+                <button aria-label="Next project" disabled={selected === data.projects.length - 1} onClick={() => selectProject(selected + 1)} type="button"><ArrowIcon /></button>
+              </div>
             </div>
           </div>
         </article>
@@ -809,26 +832,26 @@ export default function ResumeJourney({ data }: { data: ResumeJourneyData }) {
   const [activeStage, setActiveStage] = useState(0);
   const [audioEnabled, setAudioEnabled] = useState(true);
   const [volume, setVolume] = useState(0.85);
-  const touchStart = useRef<number | null>(null);
+  const audioRef = useRef<HTMLAudioElement>(null);
   const completeStageIndex = stages.length - 1;
   const showTourControls = activeStage > 0 && activeStage < completeStageIndex;
 
-  useEffect(() => {
-    const upcomingStage = stages[Math.min(activeStage + 1, completeStageIndex)];
-    const upcomingTrack = narrationTracks[upcomingStage.id];
-    if (!upcomingTrack) return;
-
-    const preloader = new Audio(upcomingTrack.audio);
-    preloader.preload = "auto";
-    preloader.load();
-    return () => preloader.pause();
-  }, [activeStage, completeStageIndex]);
-
   const goToStage = useCallback((index: number) => {
     const nextIndex = Math.max(0, Math.min(stages.length - 1, index));
+    const audio = audioRef.current;
+    const nextTrack = narrationTracks[stages[nextIndex].id];
+    if (audio) {
+      audio.pause();
+      if (nextTrack) {
+        if (new URL(audio.src, window.location.href).pathname !== nextTrack.audio) audio.src = nextTrack.audio;
+        audio.currentTime = 0;
+        audio.volume = volume;
+        if (audioEnabled) void audio.play().catch(() => {});
+      }
+    }
     setActiveStage(nextIndex);
     window.location.hash = stages[nextIndex].id;
-  }, []);
+  }, [audioEnabled, volume]);
 
   useEffect(() => {
     const syncStageToHash = () => {
@@ -885,16 +908,8 @@ export default function ResumeJourney({ data }: { data: ResumeJourneyData }) {
       ]
         .filter(Boolean)
         .join(" ")}
-      onTouchEnd={(event) => {
-        if (touchStart.current === null) return;
-        const distance = event.changedTouches[0].clientX - touchStart.current;
-        if (Math.abs(distance) > 60) goToStage(activeStage + (distance < 0 ? 1 : -1));
-        touchStart.current = null;
-      }}
-      onTouchStart={(event) => {
-        touchStart.current = event.touches[0].clientX;
-      }}
     >
+      <audio aria-hidden="true" preload="auto" ref={audioRef} src={narrationTracks.profile.audio} />
       <div className="journey-backdrop" aria-hidden="true">
         <span />
         <span />
@@ -953,6 +968,7 @@ export default function ResumeJourney({ data }: { data: ResumeJourneyData }) {
 
           <div className="journey-control-main">
             <NarrationPlayer
+              audioRef={audioRef}
               audioEnabled={audioEnabled}
               key={`narration-${stages[activeStage].id}`}
               onToggleAudio={() => setAudioEnabled((value) => !value)}
@@ -971,9 +987,22 @@ export default function ResumeJourney({ data }: { data: ResumeJourneyData }) {
           <a href={`tel:${data.profile.phoneHref}`}>{data.profile.phone}</a>
         </address>
         <nav aria-label="Résumé download">
-          <a className="journey-pdf-button" href="/thomas-miller-resume.pdf" rel="noreferrer" target="_blank">
+          <a className="journey-pdf-button" href="/resume" rel="noreferrer" target="_blank">
             <DocumentIcon /> PDF résumé
           </a>
+          <button
+            aria-label="Load the latest site version"
+            className="journey-refresh-button"
+            onClick={() => {
+              const url = new URL(window.location.href);
+              url.searchParams.set("refresh", Date.now().toString(36));
+              window.location.replace(url.toString());
+            }}
+            title="Load the latest site version"
+            type="button"
+          >
+            <RefreshIcon /> <span>Get latest</span>
+          </button>
         </nav>
       </footer>
     </div>

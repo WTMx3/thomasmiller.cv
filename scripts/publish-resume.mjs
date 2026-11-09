@@ -4,8 +4,8 @@ import path from 'node:path';
 const root = process.cwd();
 const source = path.join(root, 'output', 'pdf', 'thomas-miller-master-resume.pdf');
 const destinations = [
-  path.join(root, 'output', 'pdf', 'thomas-miller-resume.pdf'),
-  path.join(root, 'public', 'thomas-miller-resume.pdf'),
+  path.join(root, 'output', 'pdf', 'wtm3-resume.pdf'),
+  path.join(root, 'public', 'wtm3-resume.pdf'),
 ];
 
 if (!fs.existsSync(source)) {

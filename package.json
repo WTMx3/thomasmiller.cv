@@ -4,8 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
+    "clean": "node scripts/clean-build.mjs",
     "build": "next build",
-    "deploy": "pnpm build && wrangler deploy",
+    "build:fresh": "pnpm clean && pnpm build",
+    "deploy": "pnpm build:fresh && wrangler deploy",
     "preview": "pnpm build && wrangler dev",
     "resume:source": "node scripts/build-resume.mjs",
     "resume:pdf": "pnpm resume:source && typst compile --root . resume/thomas-miller-master.typ output/pdf/thomas-miller-master-resume.pdf --pdf-standard ua-1 && node scripts/publish-resume.mjs",
