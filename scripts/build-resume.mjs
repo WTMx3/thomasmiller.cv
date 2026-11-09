@@ -1,52 +1,14 @@
 import fs from "node:fs";
 import path from "node:path";
+import YAML from "yaml";
 
 const root = process.cwd();
-
-function parseValue(rawValue) {
-  const value = rawValue.trim();
-  if (value.startsWith("[") && value.endsWith("]")) {
-    try {
-      return JSON.parse(value);
-    } catch {
-      return value;
-    }
-  }
-  if (value === "true") return true;
-  if (value === "false") return false;
-  if (/^-?\d+(\.\d+)?$/.test(value)) return Number(value);
-  return value.replace(/^['"](.*)['"]$/, "$1");
-}
-
-function parseFrontmatter(fileContent) {
-  const match = /^---\s*\r?\n([\s\S]*?)\r?\n---/.exec(fileContent);
-  if (!match) return { metadata: {}, content: fileContent.trim() };
-
-  const metadata = {};
-  for (const line of match[1].split(/\r?\n/)) {
-    if (!line.trim() || line.trimStart().startsWith("#")) continue;
-    const separator = line.indexOf(":");
-    if (separator === -1) continue;
-    metadata[line.slice(0, separator).trim()] = parseValue(line.slice(separator + 1));
-  }
-
-  return {
-    metadata,
-    content: fileContent.replace(/^---\s*\r?\n([\s\S]*?)\r?\n---/, "").trim(),
-  };
-}
+const resumeConfig = YAML.parse(fs.readFileSync(path.join(root, "content", "resume.yaml"), "utf8"));
 
 function collection(name) {
-  const directory = path.join(root, "content", name);
-  if (!fs.existsSync(directory)) return [];
-
-  return fs
-    .readdirSync(directory)
-    .filter((file) => path.extname(file) === ".mdx")
-    .map((file) => ({
-      slug: path.basename(file, ".mdx"),
-      ...parseFrontmatter(fs.readFileSync(path.join(directory, file), "utf8")),
-    }))
+  const entries = resumeConfig?.[name];
+  if (!Array.isArray(entries)) throw new Error(`Missing ${name} entries in content/resume.yaml`);
+  return entries
     .filter((entry) => entry.metadata.draft !== true)
     .sort((a, b) => Number(a.metadata.order ?? 999) - Number(b.metadata.order ?? 999));
 }
@@ -117,21 +79,11 @@ const leadership = collection("leadership");
 
 if (!profile) throw new Error("A profile MDX file is required.");
 
-const latestRole = experience[0];
-const coverParagraphs = [
-  "I am a senior software engineer who turns ambiguous product needs into dependable systems. My work spans product and platform engineering: customer-facing applications, APIs, cloud infrastructure, delivery automation, observability, and the operating practices that keep software healthy after launch.",
-  latestRole
-    ? "At " +
-      latestRole.metadata.company +
-      ", I " +
-      String(latestRole.metadata.summary)
-        .replace(/^Own\b/, "own")
-        .replace(/\.$/, "") +
-      ". I lead work from early planning and architecture through implementation, release, monitoring, support, and continuous improvement."
-    : "",
-  "Earlier roles strengthened my experience in enterprise reliability, incident response, quality engineering, accessible interfaces, and client-focused delivery. I am most valuable where a team needs both breadth and follow-through: someone who can shape the architecture, write the software, improve the path to production, and remain accountable for the result in operation.",
-  "I would welcome the opportunity to discuss how that combination could support your products, engineering organization, and customers. Thank you for your consideration.",
-].filter(Boolean);
+const coverLetter = resumeConfig?.coverLetter;
+if (!coverLetter || !Array.isArray(coverLetter.paragraphs) || !coverLetter.paragraphs.length) {
+  throw new Error("content/resume.yaml must contain coverLetter.paragraphs");
+}
+const coverParagraphs = coverLetter.paragraphs;
 
 const lines = [
   "#set document(",
@@ -168,13 +120,13 @@ const lines = [
   "  ]]],",
   ")",
   "#v(54pt)",
-  '#text(size: 11pt, weight: "semibold", fill: ink)[Dear Hiring Team,]',
+  '#text(size: 11pt, weight: "semibold", fill: ink)[' + typstText(coverLetter.salutation) + "]",
   ...coverParagraphs.flatMap((paragraph) => [
     "#v(14pt)",
     "#block(width: 100%)[#set text(size: 10.5pt); #set par(leading: 1.15em); " + typstText(paragraph) + "]",
   ]),
   "#v(18pt)",
-  "#text(size: 10.5pt)[Sincerely,]",
+  "#text(size: 10.5pt)[" + typstText(coverLetter.closing) + "]",
   "#v(6pt)",
   '#text(size: 11pt, weight: "semibold", fill: ink)[' + typstText(profile.metadata.name) + "]",
   "#pagebreak()",
@@ -297,11 +249,11 @@ for (const [index, job] of experience.entries()) {
 for (const project of projects) {
   const engineeringFocus = sectionText(project.content, "Engineering focus");
   const coverImage = String(project.metadata.coverImage ?? "").replace(/^\//, "");
-  const galleryImages = Array.isArray(project.metadata.resumeGalleryImages)
-    ? project.metadata.resumeGalleryImages.slice(0, 2)
-    : Array.isArray(project.metadata.galleryImages) ? project.metadata.galleryImages.slice(0, 2) : [];
-  const galleryCaptions = Array.isArray(project.metadata.resumeGalleryCaptions)
-    ? project.metadata.resumeGalleryCaptions : Array.isArray(project.metadata.galleryCaptions) ? project.metadata.galleryCaptions : [];
+  const galleryImages = Array.isArray(project.metadata.galleryImages) ? project.metadata.galleryImages : [];
+  const galleryCaptions = Array.isArray(project.metadata.galleryCaptions) ? project.metadata.galleryCaptions : [];
+  if (galleryImages.length !== galleryCaptions.length) {
+    throw new Error(`${project.metadata.title}: galleryImages and galleryCaptions must have the same length`);
+  }
 
   lines.push(
     "#pagebreak()",
@@ -345,23 +297,54 @@ for (const project of projects) {
       caption: galleryCaptions[galleryIndex] ?? `${project.metadata.title} product view ${galleryIndex + 1}`,
     })),
   ];
-  if (screenshots.length) {
+  for (const screenshot of screenshots) {
+    if (!fs.existsSync(path.join(root, "public", screenshot.path))) {
+      throw new Error(`${project.metadata.title}: missing screenshot ${screenshot.path}`);
+    }
+  }
+  const singlePageImages = new Set(
+    Array.isArray(project.metadata.resumeSinglePageImages)
+      ? project.metadata.resumeSinglePageImages.map((imagePath) => String(imagePath).replace(/^\//, ""))
+      : [],
+  );
+  const screenshotPages = [];
+  let pairedScreenshots = [];
+  for (const screenshot of screenshots) {
+    if (singlePageImages.has(screenshot.path)) {
+      if (pairedScreenshots.length) screenshotPages.push(pairedScreenshots);
+      pairedScreenshots = [];
+      screenshotPages.push([screenshot]);
+    } else {
+      pairedScreenshots.push(screenshot);
+      if (pairedScreenshots.length === 2) {
+        screenshotPages.push(pairedScreenshots);
+        pairedScreenshots = [];
+      }
+    }
+  }
+  if (pairedScreenshots.length) screenshotPages.push(pairedScreenshots);
+
+  screenshotPages.forEach((pageScreenshots, pageIndex) => {
+    const isSinglePageImage = pageScreenshots.length === 1 && singlePageImages.has(pageScreenshots[0].path);
+    const imageHeight = isSinglePageImage ? 570 : pageScreenshots.length === 2 ? 260 : 350;
     lines.push(
       "#pagebreak()",
       '#text(size: 20pt, weight: "bold", fill: ink)[' + typstText(project.metadata.title) + "]",
-      "#v(15pt)",
+      "#v(5pt)",
+      '#text(size: 8pt, fill: muted)[Screenshots ' + (pageIndex + 1) + " / " + screenshotPages.length + "]",
+      "#v(13pt)",
     );
-    screenshots.forEach(({ path: imagePath, caption: alt }) => {
+    pageScreenshots.forEach(({ path: imagePath, caption: alt }) => {
       lines.push(
-        '#block(width: 100%, height: 175pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[',
-        '  #image("../public/' + typstText(imagePath) + '", width: 100%, height: 175pt, fit: "cover", alt: "' + typstText(alt) + '")',
+        '#block(width: 100%, height: ' + imageHeight + 'pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[',
+        '  #image("../public/' + typstText(imagePath) + '", width: 100%, height: ' + imageHeight + 'pt, fit: "contain", alt: "' + typstText(alt) + '")',
         "]",
-        "#v(4pt)",
+        "#v(5pt)",
         '#text(size: 8.6pt, fill: muted)[' + typstText(alt) + "]",
-        "#v(9pt)",
+        "#v(11pt)",
       );
     });
-  }
+  });
 }
 
 const outputDirectory = path.join(root, "resume");

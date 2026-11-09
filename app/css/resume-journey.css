@@ -1105,6 +1105,7 @@
 }
 .project-detail__visual {
   position: relative;
+  display: block;
   height: clamp(220px, 26vw, 330px);
   overflow: hidden;
   background: #eef3f8;
@@ -1114,6 +1115,7 @@
   object-fit: cover;
   object-position: top;
 }
+.project-detail__image--contain { object-fit: contain; object-position: center; }
 .project-terminal {
   z-index: 1;
   width: 80%;

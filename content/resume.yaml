@@ -1,0 +1,490 @@
+# Edit this file to update the site and generated PDF together.
+coverLetter:
+  salutation: Dear Hiring Team,
+  paragraphs:
+    - >-
+      I am a senior software engineer who turns ambiguous product needs into dependable systems.
+      My work spans product and platform engineering: customer-facing applications, APIs,
+      cloud infrastructure, delivery automation, observability, and the operating practices
+      that keep software healthy after launch.
+    - >-
+      At BAAS Software, I own the complete software product lifecycle across web, mobile,
+      cloud, DevOps, reliability, and security. I lead work from early planning and architecture
+      through implementation, release, monitoring, support, and continuous improvement.
+    - >-
+      Earlier roles strengthened my experience in enterprise reliability, incident response,
+      quality engineering, accessible interfaces, and client-focused delivery. I am most
+      valuable where a team needs both breadth and follow-through: someone who can shape
+      the architecture, write the software, improve the path to production, and remain
+      accountable for the result in operation.
+    - >-
+      I would welcome the opportunity to discuss how that combination could support your
+      products, engineering organization, and customers. Thank you for your consideration.
+  closing: Sincerely,
+profile:
+  - slug: thomas-miller
+    metadata:
+      name: Thomas Miller III
+      role: Senior Software Engineer
+      tagline: Platform Engineering · DevOps · Site Reliability · Secure Systems
+      email: mail@thomasmiller.cv
+      phone: 214-399-1411
+      phoneHref: "+12143991411"
+      website: https://thomasmiller.cv
+      websiteLabel: thomasmiller.cv
+      github: https://github.com/WTMx3
+      linkedin: https://www.linkedin.com/in/wtmx3
+      yearsExperience: 10+
+      order: 1
+    content: "Platform-focused engineer with more than 10 years of experience building full-stack products and the systems that keep them reliable: cloud infrastructure, CI/CD, observability, identity and access management, scalable architecture, incident response, and technical leadership."
+education:
+  - slug: texas-tech-university
+    metadata:
+      institution: Texas Tech University
+      degree: Bachelor of Business Administration (BBA)
+      field: Information Technology - Emphasis in Application Development
+      startDate: Fall 2015
+      endDate: Spring 2020
+      order: 1
+    content: Completed a business and technology curriculum focused on application development, information systems, and practical software delivery.
+skills:
+  - slug: languages
+    metadata:
+      category: Languages
+      items:
+        - HTML
+        - CSS
+        - Sass
+        - Less
+        - JavaScript
+        - TypeScript
+        - Java
+        - Go
+        - Python
+        - C#
+      order: 1
+    content: Languages used across web, API, automation, cloud, and application development.
+  - slug: web-development
+    metadata:
+      category: Web Development
+      items:
+        - React
+        - Next.js
+        - Tailwind CSS
+        - Bootstrap
+        - Context API
+        - Redux
+        - Zustand
+        - Jest
+        - Vite
+        - Selenium
+        - Storybook
+      order: 2
+    content: Front-end delivery spanning component systems, state management, testing, and browser automation.
+  - slug: api-development
+    metadata:
+      category: API Development
+      items:
+        - Node.js
+        - Express
+        - Fiber
+        - Gin
+        - Django
+        - Spring Boot
+        - GraphQL
+        - Headless CMS
+      order: 3
+    content: Service and API development across JavaScript, Go, Python, Java, and headless architectures.
+  - slug: app-development
+    metadata:
+      category: App Development
+      items:
+        - Flutter
+        - Ionic
+        - .NET
+        - React Native
+        - Three.js
+        - Unity
+        - Unreal Engine
+      order: 4
+    content: Cross-platform, native-adjacent, 3D, and interactive application development.
+  - slug: infrastructure
+    metadata:
+      category: Infrastructure
+      items:
+        - AWS
+        - Docker
+        - Docker Swarm
+        - Kubernetes
+        - Serverless
+        - Terraform
+        - Layer 4 and 7 Networking
+        - HAProxy
+        - NGINX
+        - Load Balancing
+      order: 5
+    content: Cloud and container infrastructure designed for scalable, reliable delivery.
+  - slug: security
+    metadata:
+      category: Security, Authentication, and Authorization
+      items:
+        - IAM
+        - JWT
+        - Session Management
+        - Cookies
+        - CORS
+        - CSRF
+        - RBAC
+        - PBAC
+        - Keycloak
+        - Okta
+        - Active Directory
+        - LDAP
+      order: 6
+    content: Identity, access, authentication, authorization, and application security controls.
+  - slug: devops
+    metadata:
+      category: DevOps
+      items:
+        - CI/CD
+        - GitOps
+        - Git
+        - GitHub
+        - GitLab
+        - ECR
+        - Artifactory
+        - Docker Hub
+        - GitHub Actions
+        - GitLab CI/CD
+        - Jenkins
+        - CircleCI
+        - Fleet
+        - Helm
+        - Prometheus
+        - Grafana
+        - ELK
+        - Datadog
+        - Splunk
+      order: 7
+    content: Delivery automation, source control, artifact management, observability, and platform operations.
+  - slug: sre
+    metadata:
+      category: Site Reliability Engineering
+      items:
+        - High Availability
+        - Latency Optimization
+        - Auto Scaling
+        - Monitoring
+        - Incident Response
+        - Post-Incident Review
+      order: 8
+    content: Reliability practices focused on availability, performance, monitoring, and continuous improvement.
+  - slug: testing
+    metadata:
+      category: Testing
+      items:
+        - Unit Testing
+        - Integration Testing
+        - End-to-End Testing
+        - Performance Testing
+        - Security Testing
+      order: 9
+    content: Layered test strategies for product quality, performance, and security.
+  - slug: databases
+    metadata:
+      category: Data and Databases
+      items:
+        - Data Modeling
+        - Normalization
+        - ER Diagrams
+        - Data Integrity
+        - PostgreSQL
+        - MySQL
+        - MongoDB
+        - DynamoDB
+        - Cassandra
+        - Redis
+        - RabbitMQ
+        - Kafka
+      order: 10
+    content: Relational, document, key-value, queue, and streaming data systems.
+  - slug: architecture
+    metadata:
+      category: Software Architecture
+      items:
+        - Monoliths
+        - Microservices
+        - Domain-Driven Design
+        - Test-Driven Development
+        - Event-Driven Architecture
+        - System Design
+      order: 11
+    content: Architecture patterns for maintainable services and event-driven platforms.
+  - slug: documentation
+    metadata:
+      category: Technical Documentation
+      items:
+        - API Documentation
+        - Code Documentation
+        - Architecture
+        - Requirements
+        - System Design
+        - Deployment
+        - User Manuals
+        - Swagger
+        - Postman
+        - UML
+        - Lucidchart
+        - Docusaurus
+      order: 12
+    content: Documentation for developers, operators, stakeholders, and end users.
+  - slug: project-management
+    metadata:
+      category: Project Management
+      items:
+        - Agile
+        - Scrum
+        - Cross-Functional Collaboration
+        - Mentoring
+      order: 13
+    content: Iterative delivery, planning, collaboration, and engineering mentorship.
+experience:
+  - slug: baas-software
+    metadata:
+      company: BAAS Software
+      role: Senior Software Engineer
+      startDate: June 2022
+      endDate: Present
+      location: Remote
+      summary: Own the complete software product lifecycle across web, mobile, cloud, DevOps, reliability, and security.
+      order: 1
+    content: |-
+      - Led products from concept and client discovery through architecture, full-stack implementation, launch, monitoring, and ongoing support.
+      - Built customer-facing web and mobile applications, APIs, automation systems, and internal platforms across cloud and containerized environments.
+      - Created GitHub Actions release pipelines for AWS, Cloudflare, Docker, web, and mobile targets; reduced release time by 40% while helping maintain 99.9% uptime.
+      - Established production monitoring, alerting, and incident workflows with Prometheus, Grafana, and Kibana, carrying corrective work through deployment.
+      - Strengthened platform security with least-privilege AWS IAM policies, access-risk remediation, and OAuth 2.0, SSO, 2FA, and secure session flows.
+  - slug: usaa
+    metadata:
+      company: USAA
+      role: Software Engineer III
+      startDate: June 2020
+      endDate: July 2022
+      location: Remote
+      summary: Strengthened enterprise reliability, delivery automation, quality engineering, and incident response.
+      order: 2
+    content: |-
+      - Automated deployment and development workflows to improve release consistency, service stability, and recovery from failed changes.
+      - Implemented real-time monitoring and alerting, supported production incidents, and turned post-incident findings into reliability improvements.
+      - Advanced automated integration, regression, and performance testing across teams as Vice President of the Quality Engineering Society.
+      - Mentored engineers in site reliability, troubleshooting, and quality practices while contributing to resilient service designs.
+  - slug: web-plant-media
+    metadata:
+      company: Web Plant Media
+      role: Software Engineer
+      startDate: July 2018
+      endDate: May 2020
+      location: Remote
+      summary: Built custom WordPress and React experiences while modernizing client platforms, cloud infrastructure, and delivery practices.
+      order: 3
+    content: |-
+      - Built reusable React components and custom WordPress themes that standardized responsive navigation, content, forms, and interactive experiences.
+      - Led client UI/UX work from requirements and user flows through design, accessible implementation, and iterative delivery.
+      - Migrated client websites to AWS to improve performance, availability, security, and hosting efficiency.
+      - Added monitoring, alerting, logging, backups, and disaster-recovery procedures to reduce operational risk and speed restoration.
+  - slug: caprock-custom-apps
+    metadata:
+      company: Caprock Custom Apps
+      role: Software Engineer
+      startDate: February 2017
+      endDate: July 2018
+      summary: Delivered custom web and mobile products from discovery and architecture through app-store release and support.
+      order: 4
+    content: |-
+      - Defined product scope and technical plans directly with clients and cross-functional teams, then delivered web and mobile applications through launch.
+      - Built front-end experiences, Node.js and Express services, APIs, integrations, and data workflows for custom products.
+      - Improved service architecture and request handling, reducing response times by up to 30% for key features.
+      - Released multiple applications through mobile app stores and managed updates and post-launch support.
+  - slug: it-help-central
+    metadata:
+      company: IT Help Central
+      role: IT Support Technician / Supervisor
+      startDate: November 2015
+      endDate: August 2017
+      summary: Resolved complex technology issues, led support operations, and created knowledge resources for a large university community.
+      order: 5
+    content: |-
+      - Earned promotion to Lead Technician, coordinated daily support operations, and led technical projects for a large university community.
+      - Resolved software, hardware, account, network, and endpoint issues for students, faculty, and staff across walk-up, phone, and on-site channels.
+      - Created searchable troubleshooting documentation used by thousands of Texas Tech University users and support technicians.
+      - Investigated root causes, coordinated escalations with specialized IT teams, and communicated solutions clearly to people with varied technical experience.
+projects:
+  - slug: eazyhq
+    metadata:
+      title: EazyHQ
+      summary: A modular workspace operating system for projects, data, automation, content, and team workflows.
+      role: Lead Software Engineer
+      status: Active development
+      startedAt: 2026
+      repositoryUrl: https://github.com/WTMx3/eazyhq
+      coverImage: /project-media/eazyhq/workflow-canvas.png
+      galleryImages:
+        - /project-media/eazyhq/task-performance.png
+        - /project-media/eazyhq/campaign-performance.png
+        - /project-media/eazyhq/starter-library.png
+        - /project-media/eazyhq/starter-details.png
+        - /project-media/eazyhq/starter-execution.png
+        - /project-media/eazyhq/event-inspector.png
+        - /project-media/eazyhq/dashboard-builder.png
+      galleryCaptions:
+        - Task performance and workload analytics
+        - Campaign delivery and engagement analytics
+        - Scenario-driven starter library
+        - Starter requirements and generated outputs
+        - Auditable multi-step starter execution
+        - Event payload and metadata inspector
+        - Configurable operational dashboard builder
+      technologies:
+        - Flutter
+        - Dart
+        - Go
+        - PostgreSQL
+        - Redis
+        - Docker
+        - GitHub Actions
+        - Caddy
+      featured: true
+      order: 1
+    content: |-
+      EazyHQ is a cross-platform workspace platform built around a Flutter client and Go API. It combines project operations, configurable dashboards, automation flows, content tools, data management, and installable add-ons in a single workspace-aware product.
+
+      ## What I built
+
+      - Designed a registry-first add-on architecture with build-time linking and workspace-level enablement.
+      - Built event-driven automation infrastructure covering subscriptions, queued steps, waits, execution logs, and run histories.
+      - Developed workspace dashboards with configurable tabs, permission-aware editing, and add-on-provided widgets.
+      - Implemented platform capabilities for forms, structured data, APIs, sites, email, calendars, storage, reports, directories, and wikis.
+      - Created a cross-platform Flutter interface backed by a Go service layer, PostgreSQL, Redis, and containerized deployment.
+      - Established GitHub Actions and Docker-based delivery workflows for the API and web application.
+
+      ## Engineering focus
+
+      The project demonstrates full-stack platform design: authorization boundaries, stable extension contracts, event-driven execution, operational recovery, responsive interface systems, and deployment automation.
+  - slug: listingsplus
+    metadata:
+      title: Listings+
+      summary: An AI-assisted real-estate platform that turns natural-language intent into structured searches, retrieves live listings, and enriches grounded property results.
+      role: Full-Stack Software Engineer
+      status: Active development
+      startedAt: 2026
+      repositoryUrl: https://github.com/WTMx3/listingsplus
+      coverImage: /project-media/listingsplus/property-discovery.png
+      galleryImages:
+        - /project-media/listingsplus/property-and-call-workspace.png
+        - /project-media/listingsplus/guided-property-match.png
+        - /project-media/listingsplus/listing-grid.jpg
+        - /project-media/listingsplus/property-page-full.jpg
+        - /project-media/listingsplus/service-area-map.png
+        - /project-media/listingsplus/campaign-list.png
+        - /project-media/listingsplus/campaign-creation.png
+        - /project-media/listingsplus/campaign-flow.png
+        - /project-media/listingsplus/sales-dashboard.png
+      galleryCaptions:
+        - Property detail, guided matching, and call context
+        - Guided buyer match on a property page
+        - Searchable inventory grid with normalized listing cards
+        - Full property listing and details
+        - Geographic service-area visualization
+        - Campaign management and status
+        - Campaign creation workflow
+        - Visual buyer nurture flow builder
+        - Sales and payment analytics dashboard
+      resumeSinglePageImages:
+        - /project-media/listingsplus/listing-grid.jpg
+        - /project-media/listingsplus/property-page-full.jpg
+        - /project-media/listingsplus/campaign-creation.png
+      technologies:
+        - Next.js
+        - React
+        - TypeScript
+        - Go
+        - OpenAI API
+        - PostgreSQL
+        - Redis
+        - Typesense
+        - Docker
+        - Caddy
+        - Cloudflare
+      featured: true
+      order: 2
+    content: |-
+      Listings+ is a full-stack property-discovery platform designed to make home search feel conversational. Its AI-assisted retrieval pipeline translates a buyer's free-form preferences into constrained search parameters, retrieves current listings from multiple property sources, and returns enriched, source-grounded results to a responsive web experience.
+
+      ## What I built
+
+      - Designed a retrieval workflow that uses OpenAI structured output to turn natural-language home preferences into validated property filters, retrieves live inventory, and falls back gracefully when a model response or search fails.
+      - Built Go API endpoints for AI-assisted home finding, UUID-based result retrieval, and merged property-detail views across eXp Realty, Century 21, and enrichment sources.
+      - Persisted search summaries, generated filters, result sets, sources, and timestamps in PostgreSQL with JSONB for traceability and repeatable retrieval.
+      - Implemented Redis and in-memory caching, a PostgreSQL-backed property-detail cache, Typesense city lookup, listing normalization, enrichment, and image aggregation.
+      - Developed the Next.js interface with responsive listing cards, comparison tables, image carousels, accessible primitives, and server-action boundaries for search and lead workflows.
+      - Containerized PostgreSQL, Redis, Typesense, the Go API, and Caddy; prepared the front end for Cloudflare deployment with OpenNext.
+
+      ## Engineering focus
+
+      The model structures buyer intent; the API retrieves current source data; and the interface presents grounded results with persisted provenance. The work spans AI orchestration, external data integration, resilient services, caching, deployment, and responsive information design.
+  - slug: dochub
+    metadata:
+      title: DOCHUB - Secure Document Sharing Platform
+      summary: A secure workspace for creating, organizing, versioning, and sharing connected documents and proposals.
+      role: Lead Software Engineer
+      status: Active development
+      startedAt: 2026
+      repositoryUrl: https://github.com/WTMx3/dochub
+      coverImage: /project-media/dochub/document-access.png
+      galleryImages:
+        - /project-media/dochub/document-library.png
+        - /project-media/dochub/document-reader.png
+        - /project-media/dochub/workspace-documents.png
+        - /project-media/dochub/document-editor.png
+        - /project-media/dochub/media-picker.png
+      galleryCaptions:
+        - Workspace document library and publishing status
+        - Connected long-form document reader
+        - Document organization and storage operations
+        - Markdown editor with live preview
+        - Media selection within the document workflow
+      resumeSinglePageImages:
+        - /project-media/dochub/document-library.png
+        - /project-media/dochub/document-reader.png
+      technologies:
+        - Next.js
+        - React
+        - TypeScript
+        - Markdown
+        - Cloud Storage
+      featured: true
+      order: 3
+    content: |-
+      DOCHUB brings proposals, documentation, plans, and decisions into one focused document workspace. Readers can enter with a passwordless email code or open a specifically shared document using a collection code. Workspace access and document-level sharing are kept distinct, while a connected document tree helps people move through related information with context.
+
+      ## What I built
+
+      - Designed workspace-scoped access and a document-code path for sharing individual documents with external readers.
+      - Built a passwordless sign-in flow using a six-digit email code for workspace access.
+      - Organized documents into a navigable tree so proposals, plans, and decisions retain their relationships.
+      - Developed an authoring experience with Markdown editing, preview, media selection, and document publishing states.
+      - Added version-aware document workflows so teams can revise content while preserving a clear publishing path.
+      - Created a responsive reading experience for long-form documents and shared collections.
+
+      ## Engineering focus
+
+      DOCHUB demonstrates access boundaries, thoughtful document organization, a clear author-to-reader workflow, and secure sharing across internal workspaces and external recipients. The interface is designed to keep related information together while making the current document easy to read and act on.
+leadership:
+  - slug: quality-engineering-society
+    metadata:
+      organization: Quality Engineering Society, USAA
+      role: Vice President
+      startDate: March 2021
+      endDate: July 2022
+      order: 1
+    content: Elected to help advance quality engineering practices, testing frameworks, mentorship, and operational excellence.

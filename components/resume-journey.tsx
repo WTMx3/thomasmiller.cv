@@ -774,9 +774,9 @@ function ProjectsStage({ data }: { data: ResumeJourneyData }) {
           key={project.slug}
           role="tabpanel"
         >
-          <div className="project-detail__visual">
-            <Image alt={images[selectedImage].caption} className="project-detail__image" fill priority sizes="(min-width: 900px) 70vw, 100vw" src={images[selectedImage].src} />
-          </div>
+          <a aria-label={`Open full-size screenshot: ${images[selectedImage].caption}`} className="project-detail__visual" href={images[selectedImage].src} rel="noreferrer" target="_blank">
+            <Image alt={images[selectedImage].caption} className={`project-detail__image${selectedImage === 0 ? "" : " project-detail__image--contain"}`} fill priority sizes="(min-width: 900px) 70vw, 100vw" src={images[selectedImage].src} />
+          </a>
           <div className="project-detail__media-strip">
             <div className="project-detail__gallery" aria-label={`${project.title} screenshots`}>
               {images.map((item, index) => (

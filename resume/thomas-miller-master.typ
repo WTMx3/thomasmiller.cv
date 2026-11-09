@@ -382,25 +382,72 @@ Platform-focused engineer with more than 10 years of experience building full-st
 )
 #pagebreak()
 #text(size: 20pt, weight: "bold", fill: ink)[EazyHQ]
-#v(15pt)
-#block(width: 100%, height: 175pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
-  #image("../public/project-media/eazyhq/workflow-canvas.png", width: 100%, height: 175pt, fit: "cover", alt: "EazyHQ main interface")
+#v(5pt)
+#text(size: 8pt, fill: muted)[Screenshots 1 / 4]
+#v(13pt)
+#block(width: 100%, height: 260pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
+  #image("../public/project-media/eazyhq/workflow-canvas.png", width: 100%, height: 260pt, fit: "contain", alt: "EazyHQ main interface")
 ]
-#v(4pt)
+#v(5pt)
 #text(size: 8.6pt, fill: muted)[EazyHQ main interface]
-#v(9pt)
-#block(width: 100%, height: 175pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
-  #image("../public/project-media/eazyhq/task-performance.png", width: 100%, height: 175pt, fit: "cover", alt: "Task performance and workload analytics")
+#v(11pt)
+#block(width: 100%, height: 260pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
+  #image("../public/project-media/eazyhq/task-performance.png", width: 100%, height: 260pt, fit: "contain", alt: "Task performance and workload analytics")
 ]
-#v(4pt)
+#v(5pt)
 #text(size: 8.6pt, fill: muted)[Task performance and workload analytics]
-#v(9pt)
-#block(width: 100%, height: 175pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
-  #image("../public/project-media/eazyhq/campaign-performance.png", width: 100%, height: 175pt, fit: "cover", alt: "Campaign delivery and engagement analytics")
+#v(11pt)
+#pagebreak()
+#text(size: 20pt, weight: "bold", fill: ink)[EazyHQ]
+#v(5pt)
+#text(size: 8pt, fill: muted)[Screenshots 2 / 4]
+#v(13pt)
+#block(width: 100%, height: 260pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
+  #image("../public/project-media/eazyhq/campaign-performance.png", width: 100%, height: 260pt, fit: "contain", alt: "Campaign delivery and engagement analytics")
 ]
-#v(4pt)
+#v(5pt)
 #text(size: 8.6pt, fill: muted)[Campaign delivery and engagement analytics]
-#v(9pt)
+#v(11pt)
+#block(width: 100%, height: 260pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
+  #image("../public/project-media/eazyhq/starter-library.png", width: 100%, height: 260pt, fit: "contain", alt: "Scenario-driven starter library")
+]
+#v(5pt)
+#text(size: 8.6pt, fill: muted)[Scenario-driven starter library]
+#v(11pt)
+#pagebreak()
+#text(size: 20pt, weight: "bold", fill: ink)[EazyHQ]
+#v(5pt)
+#text(size: 8pt, fill: muted)[Screenshots 3 / 4]
+#v(13pt)
+#block(width: 100%, height: 260pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
+  #image("../public/project-media/eazyhq/starter-details.png", width: 100%, height: 260pt, fit: "contain", alt: "Starter requirements and generated outputs")
+]
+#v(5pt)
+#text(size: 8.6pt, fill: muted)[Starter requirements and generated outputs]
+#v(11pt)
+#block(width: 100%, height: 260pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
+  #image("../public/project-media/eazyhq/starter-execution.png", width: 100%, height: 260pt, fit: "contain", alt: "Auditable multi-step starter execution")
+]
+#v(5pt)
+#text(size: 8.6pt, fill: muted)[Auditable multi-step starter execution]
+#v(11pt)
+#pagebreak()
+#text(size: 20pt, weight: "bold", fill: ink)[EazyHQ]
+#v(5pt)
+#text(size: 8pt, fill: muted)[Screenshots 4 / 4]
+#v(13pt)
+#block(width: 100%, height: 260pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
+  #image("../public/project-media/eazyhq/event-inspector.png", width: 100%, height: 260pt, fit: "contain", alt: "Event payload and metadata inspector")
+]
+#v(5pt)
+#text(size: 8.6pt, fill: muted)[Event payload and metadata inspector]
+#v(11pt)
+#block(width: 100%, height: 260pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
+  #image("../public/project-media/eazyhq/dashboard-builder.png", width: 100%, height: 260pt, fit: "contain", alt: "Configurable operational dashboard builder")
+]
+#v(5pt)
+#text(size: 8.6pt, fill: muted)[Configurable operational dashboard builder]
+#v(11pt)
 #pagebreak()
 #set page(header: none)
 #set text(size: 9.2pt)
@@ -441,25 +488,99 @@ Platform-focused engineer with more than 10 years of experience building full-st
 )
 #pagebreak()
 #text(size: 20pt, weight: "bold", fill: ink)[Listings+]
-#v(15pt)
-#block(width: 100%, height: 175pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
-  #image("../public/project-media/listingsplus/property-discovery.png", width: 100%, height: 175pt, fit: "cover", alt: "Listings+ main interface")
+#v(5pt)
+#text(size: 8pt, fill: muted)[Screenshots 1 / 7]
+#v(13pt)
+#block(width: 100%, height: 260pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
+  #image("../public/project-media/listingsplus/property-discovery.png", width: 100%, height: 260pt, fit: "contain", alt: "Listings+ main interface")
 ]
-#v(4pt)
+#v(5pt)
 #text(size: 8.6pt, fill: muted)[Listings+ main interface]
-#v(9pt)
-#block(width: 100%, height: 175pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
-  #image("../public/project-media/listingsplus/property-and-call-workspace.png", width: 100%, height: 175pt, fit: "cover", alt: "Property detail, guided matching, and call context")
+#v(11pt)
+#block(width: 100%, height: 260pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
+  #image("../public/project-media/listingsplus/property-and-call-workspace.png", width: 100%, height: 260pt, fit: "contain", alt: "Property detail, guided matching, and call context")
 ]
-#v(4pt)
+#v(5pt)
 #text(size: 8.6pt, fill: muted)[Property detail, guided matching, and call context]
-#v(9pt)
-#block(width: 100%, height: 175pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
-  #image("../public/project-media/listingsplus/service-area-map.png", width: 100%, height: 175pt, fit: "cover", alt: "Geographic service-area visualization")
+#v(11pt)
+#pagebreak()
+#text(size: 20pt, weight: "bold", fill: ink)[Listings+]
+#v(5pt)
+#text(size: 8pt, fill: muted)[Screenshots 2 / 7]
+#v(13pt)
+#block(width: 100%, height: 350pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
+  #image("../public/project-media/listingsplus/guided-property-match.png", width: 100%, height: 350pt, fit: "contain", alt: "Guided buyer match on a property page")
 ]
-#v(4pt)
+#v(5pt)
+#text(size: 8.6pt, fill: muted)[Guided buyer match on a property page]
+#v(11pt)
+#pagebreak()
+#text(size: 20pt, weight: "bold", fill: ink)[Listings+]
+#v(5pt)
+#text(size: 8pt, fill: muted)[Screenshots 3 / 7]
+#v(13pt)
+#block(width: 100%, height: 570pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
+  #image("../public/project-media/listingsplus/listing-grid.jpg", width: 100%, height: 570pt, fit: "contain", alt: "Searchable inventory grid with normalized listing cards")
+]
+#v(5pt)
+#text(size: 8.6pt, fill: muted)[Searchable inventory grid with normalized listing cards]
+#v(11pt)
+#pagebreak()
+#text(size: 20pt, weight: "bold", fill: ink)[Listings+]
+#v(5pt)
+#text(size: 8pt, fill: muted)[Screenshots 4 / 7]
+#v(13pt)
+#block(width: 100%, height: 570pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
+  #image("../public/project-media/listingsplus/property-page-full.jpg", width: 100%, height: 570pt, fit: "contain", alt: "Full property listing and details")
+]
+#v(5pt)
+#text(size: 8.6pt, fill: muted)[Full property listing and details]
+#v(11pt)
+#pagebreak()
+#text(size: 20pt, weight: "bold", fill: ink)[Listings+]
+#v(5pt)
+#text(size: 8pt, fill: muted)[Screenshots 5 / 7]
+#v(13pt)
+#block(width: 100%, height: 260pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
+  #image("../public/project-media/listingsplus/service-area-map.png", width: 100%, height: 260pt, fit: "contain", alt: "Geographic service-area visualization")
+]
+#v(5pt)
 #text(size: 8.6pt, fill: muted)[Geographic service-area visualization]
-#v(9pt)
+#v(11pt)
+#block(width: 100%, height: 260pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
+  #image("../public/project-media/listingsplus/campaign-list.png", width: 100%, height: 260pt, fit: "contain", alt: "Campaign management and status")
+]
+#v(5pt)
+#text(size: 8.6pt, fill: muted)[Campaign management and status]
+#v(11pt)
+#pagebreak()
+#text(size: 20pt, weight: "bold", fill: ink)[Listings+]
+#v(5pt)
+#text(size: 8pt, fill: muted)[Screenshots 6 / 7]
+#v(13pt)
+#block(width: 100%, height: 570pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
+  #image("../public/project-media/listingsplus/campaign-creation.png", width: 100%, height: 570pt, fit: "contain", alt: "Campaign creation workflow")
+]
+#v(5pt)
+#text(size: 8.6pt, fill: muted)[Campaign creation workflow]
+#v(11pt)
+#pagebreak()
+#text(size: 20pt, weight: "bold", fill: ink)[Listings+]
+#v(5pt)
+#text(size: 8pt, fill: muted)[Screenshots 7 / 7]
+#v(13pt)
+#block(width: 100%, height: 260pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
+  #image("../public/project-media/listingsplus/campaign-flow.png", width: 100%, height: 260pt, fit: "contain", alt: "Visual buyer nurture flow builder")
+]
+#v(5pt)
+#text(size: 8.6pt, fill: muted)[Visual buyer nurture flow builder]
+#v(11pt)
+#block(width: 100%, height: 260pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
+  #image("../public/project-media/listingsplus/sales-dashboard.png", width: 100%, height: 260pt, fit: "contain", alt: "Sales and payment analytics dashboard")
+]
+#v(5pt)
+#text(size: 8.6pt, fill: muted)[Sales and payment analytics dashboard]
+#v(11pt)
 #pagebreak()
 #set page(header: none)
 #set text(size: 9.2pt)
@@ -500,22 +621,62 @@ Platform-focused engineer with more than 10 years of experience building full-st
 )
 #pagebreak()
 #text(size: 20pt, weight: "bold", fill: ink)[DOCHUB - Secure Document Sharing Platform]
-#v(15pt)
-#block(width: 100%, height: 175pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
-  #image("../public/project-media/dochub/document-access.png", width: 100%, height: 175pt, fit: "cover", alt: "DOCHUB - Secure Document Sharing Platform main interface")
+#v(5pt)
+#text(size: 8pt, fill: muted)[Screenshots 1 / 5]
+#v(13pt)
+#block(width: 100%, height: 350pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
+  #image("../public/project-media/dochub/document-access.png", width: 100%, height: 350pt, fit: "contain", alt: "DOCHUB - Secure Document Sharing Platform main interface")
 ]
-#v(4pt)
+#v(5pt)
 #text(size: 8.6pt, fill: muted)[DOCHUB - Secure Document Sharing Platform main interface]
-#v(9pt)
-#block(width: 100%, height: 175pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
-  #image("../public/project-media/dochub/workspace-documents.png", width: 100%, height: 175pt, fit: "cover", alt: "Workspace document organization and publishing")
+#v(11pt)
+#pagebreak()
+#text(size: 20pt, weight: "bold", fill: ink)[DOCHUB - Secure Document Sharing Platform]
+#v(5pt)
+#text(size: 8pt, fill: muted)[Screenshots 2 / 5]
+#v(13pt)
+#block(width: 100%, height: 570pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
+  #image("../public/project-media/dochub/document-library.png", width: 100%, height: 570pt, fit: "contain", alt: "Workspace document library and publishing status")
 ]
-#v(4pt)
-#text(size: 8.6pt, fill: muted)[Workspace document organization and publishing]
-#v(9pt)
-#block(width: 100%, height: 175pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
-  #image("../public/project-media/dochub/document-editor.png", width: 100%, height: 175pt, fit: "cover", alt: "Markdown authoring with live preview")
+#v(5pt)
+#text(size: 8.6pt, fill: muted)[Workspace document library and publishing status]
+#v(11pt)
+#pagebreak()
+#text(size: 20pt, weight: "bold", fill: ink)[DOCHUB - Secure Document Sharing Platform]
+#v(5pt)
+#text(size: 8pt, fill: muted)[Screenshots 3 / 5]
+#v(13pt)
+#block(width: 100%, height: 570pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
+  #image("../public/project-media/dochub/document-reader.png", width: 100%, height: 570pt, fit: "contain", alt: "Connected long-form document reader")
 ]
-#v(4pt)
-#text(size: 8.6pt, fill: muted)[Markdown authoring with live preview]
-#v(9pt)
+#v(5pt)
+#text(size: 8.6pt, fill: muted)[Connected long-form document reader]
+#v(11pt)
+#pagebreak()
+#text(size: 20pt, weight: "bold", fill: ink)[DOCHUB - Secure Document Sharing Platform]
+#v(5pt)
+#text(size: 8pt, fill: muted)[Screenshots 4 / 5]
+#v(13pt)
+#block(width: 100%, height: 260pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
+  #image("../public/project-media/dochub/workspace-documents.png", width: 100%, height: 260pt, fit: "contain", alt: "Document organization and storage operations")
+]
+#v(5pt)
+#text(size: 8.6pt, fill: muted)[Document organization and storage operations]
+#v(11pt)
+#block(width: 100%, height: 260pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
+  #image("../public/project-media/dochub/document-editor.png", width: 100%, height: 260pt, fit: "contain", alt: "Markdown editor with live preview")
+]
+#v(5pt)
+#text(size: 8.6pt, fill: muted)[Markdown editor with live preview]
+#v(11pt)
+#pagebreak()
+#text(size: 20pt, weight: "bold", fill: ink)[DOCHUB - Secure Document Sharing Platform]
+#v(5pt)
+#text(size: 8pt, fill: muted)[Screenshots 5 / 5]
+#v(13pt)
+#block(width: 100%, height: 350pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
+  #image("../public/project-media/dochub/media-picker.png", width: 100%, height: 350pt, fit: "contain", alt: "Media selection within the document workflow")
+]
+#v(5pt)
+#text(size: 8.6pt, fill: muted)[Media selection within the document workflow]
+#v(11pt)

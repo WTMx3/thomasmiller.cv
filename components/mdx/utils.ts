@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import YAML from "yaml";
 
 export type FrontmatterValue = string | number | boolean | string[];
 export type Frontmatter = Record<string, FrontmatterValue>;
@@ -54,6 +55,20 @@ function readMDXFile(filePath: string): Omit<ContentEntry, "slug"> {
 }
 
 export function getContentCollection(collection: string): ContentEntry[] {
+  if (["profile", "education", "skills", "experience", "projects", "leadership"].includes(collection)) {
+    const source = YAML.parse(fs.readFileSync(path.join(process.cwd(), "content", "resume.yaml"), "utf-8"));
+    const entries = source?.[collection];
+    if (!Array.isArray(entries)) throw new Error(`Missing ${collection} entries in content/resume.yaml`);
+    return entries
+      .map((entry: ContentEntry) => {
+        if (typeof entry.slug !== "string" || typeof entry.content !== "string" || !entry.metadata) {
+          throw new Error(`Invalid ${collection} entry in content/resume.yaml`);
+        }
+        return entry;
+      })
+      .filter((entry: ContentEntry) => entry.metadata.draft !== true)
+      .sort((a: ContentEntry, b: ContentEntry) => Number(a.metadata.order ?? 999) - Number(b.metadata.order ?? 999));
+  }
   const directory = path.join(process.cwd(), "content", collection);
   if (!fs.existsSync(directory)) return [];
 
