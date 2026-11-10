@@ -34,11 +34,10 @@
 #v(54pt)
 #text(size: 11pt, weight: "semibold", fill: ink)[Dear Hiring Team,]
 #v(14pt)
-#block(width: 100%)[#set text(size: 10.5pt); #set par(leading: 1.15em); I am a senior software engineer who turns ambiguous product needs into dependable systems. My work spans product and platform engineering: customer-facing applications, APIs, cloud infrastructure, delivery automation, observability, and the operating practices that keep software healthy after launch.]
+#block(width: 100%)[#set text(size: 10.5pt); #set par(leading: 1.15em); I am an experienced software engineer with countless real-world hours of experience,  searching to further my career in technology. I am excited to tackle any role or task I am presented with. I want to emphasize my eagerness to tackle new challenges, and my competitive drive.]
 #v(14pt)
-#block(width: 100%)[#set text(size: 10.5pt); #set par(leading: 1.15em); At BAAS Software, I own the complete software product lifecycle across web, mobile, cloud, DevOps, reliability, and security. I lead work from early planning and architecture through implementation, release, monitoring, support, and continuous improvement.]
-#v(14pt)
-#block(width: 100%)[#set text(size: 10.5pt); #set par(leading: 1.15em); Earlier roles strengthened my experience in enterprise reliability, incident response, quality engineering, accessible interfaces, and client-focused delivery. I am most valuable where a team needs both breadth and follow-through: someone who can shape the architecture, write the software, improve the path to production, and remain accountable for the result in operation.]
+#block(width: 100%)[#set text(size: 10.5pt); #set par(leading: 1.15em); In my current position, I own the complete software product lifecycle across web, mobile, cloud, DevOps, reliability, and security. I lead work from early planning and architecture through implementation, release, monitoring, support, and continuous improvement.  I regularly interact with clients and stakeholders, finding solutions for their problems,
+ and bringing value and change to their organizations. ]
 #v(14pt)
 #block(width: 100%)[#set text(size: 10.5pt); #set par(leading: 1.15em); I would welcome the opportunity to discuss how that combination could support your products, engineering organization, and customers. Thank you for your consideration.]
 #v(18pt)
