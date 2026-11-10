@@ -56,7 +56,7 @@ function accomplishmentList(markdown) {
     '  [#text(size: 8.5pt, fill: accent)[•]],',
     '  [#block[#set par(leading: 0.62em); #text(size: 9pt, fill: body)[' + item + "]]],",
     ")",
-    ...(index < items.length - 1 ? ["#v(2.5pt)"] : []),
+    ...(index < items.length - 1 ? ["#v(2pt)"] : []),
   ]);
 }
 
@@ -218,8 +218,9 @@ lines.push(
 
 for (const [index, job] of experience.entries()) {
   if (index === 2) lines.push("#pagebreak()", '#section("Employment History (continued)")');
+  if (index !== 0 && index !== 2) lines.push("#v(19pt)");
   lines.push(
-    "#block(above: 5pt, below: 8pt, breakable: false)[",
+    "#block(breakable: false)[",
     "#grid(columns: (1fr, auto), gutter: 12pt, align: top,",
     '  [#text(size: 12.2pt, weight: "bold", fill: ink)[' + typstText(job.metadata.role) + "]",
     "   #v(1.5pt)",
@@ -233,13 +234,13 @@ for (const [index, job] of experience.entries()) {
       typstText(job.metadata.endDate) +
       "]],",
     ")",
-    "#v(5pt)",
-    '#text(size: 7.6pt, weight: "semibold", fill: muted, tracking: 0.6pt)[POSITION SUMMARY]',
-    "#v(2pt)",
-    "#text(size: 9.2pt, fill: body)[" + typstText(job.metadata.summary) + "]",
-    "#v(5pt)",
-    '#text(size: 7.6pt, weight: "semibold", fill: muted, tracking: 0.6pt)[SELECTED ACCOMPLISHMENTS]',
     "#v(3pt)",
+    '#text(size: 7.6pt, weight: "semibold", fill: muted, tracking: 0.6pt)[POSITION SUMMARY]',
+    "#v(1pt)",
+    "#text(size: 9.2pt, fill: body)[" + typstText(job.metadata.summary) + "]",
+    "#v(3pt)",
+    '#text(size: 7.6pt, weight: "semibold", fill: muted, tracking: 0.6pt)[SELECTED ACCOMPLISHMENTS]',
+    "#v(2pt)",
     ...accomplishmentList(job.content),
     "]",
   );
@@ -247,6 +248,7 @@ for (const [index, job] of experience.entries()) {
 
 for (const [projectIndex, project] of projects.entries()) {
   const engineeringFocus = sectionText(project.content, "Engineering focus");
+  const overview = project.content.split(/^## /m)[0].trim();
   const coverImage = String(project.metadata.coverImage ?? "").replace(/^\//, "");
   const galleryImages = Array.isArray(project.metadata.galleryImages) ? project.metadata.galleryImages : [];
   const galleryCaptions = Array.isArray(project.metadata.galleryCaptions) ? project.metadata.galleryCaptions : [];
@@ -257,36 +259,34 @@ for (const [projectIndex, project] of projects.entries()) {
   lines.push(
     ...(projectIndex === 0 ? ["#pagebreak()"] : []),
     '#set page(width: 8.5in, height: 11in, margin: (top: 0.56in, bottom: 0.56in, left: 0.64in, right: 0.64in), header: none)',
-    "#set text(size: 9.2pt)",
-    "#set list(spacing: 4.2pt)",
+    "#set text(size: 9.8pt)",
+    "#set par(leading: 0.82em)",
+    "#set list(spacing: 3.5pt)",
     '#text(size: 20pt, weight: "bold", fill: ink)[' + typstText(project.metadata.title) + "]",
-    "#v(20pt)",
+    "#v(18pt)",
   );
 
   lines.push(
-    "#grid(columns: (1.58fr, 1fr), gutter: 22pt, align: top,",
-    '  [#text(size: 8.2pt, weight: "semibold", fill: muted, tracking: 0.75pt)[OVERVIEW]',
-    "   #v(4pt)",
-    "   #text(size: 9.15pt, fill: body)[" + typstText(project.metadata.summary) + "]",
-    "   #v(11pt)",
-    '   #text(size: 8.2pt, weight: "semibold", fill: muted, tracking: 0.75pt)[WHAT I BUILT]',
-    "   #set text(size: 8.65pt)",
-    "   #set list(spacing: 3.8pt)",
-    ...bulletList(project.content).map((line) => "   " + line),
-    "  ],",
-    '  [#text(size: 8.2pt, weight: "semibold", fill: muted, tracking: 0.75pt)[TECHNOLOGIES]',
-    "   #v(4pt)",
-    "   #text(size: 8.75pt, fill: body)[" + project.metadata.technologies.map(typstText).join(", ") + "]",
-    "   #v(9pt)",
-    '   #text(size: 8.2pt, weight: "semibold", fill: muted, tracking: 0.75pt)[ENGINEERING FOCUS]',
-    "   #v(4pt)",
-    "   #text(size: 8.75pt, fill: body)[" + typstText(engineeringFocus) + "]",
-    "   #v(9pt)",
-    '   #text(size: 8.2pt, weight: "semibold", fill: muted, tracking: 0.75pt)[SOURCE]',
-    "   #v(4pt)",
-    '   #link("' + typstText(project.metadata.repositoryUrl) + '")[#text(size: 8.1pt, fill: accent)[' + typstText(project.metadata.repositoryUrl) + ']]',
-    "  ],",
-    ")",
+    '#text(size: 11pt, weight: "semibold", fill: ink)[' + typstText(project.metadata.summary) + "]",
+    "#v(16pt)",
+    '#text(size: 8.2pt, weight: "semibold", fill: muted, tracking: 0.75pt)[OVERVIEW]',
+    "#v(4pt)",
+    '#text(size: 9.8pt, fill: body)[' + typstText(overview) + "]",
+    "#v(15pt)",
+    '#text(size: 8.2pt, weight: "semibold", fill: muted, tracking: 0.75pt)[WHAT I BUILT]',
+    ...bulletList(project.content, "3.5pt"),
+    "#v(13pt)",
+    '#text(size: 8.2pt, weight: "semibold", fill: muted, tracking: 0.75pt)[ENGINEERING FOCUS]',
+    "#v(4pt)",
+    '#text(size: 9.8pt, fill: body)[' + typstText(engineeringFocus) + "]",
+    "#v(13pt)",
+    '#text(size: 8.2pt, weight: "semibold", fill: muted, tracking: 0.75pt)[TECHNOLOGIES]',
+    "#v(4pt)",
+    '#text(size: 9.5pt, fill: body)[' + project.metadata.technologies.map(typstText).join(", ") + "]",
+    "#v(13pt)",
+    '#text(size: 8.2pt, weight: "semibold", fill: muted, tracking: 0.75pt)[SOURCE]',
+    "#v(4pt)",
+    '#link("' + typstText(project.metadata.repositoryUrl) + '")[#text(size: 9.2pt, fill: accent)[' + typstText(project.metadata.repositoryUrl) + ']]',
   );
 
   const screenshots = [
@@ -302,24 +302,24 @@ for (const [projectIndex, project] of projects.entries()) {
     }
   }
   const rows = Math.ceil(screenshots.length / 2);
-  const cellHeight = Math.floor((960 - (rows - 1) * 12) / rows);
-  const imageHeight = cellHeight - 24;
+  const cellHeight = Math.floor((650 - (rows - 1) * 8) / rows);
+  const imageHeight = cellHeight - 19;
   lines.push(
-    '#set page(width: 11in, height: 17in, margin: (top: 0.48in, bottom: 0.48in, left: 0.48in, right: 0.48in), header: none)',
-    '#text(size: 21pt, weight: "bold", fill: ink)[' + typstText(project.metadata.title) + "]",
-    "#v(4pt)",
-    '#text(size: 8.5pt, fill: muted)[Project screenshots · Select an image to open the full-size original]',
-    "#v(14pt)",
-    '#grid(columns: (1fr, 1fr), rows: ' + cellHeight + 'pt, column-gutter: 12pt, row-gutter: 12pt,',
+    '#set page(width: 8.5in, height: 11in, margin: (top: 0.38in, bottom: 0.38in, left: 0.38in, right: 0.38in), header: none)',
+    '#text(size: 16pt, weight: "bold", fill: ink)[' + typstText(project.metadata.title) + "]",
+    "#v(2pt)",
+    '#text(size: 7.4pt, fill: muted)[Project screenshots · Select an image to open the full-size original]',
+    "#v(8pt)",
+    '#grid(columns: (1fr, 1fr), rows: ' + cellHeight + 'pt, column-gutter: 8pt, row-gutter: 8pt,',
   );
   screenshots.forEach(({ path: imagePath, caption: alt }, index) => {
     const imageUrl = new URL(`/${imagePath}`, profile.metadata.website).toString();
     lines.push(
-      '  [#block(width: 100%, height: ' + imageHeight + 'pt, clip: true, radius: 4pt, fill: rgb("#f1f2f3"))[',
+      '  [#block(width: 100%, height: ' + imageHeight + 'pt, clip: true, radius: 3pt, fill: rgb("#f1f2f3"))[',
       '    #link("' + typstText(imageUrl) + '")[#image("../public/' + typstText(imagePath) + '", width: 100%, height: ' + imageHeight + 'pt, fit: "contain", alt: "' + typstText(alt) + '")]',
       "   ]",
-      "   #v(4pt)",
-      '   #text(size: 8pt, fill: muted)[' + String(index + 1).padStart(2, "0") + ". " + typstText(alt) + "]],",
+      "   #v(3pt)",
+      '   #text(size: 7pt, fill: muted)[' + String(index + 1).padStart(2, "0") + ". " + typstText(alt) + "]],",
     );
   });
   lines.push(")");
