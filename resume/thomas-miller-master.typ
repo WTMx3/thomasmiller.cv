@@ -5,7 +5,7 @@
 )
 #set page(
   paper: "us-letter",
-  margin: (top: 0.62in, bottom: 0.62in, left: 0.72in, right: 0.72in),
+  margin: (top: 0.56in, bottom: 0.56in, left: 0.64in, right: 0.64in),
   numbering: "1",
   number-align: right,
 )
@@ -13,8 +13,8 @@
 #let body = rgb("#42454a")
 #let muted = rgb("#70747a")
 #let accent = rgb("#2d2f32")
-#set text(font: ("Segoe UI", "Arial"), size: 10pt, fill: body)
-#set par(leading: 1em)
+#set text(font: "Roboto", size: 9.6pt, fill: body)
+#set par(leading: 0.72em)
 #set list(indent: 12pt, body-indent: 6pt, spacing: 6pt, tight: false)
 #show link: set text(fill: accent)
 #let section(title) = {
@@ -59,84 +59,84 @@
 #section("Summary")
 Platform-focused engineer with more than 10 years of experience building full-stack products and the systems that keep them reliable: cloud infrastructure, CI/CD, observability, identity and access management, scalable architecture, incident response, and technical leadership.
 #section("Skills")
-#grid(columns: (1fr, 1fr), column-gutter: 18pt, row-gutter: 7pt,
+#grid(columns: (1fr, 1fr), column-gutter: 18pt, row-gutter: 13pt,
   [#block(breakable: false)[
-    #set par(leading: 0.72em)
+    #set par(leading: 1.05em)
     #text(size: 9pt, weight: "bold", fill: ink)[Languages]
-    #v(2pt)
-    #text(size: 8.55pt, fill: body)[HTML, CSS, Sass, Less, JavaScript, TypeScript, Java, Go, Python, C\#]
+    #v(0.5pt)
+    #text(size: 8.4pt, fill: body)[HTML, CSS, Sass, Less, JavaScript, TypeScript, Java, Go, Python, C\#]
   ]],
   [#block(breakable: false)[
-    #set par(leading: 0.72em)
+    #set par(leading: 1.05em)
     #text(size: 9pt, weight: "bold", fill: ink)[Web Development]
-    #v(2pt)
-    #text(size: 8.55pt, fill: body)[React, Next.js, Tailwind CSS, Bootstrap, Context API, Redux, Zustand, Jest, Vite, Selenium, Storybook]
+    #v(0.5pt)
+    #text(size: 8.4pt, fill: body)[React, Next.js, Tailwind CSS, Bootstrap, Context API, Redux, Zustand, Jest, Vite, Selenium, Storybook]
   ]],
   [#block(breakable: false)[
-    #set par(leading: 0.72em)
+    #set par(leading: 1.05em)
     #text(size: 9pt, weight: "bold", fill: ink)[API Development]
-    #v(2pt)
-    #text(size: 8.55pt, fill: body)[Node.js, Express, Fiber, Gin, Django, Spring Boot, GraphQL, Headless CMS]
+    #v(0.5pt)
+    #text(size: 8.4pt, fill: body)[Node.js, Express, Fiber, Gin, Django, Spring Boot, GraphQL, Headless CMS]
   ]],
   [#block(breakable: false)[
-    #set par(leading: 0.72em)
+    #set par(leading: 1.05em)
     #text(size: 9pt, weight: "bold", fill: ink)[App Development]
-    #v(2pt)
-    #text(size: 8.55pt, fill: body)[Flutter, Ionic, .NET, React Native, Three.js, Unity, Unreal Engine]
+    #v(0.5pt)
+    #text(size: 8.4pt, fill: body)[Flutter, Ionic, .NET, React Native, Three.js, Unity, Unreal Engine]
   ]],
   [#block(breakable: false)[
-    #set par(leading: 0.72em)
+    #set par(leading: 1.05em)
     #text(size: 9pt, weight: "bold", fill: ink)[Infrastructure]
-    #v(2pt)
-    #text(size: 8.55pt, fill: body)[AWS, Docker, Docker Swarm, Kubernetes, Serverless, Terraform, Layer 4 and 7 Networking, HAProxy, NGINX, Load Balancing]
+    #v(0.5pt)
+    #text(size: 8.4pt, fill: body)[AWS, Docker, Docker Swarm, Kubernetes, Serverless, Terraform, Layer 4 and 7 Networking, HAProxy, NGINX, Load Balancing]
   ]],
   [#block(breakable: false)[
-    #set par(leading: 0.72em)
+    #set par(leading: 1.05em)
     #text(size: 9pt, weight: "bold", fill: ink)[Security, Authentication, and Authorization]
-    #v(2pt)
-    #text(size: 8.55pt, fill: body)[IAM, JWT, Session Management, Cookies, CORS, CSRF, RBAC, PBAC, Keycloak, Okta, Active Directory, LDAP]
+    #v(0.5pt)
+    #text(size: 8.4pt, fill: body)[IAM, JWT, Session Management, Cookies, CORS, CSRF, RBAC, PBAC, Keycloak, Okta, Active Directory, LDAP]
   ]],
   [#block(breakable: false)[
-    #set par(leading: 0.72em)
+    #set par(leading: 1.05em)
     #text(size: 9pt, weight: "bold", fill: ink)[DevOps]
-    #v(2pt)
-    #text(size: 8.55pt, fill: body)[CI/CD, GitOps, Git, GitHub, GitLab, ECR, Artifactory, Docker Hub, GitHub Actions, GitLab CI/CD, Jenkins, CircleCI, Fleet, Helm, Prometheus, Grafana, ELK, Datadog, Splunk]
+    #v(0.5pt)
+    #text(size: 8.4pt, fill: body)[CI/CD, GitOps, Git, GitHub, GitLab, ECR, Artifactory, Docker Hub, GitHub Actions, GitLab CI/CD, Jenkins, CircleCI, Fleet, Helm, Prometheus, Grafana, ELK, Datadog, Splunk]
   ]],
   [#block(breakable: false)[
-    #set par(leading: 0.72em)
+    #set par(leading: 1.05em)
     #text(size: 9pt, weight: "bold", fill: ink)[Site Reliability Engineering]
-    #v(2pt)
-    #text(size: 8.55pt, fill: body)[High Availability, Latency Optimization, Auto Scaling, Monitoring, Incident Response, Post-Incident Review]
+    #v(0.5pt)
+    #text(size: 8.4pt, fill: body)[High Availability, Latency Optimization, Auto Scaling, Monitoring, Incident Response, Post-Incident Review]
   ]],
   [#block(breakable: false)[
-    #set par(leading: 0.72em)
+    #set par(leading: 1.05em)
     #text(size: 9pt, weight: "bold", fill: ink)[Testing]
-    #v(2pt)
-    #text(size: 8.55pt, fill: body)[Unit Testing, Integration Testing, End-to-End Testing, Performance Testing, Security Testing]
+    #v(0.5pt)
+    #text(size: 8.4pt, fill: body)[Unit Testing, Integration Testing, End-to-End Testing, Performance Testing, Security Testing]
   ]],
   [#block(breakable: false)[
-    #set par(leading: 0.72em)
+    #set par(leading: 1.05em)
     #text(size: 9pt, weight: "bold", fill: ink)[Data and Databases]
-    #v(2pt)
-    #text(size: 8.55pt, fill: body)[Data Modeling, Normalization, ER Diagrams, Data Integrity, PostgreSQL, MySQL, MongoDB, DynamoDB, Cassandra, Redis, RabbitMQ, Kafka]
+    #v(0.5pt)
+    #text(size: 8.4pt, fill: body)[Data Modeling, Normalization, ER Diagrams, Data Integrity, PostgreSQL, MySQL, MongoDB, DynamoDB, Cassandra, Redis, RabbitMQ, Kafka]
   ]],
   [#block(breakable: false)[
-    #set par(leading: 0.72em)
+    #set par(leading: 1.05em)
     #text(size: 9pt, weight: "bold", fill: ink)[Software Architecture]
-    #v(2pt)
-    #text(size: 8.55pt, fill: body)[Monoliths, Microservices, Domain-Driven Design, Test-Driven Development, Event-Driven Architecture, System Design]
+    #v(0.5pt)
+    #text(size: 8.4pt, fill: body)[Monoliths, Microservices, Domain-Driven Design, Test-Driven Development, Event-Driven Architecture, System Design]
   ]],
   [#block(breakable: false)[
-    #set par(leading: 0.72em)
+    #set par(leading: 1.05em)
     #text(size: 9pt, weight: "bold", fill: ink)[Technical Documentation]
-    #v(2pt)
-    #text(size: 8.55pt, fill: body)[API Documentation, Code Documentation, Architecture, Requirements, System Design, Deployment, User Manuals, Swagger, Postman, UML, Lucidchart, Docusaurus]
+    #v(0.5pt)
+    #text(size: 8.4pt, fill: body)[API Documentation, Code Documentation, Architecture, Requirements, System Design, Deployment, User Manuals, Swagger, Postman, UML, Lucidchart, Docusaurus]
   ]],
   [#block(breakable: false)[
-    #set par(leading: 0.72em)
+    #set par(leading: 1.05em)
     #text(size: 9pt, weight: "bold", fill: ink)[Project Management]
-    #v(2pt)
-    #text(size: 8.55pt, fill: body)[Agile, Scrum, Cross-Functional Collaboration, Mentoring]
+    #v(0.5pt)
+    #text(size: 8.4pt, fill: body)[Agile, Scrum, Cross-Functional Collaboration, Mentoring]
   ]],
 )
 #v(18pt)
@@ -158,192 +158,188 @@ Platform-focused engineer with more than 10 years of experience building full-st
 )
 #pagebreak()
 #set page(header: none)
-#set text(size: 10pt)
-#set list(spacing: 5pt)
+#set text(size: 9.6pt)
+#set list(spacing: 3pt)
 #section("Employment History")
-#block(above: 11pt, below: 16pt, breakable: false)[
+#block(above: 5pt, below: 8pt, breakable: false)[
 #grid(columns: (1fr, auto), gutter: 12pt, align: top,
-  [#text(size: 13pt, weight: "bold", fill: ink)[Senior Software Engineer]
-   #v(3pt)
-   #text(size: 10pt, weight: "semibold", fill: accent)[BAAS Software | Remote]],
-  [#text(size: 9.3pt, fill: muted)[June 2022 - Present]],
+  [#text(size: 12.2pt, weight: "bold", fill: ink)[Senior Software Engineer]
+   #v(1.5pt)
+   #text(size: 9.4pt, weight: "semibold", fill: accent)[BAAS Software | Remote]],
+  [#text(size: 8.9pt, fill: muted)[June 2022 - Present]],
 )
-#v(9pt)
-#text(size: 8pt, weight: "semibold", fill: muted, tracking: 0.7pt)[POSITION SUMMARY]
+#v(5pt)
+#text(size: 7.6pt, weight: "semibold", fill: muted, tracking: 0.6pt)[POSITION SUMMARY]
+#v(2pt)
+#text(size: 9.2pt, fill: body)[Own the complete software product lifecycle across web, mobile, cloud, DevOps, reliability, and security.]
+#v(5pt)
+#text(size: 7.6pt, weight: "semibold", fill: muted, tracking: 0.6pt)[SELECTED ACCOMPLISHMENTS]
 #v(3pt)
-#text(size: 9.6pt, fill: body)[Own the complete software product lifecycle across web, mobile, cloud, DevOps, reliability, and security.]
-#v(9pt)
-#text(size: 8pt, weight: "semibold", fill: muted, tracking: 0.7pt)[SELECTED ACCOMPLISHMENTS]
-#v(7pt)
-#grid(columns: (9pt, 1fr), column-gutter: 7pt, align: top,
-  [#text(size: 9pt, fill: accent)[•]],
-  [#block[#set par(leading: 1.08em); #text(size: 9.25pt, fill: body)[Led products from concept and client discovery through architecture, full-stack implementation, launch, monitoring, and ongoing support.]]],
+#grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
+  [#text(size: 8.5pt, fill: accent)[•]],
+  [#block[#set par(leading: 0.62em); #text(size: 9pt, fill: body)[Led products from concept and client discovery through architecture, full-stack implementation, launch, monitoring, and ongoing support.]]],
 )
-#v(4pt)
-#grid(columns: (9pt, 1fr), column-gutter: 7pt, align: top,
-  [#text(size: 9pt, fill: accent)[•]],
-  [#block[#set par(leading: 1.08em); #text(size: 9.25pt, fill: body)[Built customer-facing web and mobile applications, APIs, automation systems, and internal platforms across cloud and containerized environments.]]],
+#v(2.5pt)
+#grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
+  [#text(size: 8.5pt, fill: accent)[•]],
+  [#block[#set par(leading: 0.62em); #text(size: 9pt, fill: body)[Built customer-facing web and mobile applications, APIs, automation systems, and internal platforms across cloud and containerized environments.]]],
 )
-#v(4pt)
-#grid(columns: (9pt, 1fr), column-gutter: 7pt, align: top,
-  [#text(size: 9pt, fill: accent)[•]],
-  [#block[#set par(leading: 1.08em); #text(size: 9.25pt, fill: body)[Created GitHub Actions release pipelines for AWS, Cloudflare, Docker, web, and mobile targets; reduced release time by 40% while helping maintain 99.9% uptime.]]],
+#v(2.5pt)
+#grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
+  [#text(size: 8.5pt, fill: accent)[•]],
+  [#block[#set par(leading: 0.62em); #text(size: 9pt, fill: body)[Created GitHub Actions release pipelines for AWS, Cloudflare, Docker, web, and mobile targets; reduced release time by 40% while helping maintain 99.9% uptime.]]],
 )
-#v(4pt)
-#grid(columns: (9pt, 1fr), column-gutter: 7pt, align: top,
-  [#text(size: 9pt, fill: accent)[•]],
-  [#block[#set par(leading: 1.08em); #text(size: 9.25pt, fill: body)[Established production monitoring, alerting, and incident workflows with Prometheus, Grafana, and Kibana, carrying corrective work through deployment.]]],
+#v(2.5pt)
+#grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
+  [#text(size: 8.5pt, fill: accent)[•]],
+  [#block[#set par(leading: 0.62em); #text(size: 9pt, fill: body)[Established production monitoring, alerting, and incident workflows with Prometheus, Grafana, and Kibana, carrying corrective work through deployment.]]],
 )
-#v(4pt)
-#grid(columns: (9pt, 1fr), column-gutter: 7pt, align: top,
-  [#text(size: 9pt, fill: accent)[•]],
-  [#block[#set par(leading: 1.08em); #text(size: 9.25pt, fill: body)[Strengthened platform security with least-privilege AWS IAM policies, access-risk remediation, and OAuth 2.0, SSO, 2FA, and secure session flows.]]],
+#v(2.5pt)
+#grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
+  [#text(size: 8.5pt, fill: accent)[•]],
+  [#block[#set par(leading: 0.62em); #text(size: 9pt, fill: body)[Strengthened platform security with least-privilege AWS IAM policies, access-risk remediation, and OAuth 2.0, SSO, 2FA, and secure session flows.]]],
+)
+]
+#block(above: 5pt, below: 8pt, breakable: false)[
+#grid(columns: (1fr, auto), gutter: 12pt, align: top,
+  [#text(size: 12.2pt, weight: "bold", fill: ink)[Software Engineer III]
+   #v(1.5pt)
+   #text(size: 9.4pt, weight: "semibold", fill: accent)[USAA | Remote]],
+  [#text(size: 8.9pt, fill: muted)[June 2020 - July 2022]],
+)
+#v(5pt)
+#text(size: 7.6pt, weight: "semibold", fill: muted, tracking: 0.6pt)[POSITION SUMMARY]
+#v(2pt)
+#text(size: 9.2pt, fill: body)[Strengthened enterprise reliability, delivery automation, quality engineering, and incident response.]
+#v(5pt)
+#text(size: 7.6pt, weight: "semibold", fill: muted, tracking: 0.6pt)[SELECTED ACCOMPLISHMENTS]
+#v(3pt)
+#grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
+  [#text(size: 8.5pt, fill: accent)[•]],
+  [#block[#set par(leading: 0.62em); #text(size: 9pt, fill: body)[Automated deployment and development workflows to improve release consistency, service stability, and recovery from failed changes.]]],
+)
+#v(2.5pt)
+#grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
+  [#text(size: 8.5pt, fill: accent)[•]],
+  [#block[#set par(leading: 0.62em); #text(size: 9pt, fill: body)[Implemented real-time monitoring and alerting, supported production incidents, and turned post-incident findings into reliability improvements.]]],
+)
+#v(2.5pt)
+#grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
+  [#text(size: 8.5pt, fill: accent)[•]],
+  [#block[#set par(leading: 0.62em); #text(size: 9pt, fill: body)[Advanced automated integration, regression, and performance testing across teams as Vice President of the Quality Engineering Society.]]],
+)
+#v(2.5pt)
+#grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
+  [#text(size: 8.5pt, fill: accent)[•]],
+  [#block[#set par(leading: 0.62em); #text(size: 9pt, fill: body)[Mentored engineers in site reliability, troubleshooting, and quality practices while contributing to resilient service designs.]]],
 )
 ]
 #pagebreak()
 #section("Employment History (continued)")
-#block(above: 11pt, below: 16pt, breakable: false)[
+#block(above: 5pt, below: 8pt, breakable: false)[
 #grid(columns: (1fr, auto), gutter: 12pt, align: top,
-  [#text(size: 13pt, weight: "bold", fill: ink)[Software Engineer III]
-   #v(3pt)
-   #text(size: 10pt, weight: "semibold", fill: accent)[USAA | Remote]],
-  [#text(size: 9.3pt, fill: muted)[June 2020 - July 2022]],
+  [#text(size: 12.2pt, weight: "bold", fill: ink)[Software Engineer]
+   #v(1.5pt)
+   #text(size: 9.4pt, weight: "semibold", fill: accent)[Web Plant Media | Remote]],
+  [#text(size: 8.9pt, fill: muted)[July 2018 - May 2020]],
 )
-#v(9pt)
-#text(size: 8pt, weight: "semibold", fill: muted, tracking: 0.7pt)[POSITION SUMMARY]
+#v(5pt)
+#text(size: 7.6pt, weight: "semibold", fill: muted, tracking: 0.6pt)[POSITION SUMMARY]
+#v(2pt)
+#text(size: 9.2pt, fill: body)[Built custom WordPress and React experiences while modernizing client platforms, cloud infrastructure, and delivery practices.]
+#v(5pt)
+#text(size: 7.6pt, weight: "semibold", fill: muted, tracking: 0.6pt)[SELECTED ACCOMPLISHMENTS]
 #v(3pt)
-#text(size: 9.6pt, fill: body)[Strengthened enterprise reliability, delivery automation, quality engineering, and incident response.]
-#v(9pt)
-#text(size: 8pt, weight: "semibold", fill: muted, tracking: 0.7pt)[SELECTED ACCOMPLISHMENTS]
-#v(7pt)
-#grid(columns: (9pt, 1fr), column-gutter: 7pt, align: top,
-  [#text(size: 9pt, fill: accent)[•]],
-  [#block[#set par(leading: 1.08em); #text(size: 9.25pt, fill: body)[Automated deployment and development workflows to improve release consistency, service stability, and recovery from failed changes.]]],
+#grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
+  [#text(size: 8.5pt, fill: accent)[•]],
+  [#block[#set par(leading: 0.62em); #text(size: 9pt, fill: body)[Built reusable React components and custom WordPress themes that standardized responsive navigation, content, forms, and interactive experiences.]]],
 )
-#v(4pt)
-#grid(columns: (9pt, 1fr), column-gutter: 7pt, align: top,
-  [#text(size: 9pt, fill: accent)[•]],
-  [#block[#set par(leading: 1.08em); #text(size: 9.25pt, fill: body)[Implemented real-time monitoring and alerting, supported production incidents, and turned post-incident findings into reliability improvements.]]],
+#v(2.5pt)
+#grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
+  [#text(size: 8.5pt, fill: accent)[•]],
+  [#block[#set par(leading: 0.62em); #text(size: 9pt, fill: body)[Led client UI/UX work from requirements and user flows through design, accessible implementation, and iterative delivery.]]],
 )
-#v(4pt)
-#grid(columns: (9pt, 1fr), column-gutter: 7pt, align: top,
-  [#text(size: 9pt, fill: accent)[•]],
-  [#block[#set par(leading: 1.08em); #text(size: 9.25pt, fill: body)[Advanced automated integration, regression, and performance testing across teams as Vice President of the Quality Engineering Society.]]],
+#v(2.5pt)
+#grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
+  [#text(size: 8.5pt, fill: accent)[•]],
+  [#block[#set par(leading: 0.62em); #text(size: 9pt, fill: body)[Migrated client websites to AWS to improve performance, availability, security, and hosting efficiency.]]],
 )
-#v(4pt)
-#grid(columns: (9pt, 1fr), column-gutter: 7pt, align: top,
-  [#text(size: 9pt, fill: accent)[•]],
-  [#block[#set par(leading: 1.08em); #text(size: 9.25pt, fill: body)[Mentored engineers in site reliability, troubleshooting, and quality practices while contributing to resilient service designs.]]],
+#v(2.5pt)
+#grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
+  [#text(size: 8.5pt, fill: accent)[•]],
+  [#block[#set par(leading: 0.62em); #text(size: 9pt, fill: body)[Added monitoring, alerting, logging, backups, and disaster-recovery procedures to reduce operational risk and speed restoration.]]],
 )
 ]
-#v(20pt)
-#block(above: 11pt, below: 16pt, breakable: false)[
+#block(above: 5pt, below: 8pt, breakable: false)[
 #grid(columns: (1fr, auto), gutter: 12pt, align: top,
-  [#text(size: 13pt, weight: "bold", fill: ink)[Software Engineer]
-   #v(3pt)
-   #text(size: 10pt, weight: "semibold", fill: accent)[Web Plant Media | Remote]],
-  [#text(size: 9.3pt, fill: muted)[July 2018 - May 2020]],
+  [#text(size: 12.2pt, weight: "bold", fill: ink)[Software Engineer]
+   #v(1.5pt)
+   #text(size: 9.4pt, weight: "semibold", fill: accent)[Caprock Custom Apps]],
+  [#text(size: 8.9pt, fill: muted)[February 2017 - July 2018]],
 )
-#v(9pt)
-#text(size: 8pt, weight: "semibold", fill: muted, tracking: 0.7pt)[POSITION SUMMARY]
+#v(5pt)
+#text(size: 7.6pt, weight: "semibold", fill: muted, tracking: 0.6pt)[POSITION SUMMARY]
+#v(2pt)
+#text(size: 9.2pt, fill: body)[Delivered custom web and mobile products from discovery and architecture through app-store release and support.]
+#v(5pt)
+#text(size: 7.6pt, weight: "semibold", fill: muted, tracking: 0.6pt)[SELECTED ACCOMPLISHMENTS]
 #v(3pt)
-#text(size: 9.6pt, fill: body)[Built custom WordPress and React experiences while modernizing client platforms, cloud infrastructure, and delivery practices.]
-#v(9pt)
-#text(size: 8pt, weight: "semibold", fill: muted, tracking: 0.7pt)[SELECTED ACCOMPLISHMENTS]
-#v(7pt)
-#grid(columns: (9pt, 1fr), column-gutter: 7pt, align: top,
-  [#text(size: 9pt, fill: accent)[•]],
-  [#block[#set par(leading: 1.08em); #text(size: 9.25pt, fill: body)[Built reusable React components and custom WordPress themes that standardized responsive navigation, content, forms, and interactive experiences.]]],
+#grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
+  [#text(size: 8.5pt, fill: accent)[•]],
+  [#block[#set par(leading: 0.62em); #text(size: 9pt, fill: body)[Defined product scope and technical plans directly with clients and cross-functional teams, then delivered web and mobile applications through launch.]]],
 )
-#v(4pt)
-#grid(columns: (9pt, 1fr), column-gutter: 7pt, align: top,
-  [#text(size: 9pt, fill: accent)[•]],
-  [#block[#set par(leading: 1.08em); #text(size: 9.25pt, fill: body)[Led client UI/UX work from requirements and user flows through design, accessible implementation, and iterative delivery.]]],
+#v(2.5pt)
+#grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
+  [#text(size: 8.5pt, fill: accent)[•]],
+  [#block[#set par(leading: 0.62em); #text(size: 9pt, fill: body)[Built front-end experiences, Node.js and Express services, APIs, integrations, and data workflows for custom products.]]],
 )
-#v(4pt)
-#grid(columns: (9pt, 1fr), column-gutter: 7pt, align: top,
-  [#text(size: 9pt, fill: accent)[•]],
-  [#block[#set par(leading: 1.08em); #text(size: 9.25pt, fill: body)[Migrated client websites to AWS to improve performance, availability, security, and hosting efficiency.]]],
+#v(2.5pt)
+#grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
+  [#text(size: 8.5pt, fill: accent)[•]],
+  [#block[#set par(leading: 0.62em); #text(size: 9pt, fill: body)[Improved service architecture and request handling, reducing response times by up to 30% for key features.]]],
 )
-#v(4pt)
-#grid(columns: (9pt, 1fr), column-gutter: 7pt, align: top,
-  [#text(size: 9pt, fill: accent)[•]],
-  [#block[#set par(leading: 1.08em); #text(size: 9.25pt, fill: body)[Added monitoring, alerting, logging, backups, and disaster-recovery procedures to reduce operational risk and speed restoration.]]],
+#v(2.5pt)
+#grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
+  [#text(size: 8.5pt, fill: accent)[•]],
+  [#block[#set par(leading: 0.62em); #text(size: 9pt, fill: body)[Released multiple applications through mobile app stores and managed updates and post-launch support.]]],
 )
 ]
-#pagebreak()
-#section("Employment History (continued)")
-#block(above: 11pt, below: 16pt, breakable: false)[
+#block(above: 5pt, below: 8pt, breakable: false)[
 #grid(columns: (1fr, auto), gutter: 12pt, align: top,
-  [#text(size: 13pt, weight: "bold", fill: ink)[Software Engineer]
-   #v(3pt)
-   #text(size: 10pt, weight: "semibold", fill: accent)[Caprock Custom Apps]],
-  [#text(size: 9.3pt, fill: muted)[February 2017 - July 2018]],
+  [#text(size: 12.2pt, weight: "bold", fill: ink)[IT Support Technician / Supervisor]
+   #v(1.5pt)
+   #text(size: 9.4pt, weight: "semibold", fill: accent)[IT Help Central]],
+  [#text(size: 8.9pt, fill: muted)[November 2015 - August 2017]],
 )
-#v(9pt)
-#text(size: 8pt, weight: "semibold", fill: muted, tracking: 0.7pt)[POSITION SUMMARY]
+#v(5pt)
+#text(size: 7.6pt, weight: "semibold", fill: muted, tracking: 0.6pt)[POSITION SUMMARY]
+#v(2pt)
+#text(size: 9.2pt, fill: body)[Resolved complex technology issues, led support operations, and created knowledge resources for a large university community.]
+#v(5pt)
+#text(size: 7.6pt, weight: "semibold", fill: muted, tracking: 0.6pt)[SELECTED ACCOMPLISHMENTS]
 #v(3pt)
-#text(size: 9.6pt, fill: body)[Delivered custom web and mobile products from discovery and architecture through app-store release and support.]
-#v(9pt)
-#text(size: 8pt, weight: "semibold", fill: muted, tracking: 0.7pt)[SELECTED ACCOMPLISHMENTS]
-#v(7pt)
-#grid(columns: (9pt, 1fr), column-gutter: 7pt, align: top,
-  [#text(size: 9pt, fill: accent)[•]],
-  [#block[#set par(leading: 1.08em); #text(size: 9.25pt, fill: body)[Defined product scope and technical plans directly with clients and cross-functional teams, then delivered web and mobile applications through launch.]]],
+#grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
+  [#text(size: 8.5pt, fill: accent)[•]],
+  [#block[#set par(leading: 0.62em); #text(size: 9pt, fill: body)[Earned promotion to Lead Technician, coordinated daily support operations, and led technical projects for a large university community.]]],
 )
-#v(4pt)
-#grid(columns: (9pt, 1fr), column-gutter: 7pt, align: top,
-  [#text(size: 9pt, fill: accent)[•]],
-  [#block[#set par(leading: 1.08em); #text(size: 9.25pt, fill: body)[Built front-end experiences, Node.js and Express services, APIs, integrations, and data workflows for custom products.]]],
+#v(2.5pt)
+#grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
+  [#text(size: 8.5pt, fill: accent)[•]],
+  [#block[#set par(leading: 0.62em); #text(size: 9pt, fill: body)[Resolved software, hardware, account, network, and endpoint issues for students, faculty, and staff across walk-up, phone, and on-site channels.]]],
 )
-#v(4pt)
-#grid(columns: (9pt, 1fr), column-gutter: 7pt, align: top,
-  [#text(size: 9pt, fill: accent)[•]],
-  [#block[#set par(leading: 1.08em); #text(size: 9.25pt, fill: body)[Improved service architecture and request handling, reducing response times by up to 30% for key features.]]],
+#v(2.5pt)
+#grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
+  [#text(size: 8.5pt, fill: accent)[•]],
+  [#block[#set par(leading: 0.62em); #text(size: 9pt, fill: body)[Created searchable troubleshooting documentation used by thousands of Texas Tech University users and support technicians.]]],
 )
-#v(4pt)
-#grid(columns: (9pt, 1fr), column-gutter: 7pt, align: top,
-  [#text(size: 9pt, fill: accent)[•]],
-  [#block[#set par(leading: 1.08em); #text(size: 9.25pt, fill: body)[Released multiple applications through mobile app stores and managed updates and post-launch support.]]],
-)
-]
-#v(20pt)
-#block(above: 11pt, below: 16pt, breakable: false)[
-#grid(columns: (1fr, auto), gutter: 12pt, align: top,
-  [#text(size: 13pt, weight: "bold", fill: ink)[IT Support Technician / Supervisor]
-   #v(3pt)
-   #text(size: 10pt, weight: "semibold", fill: accent)[IT Help Central]],
-  [#text(size: 9.3pt, fill: muted)[November 2015 - August 2017]],
-)
-#v(9pt)
-#text(size: 8pt, weight: "semibold", fill: muted, tracking: 0.7pt)[POSITION SUMMARY]
-#v(3pt)
-#text(size: 9.6pt, fill: body)[Resolved complex technology issues, led support operations, and created knowledge resources for a large university community.]
-#v(9pt)
-#text(size: 8pt, weight: "semibold", fill: muted, tracking: 0.7pt)[SELECTED ACCOMPLISHMENTS]
-#v(7pt)
-#grid(columns: (9pt, 1fr), column-gutter: 7pt, align: top,
-  [#text(size: 9pt, fill: accent)[•]],
-  [#block[#set par(leading: 1.08em); #text(size: 9.25pt, fill: body)[Earned promotion to Lead Technician, coordinated daily support operations, and led technical projects for a large university community.]]],
-)
-#v(4pt)
-#grid(columns: (9pt, 1fr), column-gutter: 7pt, align: top,
-  [#text(size: 9pt, fill: accent)[•]],
-  [#block[#set par(leading: 1.08em); #text(size: 9.25pt, fill: body)[Resolved software, hardware, account, network, and endpoint issues for students, faculty, and staff across walk-up, phone, and on-site channels.]]],
-)
-#v(4pt)
-#grid(columns: (9pt, 1fr), column-gutter: 7pt, align: top,
-  [#text(size: 9pt, fill: accent)[•]],
-  [#block[#set par(leading: 1.08em); #text(size: 9.25pt, fill: body)[Created searchable troubleshooting documentation used by thousands of Texas Tech University users and support technicians.]]],
-)
-#v(4pt)
-#grid(columns: (9pt, 1fr), column-gutter: 7pt, align: top,
-  [#text(size: 9pt, fill: accent)[•]],
-  [#block[#set par(leading: 1.08em); #text(size: 9.25pt, fill: body)[Investigated root causes, coordinated escalations with specialized IT teams, and communicated solutions clearly to people with varied technical experience.]]],
+#v(2.5pt)
+#grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
+  [#text(size: 8.5pt, fill: accent)[•]],
+  [#block[#set par(leading: 0.62em); #text(size: 9pt, fill: body)[Investigated root causes, coordinated escalations with specialized IT teams, and communicated solutions clearly to people with varied technical experience.]]],
 )
 ]
 #pagebreak()
-#set page(header: none)
+#set page(width: 8.5in, height: 11in, margin: (top: 0.56in, bottom: 0.56in, left: 0.64in, right: 0.64in), header: none)
 #set text(size: 9.2pt)
 #set list(spacing: 4.2pt)
 #text(size: 20pt, weight: "bold", fill: ink)[EazyHQ]
@@ -380,76 +376,54 @@ Platform-focused engineer with more than 10 years of experience building full-st
    #link("https://github.com/WTMx3/eazyhq")[#text(size: 8.1pt, fill: accent)[https://github.com/WTMx3/eazyhq]]
   ],
 )
-#pagebreak()
-#text(size: 20pt, weight: "bold", fill: ink)[EazyHQ]
-#v(5pt)
-#text(size: 8pt, fill: muted)[Screenshots 1 / 4]
-#v(13pt)
-#block(width: 100%, height: 260pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
-  #image("../public/project-media/eazyhq/workflow-canvas.png", width: 100%, height: 260pt, fit: "contain", alt: "EazyHQ main interface")
-]
-#v(5pt)
-#text(size: 8.6pt, fill: muted)[EazyHQ main interface]
-#v(11pt)
-#block(width: 100%, height: 260pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
-  #image("../public/project-media/eazyhq/task-performance.png", width: 100%, height: 260pt, fit: "contain", alt: "Task performance and workload analytics")
-]
-#v(5pt)
-#text(size: 8.6pt, fill: muted)[Task performance and workload analytics]
-#v(11pt)
-#pagebreak()
-#text(size: 20pt, weight: "bold", fill: ink)[EazyHQ]
-#v(5pt)
-#text(size: 8pt, fill: muted)[Screenshots 2 / 4]
-#v(13pt)
-#block(width: 100%, height: 260pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
-  #image("../public/project-media/eazyhq/campaign-performance.png", width: 100%, height: 260pt, fit: "contain", alt: "Campaign delivery and engagement analytics")
-]
-#v(5pt)
-#text(size: 8.6pt, fill: muted)[Campaign delivery and engagement analytics]
-#v(11pt)
-#block(width: 100%, height: 260pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
-  #image("../public/project-media/eazyhq/starter-library.png", width: 100%, height: 260pt, fit: "contain", alt: "Scenario-driven starter library")
-]
-#v(5pt)
-#text(size: 8.6pt, fill: muted)[Scenario-driven starter library]
-#v(11pt)
-#pagebreak()
-#text(size: 20pt, weight: "bold", fill: ink)[EazyHQ]
-#v(5pt)
-#text(size: 8pt, fill: muted)[Screenshots 3 / 4]
-#v(13pt)
-#block(width: 100%, height: 260pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
-  #image("../public/project-media/eazyhq/starter-details.png", width: 100%, height: 260pt, fit: "contain", alt: "Starter requirements and generated outputs")
-]
-#v(5pt)
-#text(size: 8.6pt, fill: muted)[Starter requirements and generated outputs]
-#v(11pt)
-#block(width: 100%, height: 260pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
-  #image("../public/project-media/eazyhq/starter-execution.png", width: 100%, height: 260pt, fit: "contain", alt: "Auditable multi-step starter execution")
-]
-#v(5pt)
-#text(size: 8.6pt, fill: muted)[Auditable multi-step starter execution]
-#v(11pt)
-#pagebreak()
-#text(size: 20pt, weight: "bold", fill: ink)[EazyHQ]
-#v(5pt)
-#text(size: 8pt, fill: muted)[Screenshots 4 / 4]
-#v(13pt)
-#block(width: 100%, height: 260pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
-  #image("../public/project-media/eazyhq/event-inspector.png", width: 100%, height: 260pt, fit: "contain", alt: "Event payload and metadata inspector")
-]
-#v(5pt)
-#text(size: 8.6pt, fill: muted)[Event payload and metadata inspector]
-#v(11pt)
-#block(width: 100%, height: 260pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
-  #image("../public/project-media/eazyhq/dashboard-builder.png", width: 100%, height: 260pt, fit: "contain", alt: "Configurable operational dashboard builder")
-]
-#v(5pt)
-#text(size: 8.6pt, fill: muted)[Configurable operational dashboard builder]
-#v(11pt)
-#pagebreak()
-#set page(header: none)
+#set page(width: 11in, height: 17in, margin: (top: 0.48in, bottom: 0.48in, left: 0.48in, right: 0.48in), header: none)
+#text(size: 21pt, weight: "bold", fill: ink)[EazyHQ]
+#v(4pt)
+#text(size: 8.5pt, fill: muted)[Project screenshots · Select an image to open the full-size original]
+#v(14pt)
+#grid(columns: (1fr, 1fr), rows: 231pt, column-gutter: 12pt, row-gutter: 12pt,
+  [#block(width: 100%, height: 207pt, clip: true, radius: 4pt, fill: rgb("#f1f2f3"))[
+    #link("https://thomasmiller.cv/project-media/eazyhq/workflow-canvas.png")[#image("../public/project-media/eazyhq/workflow-canvas.png", width: 100%, height: 207pt, fit: "contain", alt: "EazyHQ main interface")]
+   ]
+   #v(4pt)
+   #text(size: 8pt, fill: muted)[01. EazyHQ main interface]],
+  [#block(width: 100%, height: 207pt, clip: true, radius: 4pt, fill: rgb("#f1f2f3"))[
+    #link("https://thomasmiller.cv/project-media/eazyhq/task-performance.png")[#image("../public/project-media/eazyhq/task-performance.png", width: 100%, height: 207pt, fit: "contain", alt: "Task performance and workload analytics")]
+   ]
+   #v(4pt)
+   #text(size: 8pt, fill: muted)[02. Task performance and workload analytics]],
+  [#block(width: 100%, height: 207pt, clip: true, radius: 4pt, fill: rgb("#f1f2f3"))[
+    #link("https://thomasmiller.cv/project-media/eazyhq/campaign-performance.png")[#image("../public/project-media/eazyhq/campaign-performance.png", width: 100%, height: 207pt, fit: "contain", alt: "Campaign delivery and engagement analytics")]
+   ]
+   #v(4pt)
+   #text(size: 8pt, fill: muted)[03. Campaign delivery and engagement analytics]],
+  [#block(width: 100%, height: 207pt, clip: true, radius: 4pt, fill: rgb("#f1f2f3"))[
+    #link("https://thomasmiller.cv/project-media/eazyhq/starter-library.png")[#image("../public/project-media/eazyhq/starter-library.png", width: 100%, height: 207pt, fit: "contain", alt: "Scenario-driven starter library")]
+   ]
+   #v(4pt)
+   #text(size: 8pt, fill: muted)[04. Scenario-driven starter library]],
+  [#block(width: 100%, height: 207pt, clip: true, radius: 4pt, fill: rgb("#f1f2f3"))[
+    #link("https://thomasmiller.cv/project-media/eazyhq/starter-details.png")[#image("../public/project-media/eazyhq/starter-details.png", width: 100%, height: 207pt, fit: "contain", alt: "Starter requirements and generated outputs")]
+   ]
+   #v(4pt)
+   #text(size: 8pt, fill: muted)[05. Starter requirements and generated outputs]],
+  [#block(width: 100%, height: 207pt, clip: true, radius: 4pt, fill: rgb("#f1f2f3"))[
+    #link("https://thomasmiller.cv/project-media/eazyhq/starter-execution.png")[#image("../public/project-media/eazyhq/starter-execution.png", width: 100%, height: 207pt, fit: "contain", alt: "Auditable multi-step starter execution")]
+   ]
+   #v(4pt)
+   #text(size: 8pt, fill: muted)[06. Auditable multi-step starter execution]],
+  [#block(width: 100%, height: 207pt, clip: true, radius: 4pt, fill: rgb("#f1f2f3"))[
+    #link("https://thomasmiller.cv/project-media/eazyhq/event-inspector.png")[#image("../public/project-media/eazyhq/event-inspector.png", width: 100%, height: 207pt, fit: "contain", alt: "Event payload and metadata inspector")]
+   ]
+   #v(4pt)
+   #text(size: 8pt, fill: muted)[07. Event payload and metadata inspector]],
+  [#block(width: 100%, height: 207pt, clip: true, radius: 4pt, fill: rgb("#f1f2f3"))[
+    #link("https://thomasmiller.cv/project-media/eazyhq/dashboard-builder.png")[#image("../public/project-media/eazyhq/dashboard-builder.png", width: 100%, height: 207pt, fit: "contain", alt: "Configurable operational dashboard builder")]
+   ]
+   #v(4pt)
+   #text(size: 8pt, fill: muted)[08. Configurable operational dashboard builder]],
+)
+#set page(width: 8.5in, height: 11in, margin: (top: 0.56in, bottom: 0.56in, left: 0.64in, right: 0.64in), header: none)
 #set text(size: 9.2pt)
 #set list(spacing: 4.2pt)
 #text(size: 20pt, weight: "bold", fill: ink)[Listings+]
@@ -486,103 +460,64 @@ Platform-focused engineer with more than 10 years of experience building full-st
    #link("https://github.com/WTMx3/listingsplus")[#text(size: 8.1pt, fill: accent)[https://github.com/WTMx3/listingsplus]]
   ],
 )
-#pagebreak()
-#text(size: 20pt, weight: "bold", fill: ink)[Listings+]
-#v(5pt)
-#text(size: 8pt, fill: muted)[Screenshots 1 / 7]
-#v(13pt)
-#block(width: 100%, height: 260pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
-  #image("../public/project-media/listingsplus/property-discovery.png", width: 100%, height: 260pt, fit: "contain", alt: "Listings+ main interface")
-]
-#v(5pt)
-#text(size: 8.6pt, fill: muted)[Listings+ main interface]
-#v(11pt)
-#block(width: 100%, height: 260pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
-  #image("../public/project-media/listingsplus/property-and-call-workspace.png", width: 100%, height: 260pt, fit: "contain", alt: "Property detail, guided matching, and call context")
-]
-#v(5pt)
-#text(size: 8.6pt, fill: muted)[Property detail, guided matching, and call context]
-#v(11pt)
-#pagebreak()
-#text(size: 20pt, weight: "bold", fill: ink)[Listings+]
-#v(5pt)
-#text(size: 8pt, fill: muted)[Screenshots 2 / 7]
-#v(13pt)
-#block(width: 100%, height: 350pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
-  #image("../public/project-media/listingsplus/guided-property-match.png", width: 100%, height: 350pt, fit: "contain", alt: "Guided buyer match on a property page")
-]
-#v(5pt)
-#text(size: 8.6pt, fill: muted)[Guided buyer match on a property page]
-#v(11pt)
-#pagebreak()
-#text(size: 20pt, weight: "bold", fill: ink)[Listings+]
-#v(5pt)
-#text(size: 8pt, fill: muted)[Screenshots 3 / 7]
-#v(13pt)
-#block(width: 100%, height: 570pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
-  #image("../public/project-media/listingsplus/listing-grid.jpg", width: 100%, height: 570pt, fit: "contain", alt: "Searchable inventory grid with normalized listing cards")
-]
-#v(5pt)
-#text(size: 8.6pt, fill: muted)[Searchable inventory grid with normalized listing cards]
-#v(11pt)
-#pagebreak()
-#text(size: 20pt, weight: "bold", fill: ink)[Listings+]
-#v(5pt)
-#text(size: 8pt, fill: muted)[Screenshots 4 / 7]
-#v(13pt)
-#block(width: 100%, height: 570pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
-  #image("../public/project-media/listingsplus/property-page-full.jpg", width: 100%, height: 570pt, fit: "contain", alt: "Full property listing and details")
-]
-#v(5pt)
-#text(size: 8.6pt, fill: muted)[Full property listing and details]
-#v(11pt)
-#pagebreak()
-#text(size: 20pt, weight: "bold", fill: ink)[Listings+]
-#v(5pt)
-#text(size: 8pt, fill: muted)[Screenshots 5 / 7]
-#v(13pt)
-#block(width: 100%, height: 260pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
-  #image("../public/project-media/listingsplus/service-area-map.png", width: 100%, height: 260pt, fit: "contain", alt: "Geographic service-area visualization")
-]
-#v(5pt)
-#text(size: 8.6pt, fill: muted)[Geographic service-area visualization]
-#v(11pt)
-#block(width: 100%, height: 260pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
-  #image("../public/project-media/listingsplus/campaign-list.png", width: 100%, height: 260pt, fit: "contain", alt: "Campaign management and status")
-]
-#v(5pt)
-#text(size: 8.6pt, fill: muted)[Campaign management and status]
-#v(11pt)
-#pagebreak()
-#text(size: 20pt, weight: "bold", fill: ink)[Listings+]
-#v(5pt)
-#text(size: 8pt, fill: muted)[Screenshots 6 / 7]
-#v(13pt)
-#block(width: 100%, height: 570pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
-  #image("../public/project-media/listingsplus/campaign-creation.png", width: 100%, height: 570pt, fit: "contain", alt: "Campaign creation workflow")
-]
-#v(5pt)
-#text(size: 8.6pt, fill: muted)[Campaign creation workflow]
-#v(11pt)
-#pagebreak()
-#text(size: 20pt, weight: "bold", fill: ink)[Listings+]
-#v(5pt)
-#text(size: 8pt, fill: muted)[Screenshots 7 / 7]
-#v(13pt)
-#block(width: 100%, height: 260pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
-  #image("../public/project-media/listingsplus/campaign-flow.png", width: 100%, height: 260pt, fit: "contain", alt: "Visual buyer nurture flow builder")
-]
-#v(5pt)
-#text(size: 8.6pt, fill: muted)[Visual buyer nurture flow builder]
-#v(11pt)
-#block(width: 100%, height: 260pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
-  #image("../public/project-media/listingsplus/sales-dashboard.png", width: 100%, height: 260pt, fit: "contain", alt: "Sales and payment analytics dashboard")
-]
-#v(5pt)
-#text(size: 8.6pt, fill: muted)[Sales and payment analytics dashboard]
-#v(11pt)
-#pagebreak()
-#set page(header: none)
+#set page(width: 11in, height: 17in, margin: (top: 0.48in, bottom: 0.48in, left: 0.48in, right: 0.48in), header: none)
+#text(size: 21pt, weight: "bold", fill: ink)[Listings+]
+#v(4pt)
+#text(size: 8.5pt, fill: muted)[Project screenshots · Select an image to open the full-size original]
+#v(14pt)
+#grid(columns: (1fr, 1fr), rows: 182pt, column-gutter: 12pt, row-gutter: 12pt,
+  [#block(width: 100%, height: 158pt, clip: true, radius: 4pt, fill: rgb("#f1f2f3"))[
+    #link("https://thomasmiller.cv/project-media/listingsplus/property-discovery.png")[#image("../public/project-media/listingsplus/property-discovery.png", width: 100%, height: 158pt, fit: "contain", alt: "Listings+ main interface")]
+   ]
+   #v(4pt)
+   #text(size: 8pt, fill: muted)[01. Listings+ main interface]],
+  [#block(width: 100%, height: 158pt, clip: true, radius: 4pt, fill: rgb("#f1f2f3"))[
+    #link("https://thomasmiller.cv/project-media/listingsplus/property-and-call-workspace.png")[#image("../public/project-media/listingsplus/property-and-call-workspace.png", width: 100%, height: 158pt, fit: "contain", alt: "Property detail, guided matching, and call context")]
+   ]
+   #v(4pt)
+   #text(size: 8pt, fill: muted)[02. Property detail, guided matching, and call context]],
+  [#block(width: 100%, height: 158pt, clip: true, radius: 4pt, fill: rgb("#f1f2f3"))[
+    #link("https://thomasmiller.cv/project-media/listingsplus/guided-property-match.png")[#image("../public/project-media/listingsplus/guided-property-match.png", width: 100%, height: 158pt, fit: "contain", alt: "Guided buyer match on a property page")]
+   ]
+   #v(4pt)
+   #text(size: 8pt, fill: muted)[03. Guided buyer match on a property page]],
+  [#block(width: 100%, height: 158pt, clip: true, radius: 4pt, fill: rgb("#f1f2f3"))[
+    #link("https://thomasmiller.cv/project-media/listingsplus/listing-grid.jpg")[#image("../public/project-media/listingsplus/listing-grid.jpg", width: 100%, height: 158pt, fit: "contain", alt: "Searchable inventory grid with normalized listing cards")]
+   ]
+   #v(4pt)
+   #text(size: 8pt, fill: muted)[04. Searchable inventory grid with normalized listing cards]],
+  [#block(width: 100%, height: 158pt, clip: true, radius: 4pt, fill: rgb("#f1f2f3"))[
+    #link("https://thomasmiller.cv/project-media/listingsplus/property-page-full.jpg")[#image("../public/project-media/listingsplus/property-page-full.jpg", width: 100%, height: 158pt, fit: "contain", alt: "Full property listing and details")]
+   ]
+   #v(4pt)
+   #text(size: 8pt, fill: muted)[05. Full property listing and details]],
+  [#block(width: 100%, height: 158pt, clip: true, radius: 4pt, fill: rgb("#f1f2f3"))[
+    #link("https://thomasmiller.cv/project-media/listingsplus/service-area-map.png")[#image("../public/project-media/listingsplus/service-area-map.png", width: 100%, height: 158pt, fit: "contain", alt: "Geographic service-area visualization")]
+   ]
+   #v(4pt)
+   #text(size: 8pt, fill: muted)[06. Geographic service-area visualization]],
+  [#block(width: 100%, height: 158pt, clip: true, radius: 4pt, fill: rgb("#f1f2f3"))[
+    #link("https://thomasmiller.cv/project-media/listingsplus/campaign-list.png")[#image("../public/project-media/listingsplus/campaign-list.png", width: 100%, height: 158pt, fit: "contain", alt: "Campaign management and status")]
+   ]
+   #v(4pt)
+   #text(size: 8pt, fill: muted)[07. Campaign management and status]],
+  [#block(width: 100%, height: 158pt, clip: true, radius: 4pt, fill: rgb("#f1f2f3"))[
+    #link("https://thomasmiller.cv/project-media/listingsplus/campaign-creation.png")[#image("../public/project-media/listingsplus/campaign-creation.png", width: 100%, height: 158pt, fit: "contain", alt: "Campaign creation workflow")]
+   ]
+   #v(4pt)
+   #text(size: 8pt, fill: muted)[08. Campaign creation workflow]],
+  [#block(width: 100%, height: 158pt, clip: true, radius: 4pt, fill: rgb("#f1f2f3"))[
+    #link("https://thomasmiller.cv/project-media/listingsplus/campaign-flow.png")[#image("../public/project-media/listingsplus/campaign-flow.png", width: 100%, height: 158pt, fit: "contain", alt: "Visual buyer nurture flow builder")]
+   ]
+   #v(4pt)
+   #text(size: 8pt, fill: muted)[09. Visual buyer nurture flow builder]],
+  [#block(width: 100%, height: 158pt, clip: true, radius: 4pt, fill: rgb("#f1f2f3"))[
+    #link("https://thomasmiller.cv/project-media/listingsplus/sales-dashboard.png")[#image("../public/project-media/listingsplus/sales-dashboard.png", width: 100%, height: 158pt, fit: "contain", alt: "Sales and payment analytics dashboard")]
+   ]
+   #v(4pt)
+   #text(size: 8pt, fill: muted)[10. Sales and payment analytics dashboard]],
+)
+#set page(width: 8.5in, height: 11in, margin: (top: 0.56in, bottom: 0.56in, left: 0.64in, right: 0.64in), header: none)
 #set text(size: 9.2pt)
 #set list(spacing: 4.2pt)
 #text(size: 20pt, weight: "bold", fill: ink)[DOCHUB - Secure Document Sharing Platform]
@@ -619,64 +554,40 @@ Platform-focused engineer with more than 10 years of experience building full-st
    #link("https://github.com/WTMx3/dochub")[#text(size: 8.1pt, fill: accent)[https://github.com/WTMx3/dochub]]
   ],
 )
-#pagebreak()
-#text(size: 20pt, weight: "bold", fill: ink)[DOCHUB - Secure Document Sharing Platform]
-#v(5pt)
-#text(size: 8pt, fill: muted)[Screenshots 1 / 5]
-#v(13pt)
-#block(width: 100%, height: 350pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
-  #image("../public/project-media/dochub/document-access.png", width: 100%, height: 350pt, fit: "contain", alt: "DOCHUB - Secure Document Sharing Platform main interface")
-]
-#v(5pt)
-#text(size: 8.6pt, fill: muted)[DOCHUB - Secure Document Sharing Platform main interface]
-#v(11pt)
-#pagebreak()
-#text(size: 20pt, weight: "bold", fill: ink)[DOCHUB - Secure Document Sharing Platform]
-#v(5pt)
-#text(size: 8pt, fill: muted)[Screenshots 2 / 5]
-#v(13pt)
-#block(width: 100%, height: 570pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
-  #image("../public/project-media/dochub/document-library.png", width: 100%, height: 570pt, fit: "contain", alt: "Workspace document library and publishing status")
-]
-#v(5pt)
-#text(size: 8.6pt, fill: muted)[Workspace document library and publishing status]
-#v(11pt)
-#pagebreak()
-#text(size: 20pt, weight: "bold", fill: ink)[DOCHUB - Secure Document Sharing Platform]
-#v(5pt)
-#text(size: 8pt, fill: muted)[Screenshots 3 / 5]
-#v(13pt)
-#block(width: 100%, height: 570pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
-  #image("../public/project-media/dochub/document-reader.png", width: 100%, height: 570pt, fit: "contain", alt: "Connected long-form document reader")
-]
-#v(5pt)
-#text(size: 8.6pt, fill: muted)[Connected long-form document reader]
-#v(11pt)
-#pagebreak()
-#text(size: 20pt, weight: "bold", fill: ink)[DOCHUB - Secure Document Sharing Platform]
-#v(5pt)
-#text(size: 8pt, fill: muted)[Screenshots 4 / 5]
-#v(13pt)
-#block(width: 100%, height: 260pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
-  #image("../public/project-media/dochub/workspace-documents.png", width: 100%, height: 260pt, fit: "contain", alt: "Document organization and storage operations")
-]
-#v(5pt)
-#text(size: 8.6pt, fill: muted)[Document organization and storage operations]
-#v(11pt)
-#block(width: 100%, height: 260pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
-  #image("../public/project-media/dochub/document-editor.png", width: 100%, height: 260pt, fit: "contain", alt: "Markdown editor with live preview")
-]
-#v(5pt)
-#text(size: 8.6pt, fill: muted)[Markdown editor with live preview]
-#v(11pt)
-#pagebreak()
-#text(size: 20pt, weight: "bold", fill: ink)[DOCHUB - Secure Document Sharing Platform]
-#v(5pt)
-#text(size: 8pt, fill: muted)[Screenshots 5 / 5]
-#v(13pt)
-#block(width: 100%, height: 350pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[
-  #image("../public/project-media/dochub/media-picker.png", width: 100%, height: 350pt, fit: "contain", alt: "Media selection within the document workflow")
-]
-#v(5pt)
-#text(size: 8.6pt, fill: muted)[Media selection within the document workflow]
-#v(11pt)
+#set page(width: 11in, height: 17in, margin: (top: 0.48in, bottom: 0.48in, left: 0.48in, right: 0.48in), header: none)
+#text(size: 21pt, weight: "bold", fill: ink)[DOCHUB - Secure Document Sharing Platform]
+#v(4pt)
+#text(size: 8.5pt, fill: muted)[Project screenshots · Select an image to open the full-size original]
+#v(14pt)
+#grid(columns: (1fr, 1fr), rows: 312pt, column-gutter: 12pt, row-gutter: 12pt,
+  [#block(width: 100%, height: 288pt, clip: true, radius: 4pt, fill: rgb("#f1f2f3"))[
+    #link("https://thomasmiller.cv/project-media/dochub/document-access.png")[#image("../public/project-media/dochub/document-access.png", width: 100%, height: 288pt, fit: "contain", alt: "DOCHUB - Secure Document Sharing Platform main interface")]
+   ]
+   #v(4pt)
+   #text(size: 8pt, fill: muted)[01. DOCHUB - Secure Document Sharing Platform main interface]],
+  [#block(width: 100%, height: 288pt, clip: true, radius: 4pt, fill: rgb("#f1f2f3"))[
+    #link("https://thomasmiller.cv/project-media/dochub/document-library.png")[#image("../public/project-media/dochub/document-library.png", width: 100%, height: 288pt, fit: "contain", alt: "Workspace document library and publishing status")]
+   ]
+   #v(4pt)
+   #text(size: 8pt, fill: muted)[02. Workspace document library and publishing status]],
+  [#block(width: 100%, height: 288pt, clip: true, radius: 4pt, fill: rgb("#f1f2f3"))[
+    #link("https://thomasmiller.cv/project-media/dochub/document-reader.png")[#image("../public/project-media/dochub/document-reader.png", width: 100%, height: 288pt, fit: "contain", alt: "Connected long-form document reader")]
+   ]
+   #v(4pt)
+   #text(size: 8pt, fill: muted)[03. Connected long-form document reader]],
+  [#block(width: 100%, height: 288pt, clip: true, radius: 4pt, fill: rgb("#f1f2f3"))[
+    #link("https://thomasmiller.cv/project-media/dochub/workspace-documents.png")[#image("../public/project-media/dochub/workspace-documents.png", width: 100%, height: 288pt, fit: "contain", alt: "Document organization and storage operations")]
+   ]
+   #v(4pt)
+   #text(size: 8pt, fill: muted)[04. Document organization and storage operations]],
+  [#block(width: 100%, height: 288pt, clip: true, radius: 4pt, fill: rgb("#f1f2f3"))[
+    #link("https://thomasmiller.cv/project-media/dochub/document-editor.png")[#image("../public/project-media/dochub/document-editor.png", width: 100%, height: 288pt, fit: "contain", alt: "Markdown editor with live preview")]
+   ]
+   #v(4pt)
+   #text(size: 8pt, fill: muted)[05. Markdown editor with live preview]],
+  [#block(width: 100%, height: 288pt, clip: true, radius: 4pt, fill: rgb("#f1f2f3"))[
+    #link("https://thomasmiller.cv/project-media/dochub/media-picker.png")[#image("../public/project-media/dochub/media-picker.png", width: 100%, height: 288pt, fit: "contain", alt: "Media selection within the document workflow")]
+   ]
+   #v(4pt)
+   #text(size: 8pt, fill: muted)[06. Media selection within the document workflow]],
+)

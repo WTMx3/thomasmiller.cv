@@ -399,10 +399,6 @@ projects:
         - Campaign creation workflow
         - Visual buyer nurture flow builder
         - Sales and payment analytics dashboard
-      resumeSinglePageImages:
-        - /project-media/listingsplus/listing-grid.jpg
-        - /project-media/listingsplus/property-page-full.jpg
-        - /project-media/listingsplus/campaign-creation.png
       technologies:
         - Next.js
         - React
@@ -453,9 +449,6 @@ projects:
         - Document organization and storage operations
         - Markdown editor with live preview
         - Media selection within the document workflow
-      resumeSinglePageImages:
-        - /project-media/dochub/document-library.png
-        - /project-media/dochub/document-reader.png
       technologies:
         - Next.js
         - React

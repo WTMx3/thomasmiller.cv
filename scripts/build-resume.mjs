@@ -52,11 +52,11 @@ function accomplishmentList(markdown) {
     .map((line) => typstText(line.trim().slice(2).replace(/^\*\*.+?:\*\*\s*/, "")));
 
   return items.flatMap((item, index) => [
-    "#grid(columns: (9pt, 1fr), column-gutter: 7pt, align: top,",
-    '  [#text(size: 9pt, fill: accent)[•]],',
-    '  [#block[#set par(leading: 1.08em); #text(size: 9.25pt, fill: body)[' + item + "]]],",
+    "#grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,",
+    '  [#text(size: 8.5pt, fill: accent)[•]],',
+    '  [#block[#set par(leading: 0.62em); #text(size: 9pt, fill: body)[' + item + "]]],",
     ")",
-    ...(index < items.length - 1 ? ["#v(4pt)"] : []),
+    ...(index < items.length - 1 ? ["#v(2.5pt)"] : []),
   ]);
 }
 
@@ -93,7 +93,7 @@ const lines = [
   ")",
   "#set page(",
   '  paper: "us-letter",',
-  "  margin: (top: 0.62in, bottom: 0.62in, left: 0.72in, right: 0.72in),",
+  "  margin: (top: 0.56in, bottom: 0.56in, left: 0.64in, right: 0.64in),",
   '  numbering: "1",',
   "  number-align: right,",
   ")",
@@ -101,8 +101,8 @@ const lines = [
   '#let body = rgb("#42454a")',
   '#let muted = rgb("#70747a")',
   '#let accent = rgb("#2d2f32")',
-  '#set text(font: ("Segoe UI", "Arial"), size: 10pt, fill: body)',
-  "#set par(leading: 1em)",
+  '#set text(font: "Roboto", size: 9.6pt, fill: body)',
+  "#set par(leading: 0.72em)",
   "#set list(indent: 12pt, body-indent: 6pt, spacing: 6pt, tight: false)",
   "#show link: set text(fill: accent)",
   "#let section(title) = {",
@@ -143,16 +143,16 @@ const lines = [
   '#section("Summary")',
   typstText(profile.content),
   '#section("Skills")',
-  "#grid(columns: (1fr, 1fr), column-gutter: 18pt, row-gutter: 7pt,",
+  "#grid(columns: (1fr, 1fr), column-gutter: 18pt, row-gutter: 13pt,",
 ];
 
 for (const group of skills) {
   lines.push(
     "  [#block(breakable: false)[",
-    "    #set par(leading: 0.72em)",
+    "    #set par(leading: 1.05em)",
     '    #text(size: 9pt, weight: "bold", fill: ink)[' + typstText(group.metadata.category) + "]",
-    "    #v(2pt)",
-    "    #text(size: 8.55pt, fill: body)[" + group.metadata.items.map(typstText).join(", ") + "]",
+    "    #v(0.5pt)",
+    "    #text(size: 8.4pt, fill: body)[" + group.metadata.items.map(typstText).join(", ") + "]",
     "  ]],",
   );
 }
@@ -211,42 +211,41 @@ if (educationEntry || leadershipEntry) {
 lines.push(
   "#pagebreak()",
   "#set page(header: none)",
-  "#set text(size: 10pt)",
-  "#set list(spacing: 5pt)",
+  "#set text(size: 9.6pt)",
+  "#set list(spacing: 3pt)",
   '#section("Employment History")',
 );
 
 for (const [index, job] of experience.entries()) {
-  if (index === 1 || index === 3) lines.push("#pagebreak()", '#section("Employment History (continued)")');
-  if (index !== 0 && index !== 1 && index !== 3) lines.push("#v(20pt)");
+  if (index === 2) lines.push("#pagebreak()", '#section("Employment History (continued)")');
   lines.push(
-    "#block(above: 11pt, below: 16pt, breakable: false)[",
+    "#block(above: 5pt, below: 8pt, breakable: false)[",
     "#grid(columns: (1fr, auto), gutter: 12pt, align: top,",
-    '  [#text(size: 13pt, weight: "bold", fill: ink)[' + typstText(job.metadata.role) + "]",
-    "   #v(3pt)",
-    '   #text(size: 10pt, weight: "semibold", fill: accent)[' +
+    '  [#text(size: 12.2pt, weight: "bold", fill: ink)[' + typstText(job.metadata.role) + "]",
+    "   #v(1.5pt)",
+    '   #text(size: 9.4pt, weight: "semibold", fill: accent)[' +
       typstText(job.metadata.company) +
       (job.metadata.location ? " | " + typstText(job.metadata.location) : "") +
       "]],",
-    "  [#text(size: 9.3pt, fill: muted)[" +
+    "  [#text(size: 8.9pt, fill: muted)[" +
       typstText(job.metadata.startDate) +
       " - " +
       typstText(job.metadata.endDate) +
       "]],",
     ")",
-    "#v(9pt)",
-    '#text(size: 8pt, weight: "semibold", fill: muted, tracking: 0.7pt)[POSITION SUMMARY]',
+    "#v(5pt)",
+    '#text(size: 7.6pt, weight: "semibold", fill: muted, tracking: 0.6pt)[POSITION SUMMARY]',
+    "#v(2pt)",
+    "#text(size: 9.2pt, fill: body)[" + typstText(job.metadata.summary) + "]",
+    "#v(5pt)",
+    '#text(size: 7.6pt, weight: "semibold", fill: muted, tracking: 0.6pt)[SELECTED ACCOMPLISHMENTS]',
     "#v(3pt)",
-    "#text(size: 9.6pt, fill: body)[" + typstText(job.metadata.summary) + "]",
-    "#v(9pt)",
-    '#text(size: 8pt, weight: "semibold", fill: muted, tracking: 0.7pt)[SELECTED ACCOMPLISHMENTS]',
-    "#v(7pt)",
     ...accomplishmentList(job.content),
     "]",
   );
 }
 
-for (const project of projects) {
+for (const [projectIndex, project] of projects.entries()) {
   const engineeringFocus = sectionText(project.content, "Engineering focus");
   const coverImage = String(project.metadata.coverImage ?? "").replace(/^\//, "");
   const galleryImages = Array.isArray(project.metadata.galleryImages) ? project.metadata.galleryImages : [];
@@ -256,8 +255,8 @@ for (const project of projects) {
   }
 
   lines.push(
-    "#pagebreak()",
-    "#set page(header: none)",
+    ...(projectIndex === 0 ? ["#pagebreak()"] : []),
+    '#set page(width: 8.5in, height: 11in, margin: (top: 0.56in, bottom: 0.56in, left: 0.64in, right: 0.64in), header: none)',
     "#set text(size: 9.2pt)",
     "#set list(spacing: 4.2pt)",
     '#text(size: 20pt, weight: "bold", fill: ink)[' + typstText(project.metadata.title) + "]",
@@ -302,49 +301,28 @@ for (const project of projects) {
       throw new Error(`${project.metadata.title}: missing screenshot ${screenshot.path}`);
     }
   }
-  const singlePageImages = new Set(
-    Array.isArray(project.metadata.resumeSinglePageImages)
-      ? project.metadata.resumeSinglePageImages.map((imagePath) => String(imagePath).replace(/^\//, ""))
-      : [],
+  const rows = Math.ceil(screenshots.length / 2);
+  const cellHeight = Math.floor((960 - (rows - 1) * 12) / rows);
+  const imageHeight = cellHeight - 24;
+  lines.push(
+    '#set page(width: 11in, height: 17in, margin: (top: 0.48in, bottom: 0.48in, left: 0.48in, right: 0.48in), header: none)',
+    '#text(size: 21pt, weight: "bold", fill: ink)[' + typstText(project.metadata.title) + "]",
+    "#v(4pt)",
+    '#text(size: 8.5pt, fill: muted)[Project screenshots · Select an image to open the full-size original]',
+    "#v(14pt)",
+    '#grid(columns: (1fr, 1fr), rows: ' + cellHeight + 'pt, column-gutter: 12pt, row-gutter: 12pt,',
   );
-  const screenshotPages = [];
-  let pairedScreenshots = [];
-  for (const screenshot of screenshots) {
-    if (singlePageImages.has(screenshot.path)) {
-      if (pairedScreenshots.length) screenshotPages.push(pairedScreenshots);
-      pairedScreenshots = [];
-      screenshotPages.push([screenshot]);
-    } else {
-      pairedScreenshots.push(screenshot);
-      if (pairedScreenshots.length === 2) {
-        screenshotPages.push(pairedScreenshots);
-        pairedScreenshots = [];
-      }
-    }
-  }
-  if (pairedScreenshots.length) screenshotPages.push(pairedScreenshots);
-
-  screenshotPages.forEach((pageScreenshots, pageIndex) => {
-    const isSinglePageImage = pageScreenshots.length === 1 && singlePageImages.has(pageScreenshots[0].path);
-    const imageHeight = isSinglePageImage ? 570 : pageScreenshots.length === 2 ? 260 : 350;
+  screenshots.forEach(({ path: imagePath, caption: alt }, index) => {
+    const imageUrl = new URL(`/${imagePath}`, profile.metadata.website).toString();
     lines.push(
-      "#pagebreak()",
-      '#text(size: 20pt, weight: "bold", fill: ink)[' + typstText(project.metadata.title) + "]",
-      "#v(5pt)",
-      '#text(size: 8pt, fill: muted)[Screenshots ' + (pageIndex + 1) + " / " + screenshotPages.length + "]",
-      "#v(13pt)",
+      '  [#block(width: 100%, height: ' + imageHeight + 'pt, clip: true, radius: 4pt, fill: rgb("#f1f2f3"))[',
+      '    #link("' + typstText(imageUrl) + '")[#image("../public/' + typstText(imagePath) + '", width: 100%, height: ' + imageHeight + 'pt, fit: "contain", alt: "' + typstText(alt) + '")]',
+      "   ]",
+      "   #v(4pt)",
+      '   #text(size: 8pt, fill: muted)[' + String(index + 1).padStart(2, "0") + ". " + typstText(alt) + "]],",
     );
-    pageScreenshots.forEach(({ path: imagePath, caption: alt }) => {
-      lines.push(
-        '#block(width: 100%, height: ' + imageHeight + 'pt, clip: true, radius: 5pt, fill: rgb("#f1f2f3"))[',
-        '  #image("../public/' + typstText(imagePath) + '", width: 100%, height: ' + imageHeight + 'pt, fit: "contain", alt: "' + typstText(alt) + '")',
-        "]",
-        "#v(5pt)",
-        '#text(size: 8.6pt, fill: muted)[' + typstText(alt) + "]",
-        "#v(11pt)",
-      );
-    });
   });
+  lines.push(")");
 }
 
 const outputDirectory = path.join(root, "resume");

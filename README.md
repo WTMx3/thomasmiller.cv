@@ -8,8 +8,10 @@ bullets. Project `content` contains the overview, “What I built” bullets, an
 
 For a project, add every screenshot path to `metadata.galleryImages` and a caption at the same
 position in `metadata.galleryCaptions`. The first image is `metadata.coverImage`.
-Use `metadata.resumeSinglePageImages` for tall screenshots that need their own PDF page.
-Image files belong in `public/project-media/<project>/`.
+The PDF places all project screenshots together on one 11×17-inch gallery page after that
+project's letter-size description page. Each screenshot links to its full-size image.
+Image files belong in
+`public/project-media/<project>/`.
 
 ## Local development
 
