@@ -43,7 +43,7 @@ function bulletList(markdown, spacing = "5pt") {
 
   if (!items.length) return [];
 
-  return ["#block(width: 100%, above: 6pt)[", `#list(spacing: ${spacing},`, ...items.map((item) => "  [" + item + "],"), ")", "]"];
+  return ["#block(width: 100%, above: 6pt)[", `#list(marker: "-", spacing: ${spacing},`, ...items.map((item) => "  [" + item + "],"), ")", "]"];
 }
 
 function accomplishmentList(markdown) {
@@ -54,7 +54,7 @@ function accomplishmentList(markdown) {
 
   return items.flatMap((item, index) => [
     "#grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,",
-    '  [#text(size: 8.5pt, fill: accent)[•]],',
+    '  [#text(size: 8.5pt, fill: accent)[-]],',
     '  [#block[#set par(leading: 2.3pt); #text(size: 8.65pt, fill: body)[' + item + "]]],",
     ")",
     ...(index < items.length - 1 ? ["#v(1.5pt)"] : []),
@@ -330,7 +330,7 @@ for (const [projectIndex, project] of projects.entries()) {
     '#set page(width: 8.5in, height: 11in, margin: (top: 0.45in, bottom: 0.45in, left: 0.67in, right: 0.67in), header: none)',
     '#text(size: 16pt, weight: "bold", fill: ink)[' + typstText(project.metadata.title) + "]",
     "#v(2pt)",
-    '#text(size: 7.4pt, fill: muted)[Project screenshots · Select an image to open the full-size original]',
+    '#text(size: 7.4pt, fill: muted)[Project screenshots - Select an image to open the full-size original]',
     "#v(8pt)",
     '#grid(columns: (1fr, 1fr), rows: ' + cellHeight + 'pt, column-gutter: 8pt, row-gutter: 8pt,',
   );

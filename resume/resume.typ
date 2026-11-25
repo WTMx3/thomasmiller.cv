@@ -152,30 +152,30 @@ Platform-focused engineer with more than 10 years of experience building full-st
 )
 #v(4pt)
 #pad(left: 13pt)[
-#block(width: 100%)[#set par(leading: 2.6pt); #text(size: 9.1pt, fill: ink)[Led a team of 8-12 developers exceeding expectations consistently. Very successful leadership and management of numerous software projects. Facilitated, orchestrated, and optimized procedures regarding client requirements, planning, development, deployment, execution, and monitoring.]]
+#block(width: 100%)[#set par(leading: 2.6pt); #text(size: 9.1pt, fill: ink)[Led a team of 8-12 developers and managed software projects from client requirements and planning through architecture, development, deployment, and monitoring.]]
 #v(4pt)
 #grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
-  [#text(size: 8.5pt, fill: accent)[•]],
+  [#text(size: 8.5pt, fill: accent)[-]],
   [#block[#set par(leading: 2.3pt); #text(size: 8.65pt, fill: body)[Led products from concept and client discovery through architecture, full-stack implementation, launch, monitoring, and ongoing support.]]],
 )
 #v(1.5pt)
 #grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
-  [#text(size: 8.5pt, fill: accent)[•]],
+  [#text(size: 8.5pt, fill: accent)[-]],
   [#block[#set par(leading: 2.3pt); #text(size: 8.65pt, fill: body)[Built customer-facing web and mobile applications, APIs, automation systems, and internal platforms across cloud and containerized environments.]]],
 )
 #v(1.5pt)
 #grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
-  [#text(size: 8.5pt, fill: accent)[•]],
+  [#text(size: 8.5pt, fill: accent)[-]],
   [#block[#set par(leading: 2.3pt); #text(size: 8.65pt, fill: body)[Created GitHub Actions release pipelines for AWS, Cloudflare, Docker, web, and mobile targets; reduced release time by 40% while helping maintain 99.9% uptime.]]],
 )
 #v(1.5pt)
 #grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
-  [#text(size: 8.5pt, fill: accent)[•]],
+  [#text(size: 8.5pt, fill: accent)[-]],
   [#block[#set par(leading: 2.3pt); #text(size: 8.65pt, fill: body)[Established production monitoring, alerting, and incident workflows with Prometheus, Grafana, and Kibana, carrying corrective work through deployment.]]],
 )
 #v(1.5pt)
 #grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
-  [#text(size: 8.5pt, fill: accent)[•]],
+  [#text(size: 8.5pt, fill: accent)[-]],
   [#block[#set par(leading: 2.3pt); #text(size: 8.65pt, fill: body)[Strengthened platform security with least-privilege AWS IAM policies, access-risk remediation, and OAuth 2.0, SSO, 2FA, and secure session flows.]]],
 )
 #v(4pt)
@@ -198,22 +198,22 @@ Platform-focused engineer with more than 10 years of experience building full-st
 #block(width: 100%)[#set par(leading: 2.6pt); #text(size: 9.1pt, fill: ink)[Strengthened enterprise reliability, delivery automation, quality engineering, and incident response.]]
 #v(4pt)
 #grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
-  [#text(size: 8.5pt, fill: accent)[•]],
+  [#text(size: 8.5pt, fill: accent)[-]],
   [#block[#set par(leading: 2.3pt); #text(size: 8.65pt, fill: body)[Automated deployment and development workflows to improve release consistency, service stability, and recovery from failed changes.]]],
 )
 #v(1.5pt)
 #grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
-  [#text(size: 8.5pt, fill: accent)[•]],
+  [#text(size: 8.5pt, fill: accent)[-]],
   [#block[#set par(leading: 2.3pt); #text(size: 8.65pt, fill: body)[Implemented real-time monitoring and alerting, supported production incidents, and turned post-incident findings into reliability improvements.]]],
 )
 #v(1.5pt)
 #grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
-  [#text(size: 8.5pt, fill: accent)[•]],
+  [#text(size: 8.5pt, fill: accent)[-]],
   [#block[#set par(leading: 2.3pt); #text(size: 8.65pt, fill: body)[Advanced automated integration, regression, and performance testing across teams as Vice President of the Quality Engineering Society.]]],
 )
 #v(1.5pt)
 #grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
-  [#text(size: 8.5pt, fill: accent)[•]],
+  [#text(size: 8.5pt, fill: accent)[-]],
   [#block[#set par(leading: 2.3pt); #text(size: 8.65pt, fill: body)[Mentored engineers in site reliability, troubleshooting, and quality practices while contributing to resilient service designs.]]],
 )
 #v(4pt)
@@ -236,22 +236,22 @@ Platform-focused engineer with more than 10 years of experience building full-st
 #block(width: 100%)[#set par(leading: 2.6pt); #text(size: 9.1pt, fill: ink)[Built custom WordPress and React experiences while modernizing client platforms, cloud infrastructure, and delivery practices.]]
 #v(4pt)
 #grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
-  [#text(size: 8.5pt, fill: accent)[•]],
+  [#text(size: 8.5pt, fill: accent)[-]],
   [#block[#set par(leading: 2.3pt); #text(size: 8.65pt, fill: body)[Built reusable React components and custom WordPress themes that standardized responsive navigation, content, forms, and interactive experiences.]]],
 )
 #v(1.5pt)
 #grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
-  [#text(size: 8.5pt, fill: accent)[•]],
+  [#text(size: 8.5pt, fill: accent)[-]],
   [#block[#set par(leading: 2.3pt); #text(size: 8.65pt, fill: body)[Led client UI/UX work from requirements and user flows through design, accessible implementation, and iterative delivery.]]],
 )
 #v(1.5pt)
 #grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
-  [#text(size: 8.5pt, fill: accent)[•]],
+  [#text(size: 8.5pt, fill: accent)[-]],
   [#block[#set par(leading: 2.3pt); #text(size: 8.65pt, fill: body)[Migrated client websites to AWS to improve performance, availability, security, and hosting efficiency.]]],
 )
 #v(1.5pt)
 #grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
-  [#text(size: 8.5pt, fill: accent)[•]],
+  [#text(size: 8.5pt, fill: accent)[-]],
   [#block[#set par(leading: 2.3pt); #text(size: 8.65pt, fill: body)[Added monitoring, alerting, logging, backups, and disaster-recovery procedures to reduce operational risk and speed restoration.]]],
 )
 #v(4pt)
@@ -278,22 +278,22 @@ Platform-focused engineer with more than 10 years of experience building full-st
 #block(width: 100%)[#set par(leading: 2.6pt); #text(size: 9.1pt, fill: ink)[Delivered custom web and mobile products from discovery and architecture through app-store release and support.]]
 #v(4pt)
 #grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
-  [#text(size: 8.5pt, fill: accent)[•]],
+  [#text(size: 8.5pt, fill: accent)[-]],
   [#block[#set par(leading: 2.3pt); #text(size: 8.65pt, fill: body)[Defined product scope and technical plans directly with clients and cross-functional teams, then delivered web and mobile applications through launch.]]],
 )
 #v(1.5pt)
 #grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
-  [#text(size: 8.5pt, fill: accent)[•]],
+  [#text(size: 8.5pt, fill: accent)[-]],
   [#block[#set par(leading: 2.3pt); #text(size: 8.65pt, fill: body)[Built front-end experiences, Node.js and Express services, APIs, integrations, and data workflows for custom products.]]],
 )
 #v(1.5pt)
 #grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
-  [#text(size: 8.5pt, fill: accent)[•]],
+  [#text(size: 8.5pt, fill: accent)[-]],
   [#block[#set par(leading: 2.3pt); #text(size: 8.65pt, fill: body)[Improved service architecture and request handling, reducing response times by up to 30% for key features.]]],
 )
 #v(1.5pt)
 #grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
-  [#text(size: 8.5pt, fill: accent)[•]],
+  [#text(size: 8.5pt, fill: accent)[-]],
   [#block[#set par(leading: 2.3pt); #text(size: 8.65pt, fill: body)[Released multiple applications through mobile app stores and managed updates and post-launch support.]]],
 )
 #v(4pt)
@@ -316,22 +316,22 @@ Platform-focused engineer with more than 10 years of experience building full-st
 #block(width: 100%)[#set par(leading: 2.6pt); #text(size: 9.1pt, fill: ink)[Resolved complex technology issues, led support operations, and created knowledge resources for a large university community.]]
 #v(4pt)
 #grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
-  [#text(size: 8.5pt, fill: accent)[•]],
+  [#text(size: 8.5pt, fill: accent)[-]],
   [#block[#set par(leading: 2.3pt); #text(size: 8.65pt, fill: body)[Earned promotion to Lead Technician, coordinated daily support operations, and led technical projects for a large university community.]]],
 )
 #v(1.5pt)
 #grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
-  [#text(size: 8.5pt, fill: accent)[•]],
+  [#text(size: 8.5pt, fill: accent)[-]],
   [#block[#set par(leading: 2.3pt); #text(size: 8.65pt, fill: body)[Resolved software, hardware, account, network, and endpoint issues for students, faculty, and staff across walk-up, phone, and on-site channels.]]],
 )
 #v(1.5pt)
 #grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
-  [#text(size: 8.5pt, fill: accent)[•]],
+  [#text(size: 8.5pt, fill: accent)[-]],
   [#block[#set par(leading: 2.3pt); #text(size: 8.65pt, fill: body)[Created searchable troubleshooting documentation used by thousands of Texas Tech University users and support technicians.]]],
 )
 #v(1.5pt)
 #grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
-  [#text(size: 8.5pt, fill: accent)[•]],
+  [#text(size: 8.5pt, fill: accent)[-]],
   [#block[#set par(leading: 2.3pt); #text(size: 8.65pt, fill: body)[Investigated root causes, coordinated escalations with specialized IT teams, and communicated solutions clearly to people with varied technical experience.]]],
 )
 #v(4pt)

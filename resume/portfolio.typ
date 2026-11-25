@@ -46,7 +46,7 @@
 #v(20pt)
 #text(size: 8.7pt, weight: "bold", fill: accent)[WHAT I BUILT]
 #block(width: 100%, above: 6pt)[
-#list(spacing: 6pt,
+#list(marker: "-", spacing: 6pt,
   [Designed a registry-first add-on architecture with build-time linking and workspace-level enablement.],
   [Built event-driven automation infrastructure covering subscriptions, queued steps, waits, execution logs, and run histories.],
   [Developed workspace dashboards with configurable tabs, permission-aware editing, and add-on-provided widgets.],
@@ -70,7 +70,7 @@
 #set page(width: 8.5in, height: 11in, margin: (top: 0.45in, bottom: 0.45in, left: 0.67in, right: 0.67in), header: none)
 #text(size: 16pt, weight: "bold", fill: ink)[EazyHQ]
 #v(2pt)
-#text(size: 7.4pt, fill: muted)[Project screenshots · Select an image to open the full-size original]
+#text(size: 7.4pt, fill: muted)[Project screenshots - Select an image to open the full-size original]
 #v(8pt)
 #grid(columns: (1fr, 1fr), rows: 156pt, column-gutter: 8pt, row-gutter: 8pt,
   [#block(width: 100%, height: 137pt, clip: true, radius: 3pt, fill: rgb("#f1f2f3"))[
@@ -124,11 +124,11 @@
 #v(22pt)
 #text(size: 8.7pt, weight: "bold", fill: accent)[OVERVIEW]
 #v(7pt)
-#text(size: 10.2pt, fill: body)[Listings+ is a full-stack property-discovery platform designed to make home search feel conversational. Its AI-assisted retrieval pipeline translates a buyer's free-form preferences into constrained search parameters, retrieves current listings from multiple property sources, and returns enriched, source-grounded results to a responsive web experience.]
+#text(size: 10.2pt, fill: body)[Listings+ is a full-stack property-discovery platform designed to make home search feel conversational. Its AI-assisted retrieval pipeline translates free-form buyer preferences into constrained search parameters, retrieves current listings from multiple property sources, and returns enriched, source-grounded results to a responsive web experience.]
 #v(20pt)
 #text(size: 8.7pt, weight: "bold", fill: accent)[WHAT I BUILT]
 #block(width: 100%, above: 6pt)[
-#list(spacing: 6pt,
+#list(marker: "-", spacing: 6pt,
   [Designed a retrieval workflow that uses OpenAI structured output to turn natural-language home preferences into validated property filters, retrieves live inventory, and falls back gracefully when a model response or search fails.],
   [Built Go API endpoints for AI-assisted home finding, UUID-based result retrieval, and merged property-detail views across eXp Realty, Century 21, and enrichment sources.],
   [Persisted search summaries, generated filters, result sets, sources, and timestamps in PostgreSQL with JSONB for traceability and repeatable retrieval.],
@@ -152,7 +152,7 @@
 #set page(width: 8.5in, height: 11in, margin: (top: 0.45in, bottom: 0.45in, left: 0.67in, right: 0.67in), header: none)
 #text(size: 16pt, weight: "bold", fill: ink)[Listings+]
 #v(2pt)
-#text(size: 7.4pt, fill: muted)[Project screenshots · Select an image to open the full-size original]
+#text(size: 7.4pt, fill: muted)[Project screenshots - Select an image to open the full-size original]
 #v(8pt)
 #grid(columns: (1fr, 1fr), rows: 123pt, column-gutter: 8pt, row-gutter: 8pt,
   [#block(width: 100%, height: 104pt, clip: true, radius: 3pt, fill: rgb("#f1f2f3"))[
@@ -216,12 +216,12 @@
 #v(22pt)
 #text(size: 8.7pt, weight: "bold", fill: accent)[OVERVIEW]
 #v(7pt)
-#text(size: 10.2pt, fill: body)[DOCHUB brings proposals, documentation, plans, and decisions into one focused document workspace. Readers can enter with a passwordless email code or open a specifically shared document using a collection code. Workspace access and document-level sharing are kept distinct, while a connected document tree helps people move through related information with context.]
+#text(size: 10.2pt, fill: body)[DOCHUB brings proposals, documentation, plans, and decisions into one focused document workspace. Readers can sign in with a passwordless email code or open a shared document using a collection code. Workspace access and document-level sharing are kept distinct, while a connected document tree helps people move through related information with context.]
 #v(20pt)
 #text(size: 8.7pt, weight: "bold", fill: accent)[WHAT I BUILT]
 #block(width: 100%, above: 6pt)[
-#list(spacing: 6pt,
-  [Designed workspace-scoped access and a document-code path for sharing individual documents with external readers.],
+#list(marker: "-", spacing: 6pt,
+  [Designed workspace-scoped access and a document access code flow for sharing individual documents with external readers.],
   [Built a passwordless sign-in flow using a six-digit email code for workspace access.],
   [Organized documents into a navigable tree so proposals, plans, and decisions retain their relationships.],
   [Developed an authoring experience with Markdown editing, preview, media selection, and document publishing states.],
@@ -244,7 +244,7 @@
 #set page(width: 8.5in, height: 11in, margin: (top: 0.45in, bottom: 0.45in, left: 0.67in, right: 0.67in), header: none)
 #text(size: 16pt, weight: "bold", fill: ink)[DOCHUB - Secure Document Sharing Platform]
 #v(2pt)
-#text(size: 7.4pt, fill: muted)[Project screenshots · Select an image to open the full-size original]
+#text(size: 7.4pt, fill: muted)[Project screenshots - Select an image to open the full-size original]
 #v(8pt)
 #grid(columns: (1fr, 1fr), rows: 211pt, column-gutter: 8pt, row-gutter: 8pt,
   [#block(width: 100%, height: 192pt, clip: true, radius: 3pt, fill: rgb("#f1f2f3"))[

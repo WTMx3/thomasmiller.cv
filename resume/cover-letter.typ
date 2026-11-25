@@ -34,12 +34,11 @@
 #v(58pt)
 #text(size: 14.5pt, weight: "bold", fill: ink)[Dear Hiring Team,]
 #v(19pt)
-#block(width: 100%)[#set text(size: 10.8pt); #set par(leading: 6.2pt); I am an experienced software engineer with countless real-world hours of experience, searching to further my career in technology. I am excited to tackle any role or task I am presented with. I want to emphasize my eagerness to tackle new challenges, and my competitive drive.]
+#block(width: 100%)[#set text(size: 10.8pt); #set par(leading: 6.2pt); I am a software engineer with more than 10 years of experience building full-stack products and reliable platforms. I am seeking a role where I can combine hands-on development with technical leadership and help a team deliver measurable results.]
 #v(19pt)
-#block(width: 100%)[#set text(size: 10.8pt); #set par(leading: 6.2pt); In my current position, I own the complete software product lifecycle across web, mobile, cloud, DevOps, reliability, and security. I lead work from early planning and architecture through implementation, release, monitoring, support, and continuous improvement. I regularly interact with clients and stakeholders, finding solutions for their problems,
- and bringing value and change to their organizations.]
+#block(width: 100%)[#set text(size: 10.8pt); #set par(leading: 6.2pt); In my current position, I guide products from client discovery and architecture through implementation, deployment, monitoring, and support. My work spans web and mobile applications, cloud infrastructure, DevOps, reliability, and security. I work directly with clients and stakeholders to turn their requirements into practical solutions.]
 #v(19pt)
-#block(width: 100%)[#set text(size: 10.8pt); #set par(leading: 6.2pt); I would welcome the opportunity to discuss how that combination could support your products, engineering organization, and customers. Thank you for your consideration.]
+#block(width: 100%)[#set text(size: 10.8pt); #set par(leading: 6.2pt); I would welcome the opportunity to discuss how this experience could support your products, engineering team, and customers. Thank you for your consideration.]
 #v(23pt)
 #text(size: 10.5pt)[Sincerely,]
 #v(6pt)

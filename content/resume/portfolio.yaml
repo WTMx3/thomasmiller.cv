@@ -101,7 +101,7 @@ projects:
       featured: true
       order: 2
     content: |-
-      Listings+ is a full-stack property-discovery platform designed to make home search feel conversational. Its AI-assisted retrieval pipeline translates a buyer's free-form preferences into constrained search parameters, retrieves current listings from multiple property sources, and returns enriched, source-grounded results to a responsive web experience.
+      Listings+ is a full-stack property-discovery platform designed to make home search feel conversational. Its AI-assisted retrieval pipeline translates free-form buyer preferences into constrained search parameters, retrieves current listings from multiple property sources, and returns enriched, source-grounded results to a responsive web experience.
 
       ## What I built
 
@@ -145,11 +145,11 @@ projects:
       featured: true
       order: 3
     content: |-
-      DOCHUB brings proposals, documentation, plans, and decisions into one focused document workspace. Readers can enter with a passwordless email code or open a specifically shared document using a collection code. Workspace access and document-level sharing are kept distinct, while a connected document tree helps people move through related information with context.
+      DOCHUB brings proposals, documentation, plans, and decisions into one focused document workspace. Readers can sign in with a passwordless email code or open a shared document using a collection code. Workspace access and document-level sharing are kept distinct, while a connected document tree helps people move through related information with context.
 
       ## What I built
 
-      - Designed workspace-scoped access and a document-code path for sharing individual documents with external readers.
+      - Designed workspace-scoped access and a document access code flow for sharing individual documents with external readers.
       - Built a passwordless sign-in flow using a six-digit email code for workspace access.
       - Organized documents into a navigable tree so proposals, plans, and decisions retain their relationships.
       - Developed an authoring experience with Markdown editing, preview, media selection, and document publishing states.

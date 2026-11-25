@@ -34,12 +34,11 @@
 #v(58pt)
 #text(size: 14.5pt, weight: "bold", fill: ink)[Dear Hiring Team,]
 #v(19pt)
-#block(width: 100%)[#set text(size: 10.8pt); #set par(leading: 6.2pt); I am an experienced software engineer with countless real-world hours of experience, searching to further my career in technology. I am excited to tackle any role or task I am presented with. I want to emphasize my eagerness to tackle new challenges, and my competitive drive.]
+#block(width: 100%)[#set text(size: 10.8pt); #set par(leading: 6.2pt); I am a software engineer with more than 10 years of experience building full-stack products and reliable platforms. I am seeking a role where I can combine hands-on development with technical leadership and help a team deliver measurable results.]
 #v(19pt)
-#block(width: 100%)[#set text(size: 10.8pt); #set par(leading: 6.2pt); In my current position, I own the complete software product lifecycle across web, mobile, cloud, DevOps, reliability, and security. I lead work from early planning and architecture through implementation, release, monitoring, support, and continuous improvement. I regularly interact with clients and stakeholders, finding solutions for their problems,
- and bringing value and change to their organizations.]
+#block(width: 100%)[#set text(size: 10.8pt); #set par(leading: 6.2pt); In my current position, I guide products from client discovery and architecture through implementation, deployment, monitoring, and support. My work spans web and mobile applications, cloud infrastructure, DevOps, reliability, and security. I work directly with clients and stakeholders to turn their requirements into practical solutions.]
 #v(19pt)
-#block(width: 100%)[#set text(size: 10.8pt); #set par(leading: 6.2pt); I would welcome the opportunity to discuss how that combination could support your products, engineering organization, and customers. Thank you for your consideration.]
+#block(width: 100%)[#set text(size: 10.8pt); #set par(leading: 6.2pt); I would welcome the opportunity to discuss how this experience could support your products, engineering team, and customers. Thank you for your consideration.]
 #v(23pt)
 #text(size: 10.5pt)[Sincerely,]
 #v(6pt)
@@ -175,30 +174,30 @@ Platform-focused engineer with more than 10 years of experience building full-st
 )
 #v(4pt)
 #pad(left: 13pt)[
-#block(width: 100%)[#set par(leading: 2.6pt); #text(size: 9.1pt, fill: ink)[Led a team of 8-12 developers exceeding expectations consistently. Very successful leadership and management of numerous software projects. Facilitated, orchestrated, and optimized procedures regarding client requirements, planning, development, deployment, execution, and monitoring.]]
+#block(width: 100%)[#set par(leading: 2.6pt); #text(size: 9.1pt, fill: ink)[Led a team of 8-12 developers and managed software projects from client requirements and planning through architecture, development, deployment, and monitoring.]]
 #v(4pt)
 #grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
-  [#text(size: 8.5pt, fill: accent)[•]],
+  [#text(size: 8.5pt, fill: accent)[-]],
   [#block[#set par(leading: 2.3pt); #text(size: 8.65pt, fill: body)[Led products from concept and client discovery through architecture, full-stack implementation, launch, monitoring, and ongoing support.]]],
 )
 #v(1.5pt)
 #grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
-  [#text(size: 8.5pt, fill: accent)[•]],
+  [#text(size: 8.5pt, fill: accent)[-]],
   [#block[#set par(leading: 2.3pt); #text(size: 8.65pt, fill: body)[Built customer-facing web and mobile applications, APIs, automation systems, and internal platforms across cloud and containerized environments.]]],
 )
 #v(1.5pt)
 #grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
-  [#text(size: 8.5pt, fill: accent)[•]],
+  [#text(size: 8.5pt, fill: accent)[-]],
   [#block[#set par(leading: 2.3pt); #text(size: 8.65pt, fill: body)[Created GitHub Actions release pipelines for AWS, Cloudflare, Docker, web, and mobile targets; reduced release time by 40% while helping maintain 99.9% uptime.]]],
 )
 #v(1.5pt)
 #grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
-  [#text(size: 8.5pt, fill: accent)[•]],
+  [#text(size: 8.5pt, fill: accent)[-]],
   [#block[#set par(leading: 2.3pt); #text(size: 8.65pt, fill: body)[Established production monitoring, alerting, and incident workflows with Prometheus, Grafana, and Kibana, carrying corrective work through deployment.]]],
 )
 #v(1.5pt)
 #grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
-  [#text(size: 8.5pt, fill: accent)[•]],
+  [#text(size: 8.5pt, fill: accent)[-]],
   [#block[#set par(leading: 2.3pt); #text(size: 8.65pt, fill: body)[Strengthened platform security with least-privilege AWS IAM policies, access-risk remediation, and OAuth 2.0, SSO, 2FA, and secure session flows.]]],
 )
 #v(4pt)
@@ -221,22 +220,22 @@ Platform-focused engineer with more than 10 years of experience building full-st
 #block(width: 100%)[#set par(leading: 2.6pt); #text(size: 9.1pt, fill: ink)[Strengthened enterprise reliability, delivery automation, quality engineering, and incident response.]]
 #v(4pt)
 #grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
-  [#text(size: 8.5pt, fill: accent)[•]],
+  [#text(size: 8.5pt, fill: accent)[-]],
   [#block[#set par(leading: 2.3pt); #text(size: 8.65pt, fill: body)[Automated deployment and development workflows to improve release consistency, service stability, and recovery from failed changes.]]],
 )
 #v(1.5pt)
 #grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
-  [#text(size: 8.5pt, fill: accent)[•]],
+  [#text(size: 8.5pt, fill: accent)[-]],
   [#block[#set par(leading: 2.3pt); #text(size: 8.65pt, fill: body)[Implemented real-time monitoring and alerting, supported production incidents, and turned post-incident findings into reliability improvements.]]],
 )
 #v(1.5pt)
 #grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
-  [#text(size: 8.5pt, fill: accent)[•]],
+  [#text(size: 8.5pt, fill: accent)[-]],
   [#block[#set par(leading: 2.3pt); #text(size: 8.65pt, fill: body)[Advanced automated integration, regression, and performance testing across teams as Vice President of the Quality Engineering Society.]]],
 )
 #v(1.5pt)
 #grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
-  [#text(size: 8.5pt, fill: accent)[•]],
+  [#text(size: 8.5pt, fill: accent)[-]],
   [#block[#set par(leading: 2.3pt); #text(size: 8.65pt, fill: body)[Mentored engineers in site reliability, troubleshooting, and quality practices while contributing to resilient service designs.]]],
 )
 #v(4pt)
@@ -259,22 +258,22 @@ Platform-focused engineer with more than 10 years of experience building full-st
 #block(width: 100%)[#set par(leading: 2.6pt); #text(size: 9.1pt, fill: ink)[Built custom WordPress and React experiences while modernizing client platforms, cloud infrastructure, and delivery practices.]]
 #v(4pt)
 #grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
-  [#text(size: 8.5pt, fill: accent)[•]],
+  [#text(size: 8.5pt, fill: accent)[-]],
   [#block[#set par(leading: 2.3pt); #text(size: 8.65pt, fill: body)[Built reusable React components and custom WordPress themes that standardized responsive navigation, content, forms, and interactive experiences.]]],
 )
 #v(1.5pt)
 #grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
-  [#text(size: 8.5pt, fill: accent)[•]],
+  [#text(size: 8.5pt, fill: accent)[-]],
   [#block[#set par(leading: 2.3pt); #text(size: 8.65pt, fill: body)[Led client UI/UX work from requirements and user flows through design, accessible implementation, and iterative delivery.]]],
 )
 #v(1.5pt)
 #grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
-  [#text(size: 8.5pt, fill: accent)[•]],
+  [#text(size: 8.5pt, fill: accent)[-]],
   [#block[#set par(leading: 2.3pt); #text(size: 8.65pt, fill: body)[Migrated client websites to AWS to improve performance, availability, security, and hosting efficiency.]]],
 )
 #v(1.5pt)
 #grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
-  [#text(size: 8.5pt, fill: accent)[•]],
+  [#text(size: 8.5pt, fill: accent)[-]],
   [#block[#set par(leading: 2.3pt); #text(size: 8.65pt, fill: body)[Added monitoring, alerting, logging, backups, and disaster-recovery procedures to reduce operational risk and speed restoration.]]],
 )
 #v(4pt)
@@ -301,22 +300,22 @@ Platform-focused engineer with more than 10 years of experience building full-st
 #block(width: 100%)[#set par(leading: 2.6pt); #text(size: 9.1pt, fill: ink)[Delivered custom web and mobile products from discovery and architecture through app-store release and support.]]
 #v(4pt)
 #grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
-  [#text(size: 8.5pt, fill: accent)[•]],
+  [#text(size: 8.5pt, fill: accent)[-]],
   [#block[#set par(leading: 2.3pt); #text(size: 8.65pt, fill: body)[Defined product scope and technical plans directly with clients and cross-functional teams, then delivered web and mobile applications through launch.]]],
 )
 #v(1.5pt)
 #grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
-  [#text(size: 8.5pt, fill: accent)[•]],
+  [#text(size: 8.5pt, fill: accent)[-]],
   [#block[#set par(leading: 2.3pt); #text(size: 8.65pt, fill: body)[Built front-end experiences, Node.js and Express services, APIs, integrations, and data workflows for custom products.]]],
 )
 #v(1.5pt)
 #grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
-  [#text(size: 8.5pt, fill: accent)[•]],
+  [#text(size: 8.5pt, fill: accent)[-]],
   [#block[#set par(leading: 2.3pt); #text(size: 8.65pt, fill: body)[Improved service architecture and request handling, reducing response times by up to 30% for key features.]]],
 )
 #v(1.5pt)
 #grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
-  [#text(size: 8.5pt, fill: accent)[•]],
+  [#text(size: 8.5pt, fill: accent)[-]],
   [#block[#set par(leading: 2.3pt); #text(size: 8.65pt, fill: body)[Released multiple applications through mobile app stores and managed updates and post-launch support.]]],
 )
 #v(4pt)
@@ -339,22 +338,22 @@ Platform-focused engineer with more than 10 years of experience building full-st
 #block(width: 100%)[#set par(leading: 2.6pt); #text(size: 9.1pt, fill: ink)[Resolved complex technology issues, led support operations, and created knowledge resources for a large university community.]]
 #v(4pt)
 #grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
-  [#text(size: 8.5pt, fill: accent)[•]],
+  [#text(size: 8.5pt, fill: accent)[-]],
   [#block[#set par(leading: 2.3pt); #text(size: 8.65pt, fill: body)[Earned promotion to Lead Technician, coordinated daily support operations, and led technical projects for a large university community.]]],
 )
 #v(1.5pt)
 #grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
-  [#text(size: 8.5pt, fill: accent)[•]],
+  [#text(size: 8.5pt, fill: accent)[-]],
   [#block[#set par(leading: 2.3pt); #text(size: 8.65pt, fill: body)[Resolved software, hardware, account, network, and endpoint issues for students, faculty, and staff across walk-up, phone, and on-site channels.]]],
 )
 #v(1.5pt)
 #grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
-  [#text(size: 8.5pt, fill: accent)[•]],
+  [#text(size: 8.5pt, fill: accent)[-]],
   [#block[#set par(leading: 2.3pt); #text(size: 8.65pt, fill: body)[Created searchable troubleshooting documentation used by thousands of Texas Tech University users and support technicians.]]],
 )
 #v(1.5pt)
 #grid(columns: (8pt, 1fr), column-gutter: 6pt, align: top,
-  [#text(size: 8.5pt, fill: accent)[•]],
+  [#text(size: 8.5pt, fill: accent)[-]],
   [#block[#set par(leading: 2.3pt); #text(size: 8.65pt, fill: body)[Investigated root causes, coordinated escalations with specialized IT teams, and communicated solutions clearly to people with varied technical experience.]]],
 )
 #v(4pt)
@@ -386,7 +385,7 @@ Platform-focused engineer with more than 10 years of experience building full-st
 #v(20pt)
 #text(size: 8.7pt, weight: "bold", fill: accent)[WHAT I BUILT]
 #block(width: 100%, above: 6pt)[
-#list(spacing: 6pt,
+#list(marker: "-", spacing: 6pt,
   [Designed a registry-first add-on architecture with build-time linking and workspace-level enablement.],
   [Built event-driven automation infrastructure covering subscriptions, queued steps, waits, execution logs, and run histories.],
   [Developed workspace dashboards with configurable tabs, permission-aware editing, and add-on-provided widgets.],
@@ -410,7 +409,7 @@ Platform-focused engineer with more than 10 years of experience building full-st
 #set page(width: 8.5in, height: 11in, margin: (top: 0.45in, bottom: 0.45in, left: 0.67in, right: 0.67in), header: none)
 #text(size: 16pt, weight: "bold", fill: ink)[EazyHQ]
 #v(2pt)
-#text(size: 7.4pt, fill: muted)[Project screenshots · Select an image to open the full-size original]
+#text(size: 7.4pt, fill: muted)[Project screenshots - Select an image to open the full-size original]
 #v(8pt)
 #grid(columns: (1fr, 1fr), rows: 156pt, column-gutter: 8pt, row-gutter: 8pt,
   [#block(width: 100%, height: 137pt, clip: true, radius: 3pt, fill: rgb("#f1f2f3"))[
@@ -464,11 +463,11 @@ Platform-focused engineer with more than 10 years of experience building full-st
 #v(22pt)
 #text(size: 8.7pt, weight: "bold", fill: accent)[OVERVIEW]
 #v(7pt)
-#text(size: 10.2pt, fill: body)[Listings+ is a full-stack property-discovery platform designed to make home search feel conversational. Its AI-assisted retrieval pipeline translates a buyer's free-form preferences into constrained search parameters, retrieves current listings from multiple property sources, and returns enriched, source-grounded results to a responsive web experience.]
+#text(size: 10.2pt, fill: body)[Listings+ is a full-stack property-discovery platform designed to make home search feel conversational. Its AI-assisted retrieval pipeline translates free-form buyer preferences into constrained search parameters, retrieves current listings from multiple property sources, and returns enriched, source-grounded results to a responsive web experience.]
 #v(20pt)
 #text(size: 8.7pt, weight: "bold", fill: accent)[WHAT I BUILT]
 #block(width: 100%, above: 6pt)[
-#list(spacing: 6pt,
+#list(marker: "-", spacing: 6pt,
   [Designed a retrieval workflow that uses OpenAI structured output to turn natural-language home preferences into validated property filters, retrieves live inventory, and falls back gracefully when a model response or search fails.],
   [Built Go API endpoints for AI-assisted home finding, UUID-based result retrieval, and merged property-detail views across eXp Realty, Century 21, and enrichment sources.],
   [Persisted search summaries, generated filters, result sets, sources, and timestamps in PostgreSQL with JSONB for traceability and repeatable retrieval.],
@@ -492,7 +491,7 @@ Platform-focused engineer with more than 10 years of experience building full-st
 #set page(width: 8.5in, height: 11in, margin: (top: 0.45in, bottom: 0.45in, left: 0.67in, right: 0.67in), header: none)
 #text(size: 16pt, weight: "bold", fill: ink)[Listings+]
 #v(2pt)
-#text(size: 7.4pt, fill: muted)[Project screenshots · Select an image to open the full-size original]
+#text(size: 7.4pt, fill: muted)[Project screenshots - Select an image to open the full-size original]
 #v(8pt)
 #grid(columns: (1fr, 1fr), rows: 123pt, column-gutter: 8pt, row-gutter: 8pt,
   [#block(width: 100%, height: 104pt, clip: true, radius: 3pt, fill: rgb("#f1f2f3"))[
@@ -556,12 +555,12 @@ Platform-focused engineer with more than 10 years of experience building full-st
 #v(22pt)
 #text(size: 8.7pt, weight: "bold", fill: accent)[OVERVIEW]
 #v(7pt)
-#text(size: 10.2pt, fill: body)[DOCHUB brings proposals, documentation, plans, and decisions into one focused document workspace. Readers can enter with a passwordless email code or open a specifically shared document using a collection code. Workspace access and document-level sharing are kept distinct, while a connected document tree helps people move through related information with context.]
+#text(size: 10.2pt, fill: body)[DOCHUB brings proposals, documentation, plans, and decisions into one focused document workspace. Readers can sign in with a passwordless email code or open a shared document using a collection code. Workspace access and document-level sharing are kept distinct, while a connected document tree helps people move through related information with context.]
 #v(20pt)
 #text(size: 8.7pt, weight: "bold", fill: accent)[WHAT I BUILT]
 #block(width: 100%, above: 6pt)[
-#list(spacing: 6pt,
-  [Designed workspace-scoped access and a document-code path for sharing individual documents with external readers.],
+#list(marker: "-", spacing: 6pt,
+  [Designed workspace-scoped access and a document access code flow for sharing individual documents with external readers.],
   [Built a passwordless sign-in flow using a six-digit email code for workspace access.],
   [Organized documents into a navigable tree so proposals, plans, and decisions retain their relationships.],
   [Developed an authoring experience with Markdown editing, preview, media selection, and document publishing states.],
@@ -584,7 +583,7 @@ Platform-focused engineer with more than 10 years of experience building full-st
 #set page(width: 8.5in, height: 11in, margin: (top: 0.45in, bottom: 0.45in, left: 0.67in, right: 0.67in), header: none)
 #text(size: 16pt, weight: "bold", fill: ink)[DOCHUB - Secure Document Sharing Platform]
 #v(2pt)
-#text(size: 7.4pt, fill: muted)[Project screenshots · Select an image to open the full-size original]
+#text(size: 7.4pt, fill: muted)[Project screenshots - Select an image to open the full-size original]
 #v(8pt)
 #grid(columns: (1fr, 1fr), rows: 211pt, column-gutter: 8pt, row-gutter: 8pt,
   [#block(width: 100%, height: 192pt, clip: true, radius: 3pt, fill: rgb("#f1f2f3"))[

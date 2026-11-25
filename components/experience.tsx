@@ -26,14 +26,13 @@ export default function Experience({ limit, showDetails = true }: { limit?: numb
                   {String(role.metadata.endDate)}
                 </p>
               </header>
-              {showDetails ? (
+              <p className="mt-3 text-sm leading-relaxed text-slate-500 dark:text-slate-400">
+                {String(role.metadata.summary)}
+              </p>
+              {showDetails && (
                 <div className="prose prose-sm prose-li:my-1.5 prose-li:leading-relaxed prose-strong:font-medium prose-strong:text-slate-700 marker:text-sky-500 dark:prose-strong:text-slate-200 mt-4 max-w-none text-slate-600 dark:text-slate-400">
                   <CustomMDX source={role.content} />
                 </div>
-              ) : (
-                <p className="mt-3 text-sm leading-relaxed text-slate-500 dark:text-slate-400">
-                  {String(role.metadata.summary)}
-                </p>
               )}
               {Array.isArray(role.metadata.skills) && role.metadata.skills.length > 0 && (
                 <p className="mt-4 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
