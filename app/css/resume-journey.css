@@ -998,6 +998,20 @@
   background: var(--journey-blue);
   content: "";
 }
+.role-detail__skills {
+  margin-top: 20px;
+}
+.role-detail__skills h4 {
+  margin-bottom: 6px;
+  font-family: var(--font-aspekta);
+  font-size: 14px;
+  font-weight: 650;
+}
+.role-detail__skills p {
+  color: #5c7088;
+  font-size: 13px;
+  line-height: 1.55;
+}
 .role-detail__pager {
   display: flex;
   align-items: center;

@@ -56,7 +56,7 @@ function accomplishmentList(markdown) {
     '  [#text(size: 8.5pt, fill: accent)[•]],',
     '  [#block[#set par(leading: 2.3pt); #text(size: 8.65pt, fill: body)[' + item + "]]],",
     ")",
-    ...(index < items.length - 1 ? ["#v(3pt)"] : []),
+    ...(index < items.length - 1 ? ["#v(1.5pt)"] : []),
   ]);
 }
 
@@ -207,13 +207,13 @@ if (educationEntry || leadershipEntry) {
 
 lines.push(
   "#pagebreak()",
-  "#set page(header: none)",
+  "#set page(header: none, margin: (top: 0.45in, bottom: 0.3in, left: 0.67in, right: 0.67in))",
   "#set text(size: 9.5pt)",
   "#set list(spacing: 3pt)",
   '#text(size: 20pt, weight: "bold", fill: ink)[EXPERIENCE]',
   "#v(8pt)",
   '#text(size: 8.2pt, weight: "bold", fill: accent)[SELECTED ROLES / 01-03]',
-  "#v(20pt)",
+  "#v(8pt)",
 );
 
 for (const [index, job] of experience.entries()) {
@@ -223,10 +223,10 @@ for (const [index, job] of experience.entries()) {
       '#text(size: 20pt, weight: "bold", fill: ink)[EXPERIENCE]',
       "#v(8pt)",
       '#text(size: 8.2pt, weight: "bold", fill: accent)[EARLIER ROLES / 04-05]',
-      "#v(20pt)",
+      "#v(8pt)",
     );
   }
-  if (index !== 0 && index !== 3) lines.push(index < 3 ? "#v(18pt)" : "#v(42pt)");
+  if (index !== 0 && index !== 3) lines.push(index < 3 ? "#v(10pt)" : "#v(32pt)");
   lines.push(
     "#block(breakable: false)[",
     "#grid(columns: (3pt, 1fr), column-gutter: 10pt, align: top,",
@@ -245,11 +245,19 @@ for (const [index, job] of experience.entries()) {
       "]],",
     "  )],",
     ")",
-    "#v(6pt)",
+    "#v(4pt)",
     "#pad(left: 13pt)[",
     "#block(width: 100%)[#set par(leading: 2.6pt); #text(size: 9.1pt, fill: ink)[" + typstText(job.metadata.summary) + "]]",
-    "#v(6pt)",
+    "#v(4pt)",
     ...accomplishmentList(job.content),
+    ...(Array.isArray(job.metadata.skills) && job.metadata.skills.length
+      ? [
+          "#v(4pt)",
+          '#block(width: 100%)[#set par(leading: 2.2pt); #text(size: 8pt, weight: "bold", fill: accent)[Skills & technologies] #text(size: 8pt, fill: body)[' +
+            job.metadata.skills.map(typstText).join("  |  ") +
+            "]]",
+        ]
+      : []),
     "]",
     "]",
   );

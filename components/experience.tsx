@@ -35,6 +35,12 @@ export default function Experience({ limit, showDetails = true }: { limit?: numb
                   {String(role.metadata.summary)}
                 </p>
               )}
+              {Array.isArray(role.metadata.skills) && role.metadata.skills.length > 0 && (
+                <p className="mt-4 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+                  <span className="font-semibold text-slate-900 dark:text-white">Skills & technologies: </span>
+                  {role.metadata.skills.join(" · ")}
+                </p>
+              )}
             </article>
           </li>
         ))}

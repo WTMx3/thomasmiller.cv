@@ -30,6 +30,7 @@ type Role = {
   dates: string;
   summary: string;
   achievements: string[];
+  skills: string[];
 };
 
 type SkillGroup = {
@@ -692,6 +693,12 @@ function ExperienceStage({ data }: { data: ResumeJourneyData }) {
               ))}
             </ul>
           </div>
+          {role.skills.length > 0 && (
+            <div className="role-detail__skills">
+              <h4>Skills & technologies</h4>
+              <p>{role.skills.join(" · ")}</p>
+            </div>
+          )}
           <div className="role-detail__pager" aria-label="Role navigation">
             <span>
               {selected + 1} of {data.roles.length}

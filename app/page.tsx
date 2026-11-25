@@ -59,6 +59,7 @@ export default function Home() {
       dates: `${String(entry.metadata.startDate)} — ${String(entry.metadata.endDate)}`,
       summary: String(entry.metadata.summary),
       achievements: markdownBullets(entry.content),
+      skills: (entry.metadata.skills ?? []) as string[],
     })),
     skills: skillEntries.map((entry) => ({
       category: String(entry.metadata.category),
