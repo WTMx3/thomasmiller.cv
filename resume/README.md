@@ -1,18 +1,9 @@
-# Master resume
+# Generated resume
 
-The website and Typst resume share the MDX files under `content/` as their canonical data source.
+`content/resume.yaml` is the shared source for the website and PDF. Update the YAML to change the cover letter, profile, skills, experience, education, accolade, or portfolio entries.
 
-- Update contact details and the professional summary in `content/profile/`.
-- Add or edit jobs in `content/experience/`.
-- Maintain skill groups in `content/skills/`.
-- Add portfolio case studies in `content/projects/`.
-- Add education in `content/education/`; entries with `draft: true` are excluded.
-- Add leadership entries in `content/leadership/`.
+Run `pnpm resume:pdf` to regenerate `resume/thomas-miller-master.typ` and the PDF copies in `output/pdf/` and `public/wtm3-resume.pdf`. The build uses the bundled Inter font in `resume/fonts/` so the layout is consistent locally and in Cloudflare.
 
-Run `pnpm resume:source` to regenerate `thomas-miller-master.typ`. Run `pnpm resume:pdf` to regenerate the source-of-truth PDF, copy it to `public/wtm3-resume.pdf`, and update the output copies.
+Run `pnpm build:fresh` before a local deployment. Cloudflare's Git build also runs this command and serves the resulting PDF at `/resume`. The scrollable web resume remains at `/full-resume`.
 
-Cloudflare serves the PDF at `/resume` through `public/_redirects`. The scrollable web résumé remains at `/full-resume`. Run `pnpm build:fresh` to remove stale Next.js output before rebuilding.
-
-`thomas-miller-resume.typ` is retained as a concise, application-specific variant. It is not the PDF linked from the website; the public PDF is always generated from the shared MDX content above.
-
-Tour narration source files live in `resume/audio-source/` and `resume/caption-source/`. Only compressed, content-hashed web assets belong under `public/audio/resume-tour/` and `public/captions/resume-tour/` so Cloudflare can cache them immutably.
+`thomas-miller-resume.typ` is a separate, application-specific variant and is not used for the public PDF.
