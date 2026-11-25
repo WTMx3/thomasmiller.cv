@@ -1,0 +1,10 @@
+document:
+  id: all-in-one
+  label: Complete package
+  description: Cover letter, resume, and portfolio in one document.
+  file: wtm3-all-in-one.pdf
+  order: 4
+  includes:
+    - cover-letter
+    - resume
+    - portfolio

@@ -242,7 +242,7 @@ function IntroStage({
             rel="noreferrer"
             target="_blank"
           >
-            <DocumentIcon /> View résumé PDF
+            <DocumentIcon /> View documents
           </a>
         </div>
       </div>
@@ -454,7 +454,7 @@ function CompleteStage({ onRestart }: { onRestart: () => void }) {
             rel="noreferrer"
             target="_blank"
           >
-            <DocumentIcon /> View résumé PDF
+            <DocumentIcon /> View documents
           </a>
         </div>
       </div>
@@ -995,9 +995,9 @@ export default function ResumeJourney({ data }: { data: ResumeJourneyData }) {
           <a href={`mailto:${data.profile.email}`}>{data.profile.email}</a>
           <a href={`tel:${data.profile.phoneHref}`}>{data.profile.phone}</a>
         </address>
-        <nav aria-label="Résumé download">
+        <nav aria-label="Resume documents">
           <a className="journey-pdf-button" href="/resume" rel="noreferrer" target="_blank">
-            <DocumentIcon /> PDF résumé
+            <DocumentIcon /> Documents
           </a>
           <button
             aria-label="Load the latest site version"

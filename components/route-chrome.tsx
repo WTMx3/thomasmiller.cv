@@ -16,7 +16,7 @@ export default function RouteChrome({
 }) {
   const pathname = usePathname();
 
-  if (pathname === "/") {
+  if (pathname === "/" || pathname === "/resume") {
     return <main className="min-h-screen">{children}</main>;
   }
 

@@ -1,21 +1,10 @@
-# Edit this file to update the site and generated PDF together.
-coverLetter:
-  salutation: Dear Hiring Team,
-  paragraphs:
-    - >-
-      I am an experienced software engineer with countless real-world hours of experience, 
-      searching to further my career in technology. I am excited to tackle any role or task I am presented with.
-      I want to emphasize my eagerness to tackle new challenges, and my competitive drive.
-    - >-
-      In my current position, I own the complete software product lifecycle across web, mobile,
-      cloud, DevOps, reliability, and security. I lead work from early planning and architecture
-      through implementation, release, monitoring, support, and continuous improvement. 
-      I regularly interact with clients and stakeholders, finding solutions for their problems,
-       and bringing value and change to their organizations. 
-    - >-
-      I would welcome the opportunity to discuss how that combination could support your
-      products, engineering organization, and customers. Thank you for your consideration.
-  closing: Sincerely,
+document:
+  id: resume
+  label: Resume
+  description: Profile, skills, experience, education, and leadership.
+  file: wtm3-resume.pdf
+  order: 2
+
 profile:
   - slug: thomas-miller
     metadata:
@@ -32,6 +21,7 @@ profile:
       yearsExperience: 10+
       order: 1
     content: "Platform-focused engineer with more than 10 years of experience building full-stack products and the systems that keep them reliable: cloud infrastructure, CI/CD, observability, identity and access management, scalable architecture, incident response, and technical leadership."
+
 education:
   - slug: texas-tech-university
     metadata:
@@ -42,6 +32,7 @@ education:
       endDate: Spring 2020
       order: 1
     content: Completed a business and technology curriculum focused on application development, information systems, and practical software delivery.
+
 skills:
   - slug: languages
     metadata:
@@ -243,6 +234,7 @@ skills:
         - Mentoring
       order: 13
     content: Iterative delivery, planning, collaboration, and engineering mentorship.
+
 experience:
   - slug: baas-software
     metadata:
@@ -318,160 +310,7 @@ experience:
       - Resolved software, hardware, account, network, and endpoint issues for students, faculty, and staff across walk-up, phone, and on-site channels.
       - Created searchable troubleshooting documentation used by thousands of Texas Tech University users and support technicians.
       - Investigated root causes, coordinated escalations with specialized IT teams, and communicated solutions clearly to people with varied technical experience.
-projects:
-  - slug: eazyhq
-    metadata:
-      title: EazyHQ
-      summary: A modular workspace operating system for projects, data, automation, content, and team workflows.
-      role: Lead Software Engineer
-      status: Active development
-      startedAt: 2026
-      repositoryUrl: https://github.com/WTMx3/eazyhq
-      coverImage: /project-media/eazyhq/workflow-canvas.png
-      galleryImages:
-        - /project-media/eazyhq/task-performance.png
-        - /project-media/eazyhq/campaign-performance.png
-        - /project-media/eazyhq/starter-library.png
-        - /project-media/eazyhq/starter-details.png
-        - /project-media/eazyhq/starter-execution.png
-        - /project-media/eazyhq/event-inspector.png
-        - /project-media/eazyhq/dashboard-builder.png
-      galleryCaptions:
-        - Task performance and workload analytics
-        - Campaign delivery and engagement analytics
-        - Scenario-driven starter library
-        - Starter requirements and generated outputs
-        - Auditable multi-step starter execution
-        - Event payload and metadata inspector
-        - Configurable operational dashboard builder
-      technologies:
-        - Flutter
-        - Dart
-        - Go
-        - PostgreSQL
-        - Redis
-        - Docker
-        - GitHub Actions
-        - Caddy
-      featured: true
-      order: 1
-    content: |-
-      EazyHQ is a cross-platform workspace platform built around a Flutter client and Go API. It combines project operations, configurable dashboards, automation flows, content tools, data management, and installable add-ons in a single workspace-aware product.
 
-      ## What I built
-
-      - Designed a registry-first add-on architecture with build-time linking and workspace-level enablement.
-      - Built event-driven automation infrastructure covering subscriptions, queued steps, waits, execution logs, and run histories.
-      - Developed workspace dashboards with configurable tabs, permission-aware editing, and add-on-provided widgets.
-      - Implemented platform capabilities for forms, structured data, APIs, sites, email, calendars, storage, reports, directories, and wikis.
-      - Created a cross-platform Flutter interface backed by a Go service layer, PostgreSQL, Redis, and containerized deployment.
-      - Established GitHub Actions and Docker-based delivery workflows for the API and web application.
-
-      ## Engineering focus
-
-      The project demonstrates full-stack platform design: authorization boundaries, stable extension contracts, event-driven execution, operational recovery, responsive interface systems, and deployment automation.
-  - slug: listingsplus
-    metadata:
-      title: Listings+
-      summary: An AI-assisted real-estate platform that turns natural-language intent into structured searches, retrieves live listings, and enriches grounded property results.
-      role: Full-Stack Software Engineer
-      status: Active development
-      startedAt: 2026
-      repositoryUrl: https://github.com/WTMx3/listingsplus
-      coverImage: /project-media/listingsplus/property-discovery.png
-      galleryImages:
-        - /project-media/listingsplus/property-and-call-workspace.png
-        - /project-media/listingsplus/guided-property-match.png
-        - /project-media/listingsplus/listing-grid.jpg
-        - /project-media/listingsplus/property-page-full.jpg
-        - /project-media/listingsplus/service-area-map.png
-        - /project-media/listingsplus/campaign-list.png
-        - /project-media/listingsplus/campaign-creation.png
-        - /project-media/listingsplus/campaign-flow.png
-        - /project-media/listingsplus/sales-dashboard.png
-      galleryCaptions:
-        - Property detail, guided matching, and call context
-        - Guided buyer match on a property page
-        - Searchable inventory grid with normalized listing cards
-        - Full property listing and details
-        - Geographic service-area visualization
-        - Campaign management and status
-        - Campaign creation workflow
-        - Visual buyer nurture flow builder
-        - Sales and payment analytics dashboard
-      technologies:
-        - Next.js
-        - React
-        - TypeScript
-        - Go
-        - OpenAI API
-        - PostgreSQL
-        - Redis
-        - Typesense
-        - Docker
-        - Caddy
-        - Cloudflare
-      featured: true
-      order: 2
-    content: |-
-      Listings+ is a full-stack property-discovery platform designed to make home search feel conversational. Its AI-assisted retrieval pipeline translates a buyer's free-form preferences into constrained search parameters, retrieves current listings from multiple property sources, and returns enriched, source-grounded results to a responsive web experience.
-
-      ## What I built
-
-      - Designed a retrieval workflow that uses OpenAI structured output to turn natural-language home preferences into validated property filters, retrieves live inventory, and falls back gracefully when a model response or search fails.
-      - Built Go API endpoints for AI-assisted home finding, UUID-based result retrieval, and merged property-detail views across eXp Realty, Century 21, and enrichment sources.
-      - Persisted search summaries, generated filters, result sets, sources, and timestamps in PostgreSQL with JSONB for traceability and repeatable retrieval.
-      - Implemented Redis and in-memory caching, a PostgreSQL-backed property-detail cache, Typesense city lookup, listing normalization, enrichment, and image aggregation.
-      - Developed the Next.js interface with responsive listing cards, comparison tables, image carousels, accessible primitives, and server-action boundaries for search and lead workflows.
-      - Containerized PostgreSQL, Redis, Typesense, the Go API, and Caddy; prepared the front end for Cloudflare deployment with OpenNext.
-
-      ## Engineering focus
-
-      The model structures buyer intent; the API retrieves current source data; and the interface presents grounded results with persisted provenance. The work spans AI orchestration, external data integration, resilient services, caching, deployment, and responsive information design.
-  - slug: dochub
-    metadata:
-      title: DOCHUB - Secure Document Sharing Platform
-      summary: A secure workspace for creating, organizing, versioning, and sharing connected documents and proposals.
-      role: Lead Software Engineer
-      status: Active development
-      startedAt: 2026
-      repositoryUrl: https://github.com/WTMx3/dochub
-      coverImage: /project-media/dochub/document-access.png
-      galleryImages:
-        - /project-media/dochub/document-library.png
-        - /project-media/dochub/document-reader.png
-        - /project-media/dochub/workspace-documents.png
-        - /project-media/dochub/document-editor.png
-        - /project-media/dochub/media-picker.png
-      galleryCaptions:
-        - Workspace document library and publishing status
-        - Connected long-form document reader
-        - Document organization and storage operations
-        - Markdown editor with live preview
-        - Media selection within the document workflow
-      technologies:
-        - Next.js
-        - React
-        - TypeScript
-        - Markdown
-        - Cloud Storage
-      featured: true
-      order: 3
-    content: |-
-      DOCHUB brings proposals, documentation, plans, and decisions into one focused document workspace. Readers can enter with a passwordless email code or open a specifically shared document using a collection code. Workspace access and document-level sharing are kept distinct, while a connected document tree helps people move through related information with context.
-
-      ## What I built
-
-      - Designed workspace-scoped access and a document-code path for sharing individual documents with external readers.
-      - Built a passwordless sign-in flow using a six-digit email code for workspace access.
-      - Organized documents into a navigable tree so proposals, plans, and decisions retain their relationships.
-      - Developed an authoring experience with Markdown editing, preview, media selection, and document publishing states.
-      - Added version-aware document workflows so teams can revise content while preserving a clear publishing path.
-      - Created a responsive reading experience for long-form documents and shared collections.
-
-      ## Engineering focus
-
-      DOCHUB demonstrates access boundaries, thoughtful document organization, a clear author-to-reader workflow, and secure sharing across internal workspaces and external recipients. The interface is designed to keep related information together while making the current document easy to read and act on.
 leadership:
   - slug: quality-engineering-society
     metadata:

@@ -1,13 +1,14 @@
 import fs from "node:fs";
 import path from "node:path";
-import YAML from "yaml";
+
+import { getResumeDocuments, resolveResumeDocument } from "../lib/resume-content.mjs";
 
 const root = process.cwd();
-const resumeConfig = YAML.parse(fs.readFileSync(path.join(root, "content", "resume.yaml"), "utf8"));
+const resumeConfig = resolveResumeDocument("all-in-one").sections;
 
 function collection(name) {
   const entries = resumeConfig?.[name];
-  if (!Array.isArray(entries)) throw new Error(`Missing ${name} entries in content/resume.yaml`);
+  if (!Array.isArray(entries)) throw new Error(`Missing ${name} entries in the included resume YAML files`);
   return entries
     .filter((entry) => entry.metadata.draft !== true)
     .sort((a, b) => Number(a.metadata.order ?? 999) - Number(b.metadata.order ?? 999));
@@ -70,6 +71,21 @@ function sectionText(markdown, heading) {
     .trim();
 }
 
+function contactHeader(profile) {
+  const contact = profile.metadata;
+  return [
+    "#grid(columns: (0.85fr, 1.55fr), column-gutter: 16pt, align: top,",
+    '  [#text(size: 17pt, weight: "bold", fill: ink)[' + typstText(contact.name) + "]],",
+    "  [#align(right)[#text(size: 8.2pt, fill: body)[",
+    '    #link("mailto:' + contact.email + '")[' + typstText(contact.email) + "]  |  #link(\"tel:" + typstText(contact.phoneHref) + '\")[' + typstText(contact.phone) + "] \\",
+    '    #link("' + typstText(contact.website) + '")[' + typstText(contact.websiteLabel) + ']  |  #link("' + typstText(contact.github) + '")[github.com/WTMx3]  |  #link("' + typstText(contact.linkedin) + '")[linkedin.com/in/wtmx3]',
+    "  ]]],",
+    ")",
+    "#v(14pt)",
+    '#rect(width: 100%, height: 1.5pt, fill: accent)',
+  ];
+}
+
 const profile = collection("profile")[0];
 const experience = collection("experience");
 const education = collection("education");
@@ -81,7 +97,7 @@ if (!profile) throw new Error("A profile MDX file is required.");
 
 const coverLetter = resumeConfig?.coverLetter;
 if (!coverLetter || !Array.isArray(coverLetter.paragraphs) || !coverLetter.paragraphs.length) {
-  throw new Error("content/resume.yaml must contain coverLetter.paragraphs");
+  throw new Error("content/resume/cover-letter.yaml must contain coverLetter.paragraphs");
 }
 const coverParagraphs = coverLetter.paragraphs;
 
@@ -110,13 +126,8 @@ const lines = [
   '  text(size: 10.2pt, weight: "bold", fill: accent, upper(title))',
   "  v(7pt)",
   "}",
-  '#place(top + left, dx: -0.67in, dy: -0.62in)[#rect(width: 8.5in, height: 5pt, fill: accent)]',
-  '#text(size: 16pt, weight: "bold", fill: ink)[' + typstText(profile.metadata.name) + "]",
-  "#v(11pt)",
-  '#text(size: 9pt, fill: muted)[#link("mailto:' + profile.metadata.email + '")[' + typstText(profile.metadata.email) + ']  |  #link("tel:' + typstText(profile.metadata.phoneHref) + '")[' + typstText(profile.metadata.phone) + ']]',
-  "#v(3pt)",
-  '#text(size: 9pt, fill: muted)[#link("' + typstText(profile.metadata.website) + '")[' + typstText(profile.metadata.websiteLabel) + ']  |  #link("' + typstText(profile.metadata.github) + '")[github.com/WTMx3]  |  #link("' + typstText(profile.metadata.linkedin) + '")[linkedin.com/in/wtmx3]]',
-  "#v(62pt)",
+  ...contactHeader(profile),
+  "#v(58pt)",
   '#text(size: 14.5pt, weight: "bold", fill: ink)[' + typstText(coverLetter.salutation) + "]",
   ...coverParagraphs.flatMap((paragraph) => [
     "#v(19pt)",
@@ -127,15 +138,7 @@ const lines = [
   "#v(6pt)",
   '#text(size: 10.8pt, weight: "bold", fill: ink)[' + typstText(profile.metadata.name) + "]",
   "#pagebreak()",
-  "#grid(columns: (1fr, auto), gutter: 18pt, align: top,",
-  '  [#text(size: 24pt, weight: "bold", fill: ink)[' + typstText(profile.metadata.name) + "]],",
-  "  [#align(right)[#text(size: 8.4pt, fill: muted)[",
-  '    #link("mailto:' + profile.metadata.email + '")[' + typstText(profile.metadata.email) + "] |",
-  '    #link("tel:' + typstText(profile.metadata.phoneHref) + '")[' + typstText(profile.metadata.phone) + "] \\",
-  '    #link("' + typstText(profile.metadata.website) + '")[' + typstText(profile.metadata.websiteLabel) + "] |",
-  '    #link("' + typstText(profile.metadata.github) + '")[github.com/WTMx3]  |  #link("' + typstText(profile.metadata.linkedin) + '")[linkedin.com/in/wtmx3]',
-  "  ]]],",
-  ")",
+  ...contactHeader(profile),
   "#v(18pt)",
   '#section("Summary")',
   typstText(profile.content),
@@ -263,6 +266,7 @@ for (const [index, job] of experience.entries()) {
   );
 }
 
+const portfolioStart = lines.length;
 for (const [projectIndex, project] of projects.entries()) {
   const engineeringFocus = sectionText(project.content, "Engineering focus");
   const overview = project.content.split(/^## /m)[0].trim();
@@ -279,6 +283,7 @@ for (const [projectIndex, project] of projects.entries()) {
     "#set text(size: 10.2pt)",
     "#set par(leading: 4pt)",
     "#set list(spacing: 6pt)",
+    ...(projectIndex === 0 ? [...contactHeader(profile), "#v(18pt)"] : []),
     '#text(size: 22pt, weight: "bold", fill: ink)[' + typstText(project.metadata.title) + "]",
     "#v(19pt)",
   );
@@ -342,9 +347,46 @@ for (const [projectIndex, project] of projects.entries()) {
   lines.push(")");
 }
 
+const headerStart = lines.findIndex((line) => line === "#grid(columns: (0.85fr, 1.55fr), column-gutter: 16pt, align: top,");
+const coverEnd = lines.indexOf("#pagebreak()", headerStart);
+if (headerStart < 0 || coverEnd < 0 || portfolioStart <= coverEnd) {
+  throw new Error("Could not identify the resume document sections");
+}
+
+const preamble = lines.slice(0, headerStart);
+const coverPages = lines.slice(headerStart, coverEnd);
+const resumePages = lines.slice(coverEnd + 1, portfolioStart);
+const portfolioPages = lines.slice(portfolioStart + 1);
 const outputDirectory = path.join(root, "resume");
 fs.mkdirSync(outputDirectory, { recursive: true });
-fs.mkdirSync(path.join(root, "output", "pdf"), { recursive: true });
-const outputPath = path.join(outputDirectory, "thomas-miller-master.typ");
-fs.writeFileSync(outputPath, lines.join("\n") + "\n", "utf8");
-console.log(outputPath);
+
+function documentSections(id) {
+  const { document, sections } = resolveResumeDocument(id);
+  if (document.includes?.length) return document.includes.flatMap(documentSections);
+  const parts = [];
+  if (sections.coverLetter) parts.push("cover-letter");
+  if (sections.profile && sections.experience) parts.push("resume");
+  if (sections.projects) parts.push("portfolio");
+  return parts;
+}
+
+for (const document of getResumeDocuments()) {
+  const parts = documentSections(document.id);
+  if (!parts.length) throw new Error(`${document.id}: no supported PDF sections`);
+  const pagesBySection = { "cover-letter": coverPages, resume: resumePages, portfolio: portfolioPages };
+
+  const documentLines = [
+    ...preamble.map((line) =>
+      line.startsWith('  title: "WTM3 Resume"')
+        ? '  title: "' + typstText(`${profile.metadata.name} - ${document.label}`) + '",'
+        : line,
+    ),
+    ...parts.flatMap((part, index) => [...(index > 0 ? ["#pagebreak()"] : []), ...pagesBySection[part]]),
+  ];
+  const outputPath = path.join(outputDirectory, `${document.id}.typ`);
+  fs.writeFileSync(outputPath, documentLines.join("\n") + "\n", "utf8");
+  console.log(outputPath);
+  if (document.id === "all-in-one") {
+    fs.writeFileSync(path.join(outputDirectory, "thomas-miller-master.typ"), documentLines.join("\n") + "\n", "utf8");
+  }
+}

@@ -9,3 +9,15 @@
 /wtm3-resume.pdf
   Cache-Control: public, max-age=0, must-revalidate
   X-Content-Type-Options: nosniff
+
+/wtm3-cover-letter.pdf
+  Cache-Control: public, max-age=0, must-revalidate
+  X-Content-Type-Options: nosniff
+
+/wtm3-portfolio.pdf
+  Cache-Control: public, max-age=0, must-revalidate
+  X-Content-Type-Options: nosniff
+
+/wtm3-all-in-one.pdf
+  Cache-Control: public, max-age=0, must-revalidate
+  X-Content-Type-Options: nosniff
